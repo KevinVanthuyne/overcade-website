@@ -1,3 +1,13 @@
 ---
 ---
-@import "main";
+
+@use "main";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Montserrat", serif;
+}

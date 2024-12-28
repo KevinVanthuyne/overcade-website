@@ -16,3 +16,7 @@ defaults:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-postcss-v2
+
+postcss:
+  cache: false
