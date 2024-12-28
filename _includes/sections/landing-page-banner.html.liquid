@@ -1,18 +1,12 @@
-<!--
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
--->
-
 <section
-    class="relative bg-[url(/assets/images/pac-man-in-office.JPG)] bg-cover bg-center bg-no-repeat"
+        class="relative bg-[url(/assets/images/pac-man-in-office.JPG)] bg-cover bg-center bg-no-repeat"
 >
     <div
-        class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 sm:bg-gradient-to-r"
+            class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 sm:bg-gradient-to-r"
     ></div>
 
     <div
-        class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+            class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
     >
         <div class="max-w-xl text-center sm:text-left">
             <h1 class="text-3xl font-extrabold text-white sm:text-5xl">
@@ -26,11 +20,27 @@
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4 text-center">
+
                 <a
-                    href="/games"
-                    class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                        class="inline-flex items-center gap-2 rounded border border-rose-600 bg-rose-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+                        href="/games"
                 >
-                    Alle arcades →
+                    <span class="text-sm font-medium"> Alle arcades </span>
+
+                    <svg
+                            class="size-5 rtl:rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                    >
+                        <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                    </svg>
                 </a>
             </div>
         </div>
