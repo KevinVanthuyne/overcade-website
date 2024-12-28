@@ -1,10 +1,10 @@
 - name: Home
   link: /
 - name: Aanbod
-  link: /games.html
+  link: /games
 - name: Over
-  link: /about.html
+  link: /about
 - name: Scorebord
   link: #
 - name: Contact
-  link: #
+  link: /contact
