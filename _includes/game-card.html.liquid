@@ -1,0 +1,31 @@
+<div class="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+    <a href="{{ game.url }}" class="relative block rounded-tr-3xl border border-gray-100 group">
+        {% if game.featured %}
+            <span
+                    class="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white z-10"
+            >
+        Popular
+        </span>
+        {% endif %}
+        <img
+                src="{{ game.image }}"
+                alt=""
+                {% comment %}class="h-100 w-full rounded-tr-3xl object-cover"{% endcomment %}
+                class="h-100 w-full rounded-tr-3xl object-cover transition duration-500 group-hover:scale-105 -z-10"
+        />
+
+        <div class="p-4 text-center">
+            <strong class="text-xl font-medium text-gray-900">{{ game.name }}</strong>
+
+            <p class="mt-2 text-pretty text-gray-500">
+                {{ game.content | markdownify }}
+            </p>
+
+            <span
+                    class="mt-4 block rounded-md border border-indigo-900 bg-indigo-900 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-indigo-900"
+            >
+      Meer info
+    </span>
+        </div>
+    </a>
+</div>

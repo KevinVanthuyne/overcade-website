@@ -1,6 +1,8 @@
 - name: Home
   link: /
-- name: About
-  link: /about.html
-- name: Games
+- name: Aanbod
   link: /games.html
+- name: Over
+  link: /about.html
+- name: Scorebord
+  link: #
