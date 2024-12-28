@@ -1,0 +1,50 @@
+<div class="bg-white">
+
+    <section id="features"
+             class="relative block px-6 py-10 md:py-20 md:px-10 bg-gray-50">
+
+        <div class="relative mx-auto max-w-5xl text-center">
+            <span class="text-indigo-700 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
+            Waarom kiezen voor ons
+            </span>
+            <h2
+                    class="block w-full text-gray-900 bg-clip-text font-bold text-3xl sm:text-4xl">
+                Kies voor zekerheid
+            </h2>
+            <p
+                    class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-500">
+                Een vaste prijs per maand, alles inbegrepen.
+                Geen verrassingen achteraf.
+            </p>
+        </div>
+
+
+        <div class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
+            {% include feature-card.html.liquid
+                    icon="icons/construction.svg"
+                    title="Gratis onderhoud & levering"
+                    content="Herstellingen, onderhoud en levering zitten in de prijs.
+                            Geen zorgen dat iets kapot gaat en geen extra kosten achteraf." %}
+
+            {% include feature-card.html.liquid
+                    icon="icons/event-available.svg"
+                    title="Afwisseling"
+                    content="Elke 3 maanden een ander spel op kantoor. Zo valt er telkens iets nieuws te beleven." %}
+
+            {% include feature-card.html.liquid
+                    icon="icons/verified.svg"
+                    title="Authentieke arcades"
+                    content="Enkel echte, originele arcadekasten uit de jaren 80.
+                            Een écht museumstuk, geen goedkope Chinese namaak." %}
+
+        </div>
+
+        <div class="absolute bottom-0 left-0 z-0 h-1/3 w-full border-b"
+             style="background-image: linear-gradient(to right top, rgba(79, 70, 229, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);">
+        </div>
+        <div class="absolute bottom-0 right-0 z-0 h-1/3 w-full"
+             style="background-image: linear-gradient(to left top, rgba(220, 38, 38, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);">
+        </div>
+
+    </section>
+</div>
