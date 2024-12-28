@@ -1,0 +1,14 @@
+collections:
+  games:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "games"
+    values:
+      layout: "game"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

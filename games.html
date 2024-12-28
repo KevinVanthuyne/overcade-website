@@ -1,0 +1,14 @@
+---
+title: Games
+---
+<h1>Games</h1>
+
+<ul>
+    {% for game in site.games %}
+        <li>
+            <h2><a href="{{ game.url}}">{{ game.name }}</a></h2>
+            <h3>{{ game.year }}</h3>
+            <p>{{ game.content | markdownify }}</p>
+        </li>
+    {% endfor %}
+</ul>
