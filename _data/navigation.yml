@@ -5,6 +5,6 @@
 - name: Over
   link: /about
 - name: Scorebord
-  link: #
+  link: /leaderboard
 - name: Contact
   link: /contact
