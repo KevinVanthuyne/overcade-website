@@ -1,5 +1,5 @@
 <div class="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-    <a href="{{ game.url }}" class="relative block rounded-tr-3xl border border-gray-100 group">
+    <a href="{{ game.url }}" class="relative rounded-tr-3xl border border-gray-100 group flex flex-col h-full">
         {% if game.featured %}
             <span
                     class="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white z-10"
@@ -11,7 +11,7 @@
                 src="{{ game.image }}"
                 alt=""
                 {% comment %}class="h-100 w-full rounded-tr-3xl object-cover"{% endcomment %}
-                class="h-100 w-full rounded-tr-3xl object-cover transition duration-500 group-hover:scale-105 -z-10"
+                class="h-100 w-full rounded-tr-3xl object-cover transition duration-500 group-hover:scale-105 -z-10 flex-grow"
         />
 
         <div class="p-4 text-center">

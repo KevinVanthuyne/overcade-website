@@ -4,13 +4,13 @@ title: Games
 
 <section>
   <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-    <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Aanbod</h2>
+    <h2 class="text-2xl font-bold text-gray-900 sm:text-4xl">Aanbod</h2>
 
     <p class="mt-4 max-w-md text-gray-500">Het volledige aanbod van arcades.</p>
 
     <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {% for game in site.games %}
-      <li>{% include game-card.html.liquid %}</li>
+      <li class="flex">{% include game-card.html.liquid %}</li>
       {% endfor %}
     </ul>
   </div>
