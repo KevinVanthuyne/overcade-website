@@ -13,7 +13,7 @@ npm install
 ```
 
 3. Run the development server:
-    
+
 ```shell
 bundle exec jekyll serve --livereload
 ```
@@ -22,7 +22,7 @@ bundle exec jekyll serve --livereload
 
 Run a production build:
 
-```   
+```shell   
 $env:JEKYLL_ENV = 'production'; bundle exec jekyll build
 ```
 
