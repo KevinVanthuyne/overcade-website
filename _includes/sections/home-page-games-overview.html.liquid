@@ -1,4 +1,25 @@
 <div class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 mx-auto">
+    <div class="flex items-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Uitgelicht aanbod</h2>
+        <a href="/games.html"
+           class="ml-auto text-indigo-700 font-semibold hover:underline flex flex-row items-center">
+            Volledig aanbod
+            <svg
+                    class="size-5 rtl:rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+            >
+                <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+            </svg>
+        </a>
+    </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:items-stretch md:grid-cols-3 md:gap-8">
         {% for game in site.games %}
             {% if game.showOnHomepage %}
