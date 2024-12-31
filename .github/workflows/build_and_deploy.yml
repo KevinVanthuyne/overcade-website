@@ -32,6 +32,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: Install node dependencies
+        run: npm ci
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.206.0
         with:
