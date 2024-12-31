@@ -28,6 +28,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install node dependencies
+        run: npm ci
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.206.0
         with:
@@ -46,4 +52,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./
-          local-dir: ./_site
+          local-dir: ./_site/
