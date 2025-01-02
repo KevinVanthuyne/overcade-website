@@ -3,6 +3,7 @@ name: Frogger
 year: 1982
 image: https://www.joystixgames.com/wp-content/uploads/2024/03/FROGGER-ARCADE-GAME-AT-JOYSTIX-fixed-resized.jpg
 tagline: Gekend door iedereen!
+showOnHomepage: true
 ---
 
 Een van de meest iconische en geliefde arcadespellen aller tijden. Frogger wordt algemeen beschouwd als een klassieker
