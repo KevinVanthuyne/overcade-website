@@ -6,13 +6,19 @@ Built with Jekyll, Tailwind CSS and Hyper UI.
 
 1. [Install Ruby and Jekyll](https://jekyllrb.com/docs/installation/windows/)
 
-2. Install node modules:
+2. Install Jekyll gems
+
+```shell
+bundle install
+```
+
+3. Install node modules:
 
 ```shell
 npm install
 ```
 
-3. Run the development server:
+4. Run the development server:
 
 ```shell
 bundle exec jekyll serve --livereload
