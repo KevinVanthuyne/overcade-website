@@ -2,14 +2,15 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
     {% seo %}
   </head>
   <body>
     {% include navigation.html.liquid %}
-    <main>
+    <!-- margin of 64px, the height of the mobile fixed navbar -->
+    <main class="pt-16 md:pt-0">
       <!--    <h1>Overcade</h1>-->
       {{ content }}
     </main>

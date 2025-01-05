@@ -5,16 +5,20 @@
     flex-direction: row;
   }
 
-  &.mobile-menu-open {
-    position: absolute;
-    left: 0;
-    top: 64px;
-    z-index: 50;
-    width: 100%;
-    background-color: white;
+  // 768ox is the md breakpoint in tailwindcss
+  @media (max-width: 768px) {
+    &.mobile-menu-open {
+      position: absolute;
+      left: 0;
+      top: 64px;
+      z-index: 40;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 
-    ul {
-      flex-direction: column;
+      ul {
+        flex-direction: column;
+      }
     }
   }
 }
