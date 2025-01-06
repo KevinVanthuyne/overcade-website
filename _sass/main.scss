@@ -17,3 +17,17 @@
 .current-link {
   color: green;
 }
+
+.grid-background {
+  background-image: linear-gradient(to right, rgb(232, 232, 232) 1px, transparent 1px),
+  linear-gradient(to bottom, rgb(232, 232, 232) 1px, transparent 1px);
+  background-size: 150px 150px;
+  mask-image: radial-gradient(100% 100% at 100% 40%, white, transparent);
+}
+
+// 768ox is the md breakpoint in tailwindcss
+@media (max-width: 768px) {
+  .carousel {
+    width: 298vw;
+  }
+}

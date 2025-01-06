@@ -1,4 +1,4 @@
-<header class="bg-white">
+<header id="header" class="bg-white fixed md:static z-50 w-screen md:w-auto">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="flex-1 md:flex md:items-center md:gap-12">
@@ -14,8 +14,9 @@
             </div>
 
             <div class="md:flex md:items-center md:gap-12">
-                <nav aria-label="Global" class="hidden md:block">
-                    <ul class="flex items-center gap-6 text-sm">
+                <!-- Menu -->
+                <nav id="menu" aria-label="Global" class="hidden md:block">
+                    <ul class="gap-6 text-lg md:text-sm pb-8 md:pb-0">
                         {% for item in site.data.navigation %}
                             <li>
                                 <a href="{{ item.link }}"{% if page.url == item.link %} class="current-link text-gray-500 transition hover:text-gray-500/75"{% endif %}>{{ item.name }}</a>
@@ -24,8 +25,10 @@
                     </ul>
                 </nav>
 
+                <!-- Menu button for mobile -->
                 <div class="block md:hidden">
-                    <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                    <button id="menu-toggle"
+                            class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="size-5"
@@ -42,3 +45,23 @@
         </div>
     </div>
 </header>
+
+<script>
+    // Open the mobile menu when the button is pressed
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        console.log("opened")
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('mobile-menu-open');
+        menu.classList.toggle('hidden');
+    });
+
+    // Close the mobile menu when the user clicks outside the menu
+    document.addEventListener('click', (event) => {
+        const header = document.getElementById('header');
+        const menu = document.getElementById('menu');
+        if (!header.contains(event.target)) {
+            menu.classList.remove('mobile-menu-open');
+            menu.classList.add('hidden');
+        }
+    });
+</script>

@@ -3,9 +3,9 @@ layout: default
 ---
 
 <section
-  class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
+  class="overflow-hidden flex flex-col md:flex-row bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
 >
-  <div class="h-full">
+  <div class="h-full order-2 md:order-1">
     <div class="p-8 md:p-12 lg:px-16 lg:py-12">
       <a
         href="/games.html"
@@ -36,6 +36,6 @@ layout: default
   <img
     alt=""
     src="{{ page.image }}"
-    class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
+    class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"
   />
 </section>
