@@ -63,6 +63,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: jekyll-build
+          path: ./_site/
 
       - name: Deploy over FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
