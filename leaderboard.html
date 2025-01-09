@@ -10,7 +10,7 @@ title: Leaderboard
         <h2 class="font-semibold text-indigo-700 sm:text-lg mb-2">
           Meer competitie
         </h2>
-        <h2 class="text-3xl font-bold sm:text-5xl/tight">
+        <h2 class="text-2xl font-bold sm:text-5xl/tight">
           Online highscore bord
         </h2>
 
@@ -24,7 +24,7 @@ title: Leaderboard
         <img
           src="/assets/images/agon-leaderboard.png"
           alt="Highscore website"
-          class="rounded-2xl drop-shadow-2xl"
+          class="rounded-2xl drop-shadow-xl md:drop-shadow-2xl"
         />
       </div>
     </div>
@@ -35,9 +35,11 @@ title: Leaderboard
 </section>
 
 <section>
-  <div class="max-w-screen-xl grid grid-cols-3 gap-6 mx-auto py-32">
+  <div
+    class="max-w-screen-xl grid grid-cols-1 md:grid-cols-3 md:gap-6 mx-auto py-32"
+  >
     <div class="relative pl-9">
-      <dt class="flex items-center font-semibold text-gray-900 mb-5">
+      <dt class="flex items-center font-semibold text-gray-900 mb-3 md:mb-5">
         <div class="size-7 text-indigo-600 mr-3">
           {% include icons/trophy_filled.svg %}
         </div>
@@ -49,8 +51,8 @@ title: Leaderboard
       </dd>
     </div>
 
-    <div class="relative pl-9">
-      <dt class="flex items-center font-semibold text-gray-900 mb-5">
+    <div class="relative pl-9 mt-12 md:mt-0">
+      <dt class="flex items-center font-semibold text-gray-900 mb-3 md:mb-5">
         <div class="size-6 text-indigo-600 mr-3">
           {% include icons/info_filled.svg %}
         </div>
@@ -61,8 +63,8 @@ title: Leaderboard
       </dd>
     </div>
 
-    <div class="relative pl-9">
-      <dt class="flex items-center font-semibold text-gray-900 mb-5">
+    <div class="relative pl-9 mt-12 md:mt-0">
+      <dt class="flex items-center font-semibold text-gray-900 mb-3 md:mb-5">
         <div class="size-6 text-indigo-600 mr-3">
           {% include icons/problem_filled.svg %}
         </div>
@@ -76,28 +78,30 @@ title: Leaderboard
 </section>
 
 <section>
-  <div class="grid grid-cols-2 mt-16">
-    <div>
+  <div class="grid grid-cols-1 md:grid-cols-2 md:mt-16">
+    <div class="mr-8 md:mr-0">
       <img
         src="/assets/images/agon-game-page.png"
         alt="Pac-Man pagina op de scorebord website"
-        class="rounded-r-2xl drop-shadow-2xl"
+        class="rounded-r-2xl drop-shadow-xl md:drop-shadow-2xl"
       />
     </div>
-    <div class="flex items-center">
-      <div class="max-w-xl mx-auto">
-        <h2 class="font-semibold text-indigo-700 sm:text-lg mb-2">
-          Duik dieper
-        </h2>
-        <h2 class="text-3xl font-bold sm:text-4xl/tight">
-          Informatie over elke arcade
-        </h2>
+    <div class="flex items-center mt-16 md:mt-0">
+      <div class="max-w-xl mx-auto px-8 md:px-0">
+        <div class="text-center">
+          <h2 class="font-semibold text-indigo-700 sm:text-lg mb-2">
+            Duik dieper
+          </h2>
+          <h2 class="text-2xl font-bold sm:text-4xl/tight">
+            Informatie over elke arcade
+          </h2>
 
-        <p class="mt-4 mb-8 sm:text-xl/relaxed text-gray-500">
-          Leer meer over de arcade en wat deze speciaal maakt.
-        </p>
+          <p class="mt-4 mb-8 sm:text-xl/relaxed text-gray-500">
+            Leer meer over de arcade en wat deze speciaal maakt.
+          </p>
+        </div>
 
-        <div class="relative pl-9">
+        <div class="relative pl-9 mt-24 md:mt-0">
           <dt class="inline font-semibold text-gray-900">
             <div class="size-6 text-indigo-600 absolute left-0 top-1">
               {% include icons/history.svg %}
@@ -141,9 +145,11 @@ title: Leaderboard
 </section>
 
 <section class="py-48 mx-auto max-w-screen-xl">
-  <div class="grid grid-cols-2 gap-8">
-    <div class="flex items-center">
-      <div>
+  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8 content-center">
+    <div
+      class="order-2 md:order-1 flex items-center px-8 md:px-0 mt-16 md:mt-0"
+    >
+      <div class="text-center md:text-left">
         <h2 class="font-semibold text-indigo-700 sm:text-lg mb-2">
           Extra aanlokkelijk
         </h2>
@@ -158,27 +164,27 @@ title: Leaderboard
         </p>
       </div>
     </div>
-    <div>
-      <div class="grid grid-cols-3 gap-12">
+    <div class="order-1 md:order-2">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
         <img
           src="/assets/images/pac-man-and-screen.jpg"
           alt=""
-          class="w-52 rounded-2xl row-span-2 row-start-2 shadow-lg"
+          class="w-52 rounded-l-2xl md:rounded-2xl row-span-2 md:row-start-2 shadow-lg"
         />
         <img
           src="/assets/images/screen.jpg"
           alt=""
-          class="w-52 rounded-2xl row-span-2 shadow-lg"
+          class="w-52 md:rounded-2xl row-span-2 shadow-lg hidden md:block"
         />
         <img
           src="/assets/images/mini-arcade.jpg"
           alt=""
-          class="w-52 rounded-2xl row-span-2 row-start-2 col-start-3 shadow-lg"
+          class="w-52 rounded-r-2xl md:rounded-2xl row-span-2 row-start-2 md:col-start-3 shadow-lg"
         />
         <img
           src="/assets/images/screen-sign.jpg"
           alt=""
-          class="w-52 rounded-2xl row-span-2 row-start-3 shadow-lg"
+          class="w-52 rounded-l-2xl md:rounded-2xl row-span-2 row-start-3 shadow-lg"
         />
       </div>
     </div>
