@@ -20,12 +20,12 @@ title: Leaderboard
         </p>
       </div>
 
-      <div class="relative">
-        <img
-          src="/assets/images/agon-leaderboard.png"
-          alt="Highscore website"
-          class="rounded-2xl drop-shadow-xl md:drop-shadow-2xl"
-        />
+      <div
+        class="relative rounded-2xl drop-shadow-xl md:drop-shadow-2xl overflow-hidden"
+      >
+        {% responsive_image path: assets/images/agon-leaderboard.png alt:
+        "Highscore website met de namen van spelers en hun scores voor Pac-Man"
+        %}
       </div>
     </div>
   </div>
@@ -80,14 +80,15 @@ title: Leaderboard
 <section>
   <div class="grid grid-cols-1 md:grid-cols-2 md:mt-16">
     <div class="mr-8 md:mr-0">
-      <img
-        src="/assets/images/agon-game-page.png"
-        alt="Pac-Man pagina op de scorebord website"
-        class="rounded-r-2xl drop-shadow-xl md:drop-shadow-2xl"
-      />
+      <div
+        class="rounded-r-2xl drop-shadow-xl md:drop-shadow-2xl overflow-hidden"
+      >
+        {% responsive_image path: assets/images/agon-game-page.png alt: "Pac-Man
+        pagina op de high score website met informatie over de arcade" %}
+      </div>
     </div>
     <div class="flex items-center mt-16 md:mt-0">
-      <div class="max-w-xl mx-auto px-8 md:px-0">
+      <div class="max-w-xl mx-auto px-8">
         <div class="text-center">
           <h2 class="font-semibold text-indigo-700 sm:text-lg mb-2">
             Duik dieper
@@ -166,26 +167,31 @@ title: Leaderboard
     </div>
     <div class="order-1 md:order-2">
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
-        <img
-          src="/assets/images/pac-man-and-screen.jpg"
-          alt=""
-          class="w-52 rounded-l-2xl md:rounded-2xl row-span-2 md:row-start-2 shadow-lg"
-        />
-        <img
-          src="/assets/images/screen.jpg"
-          alt=""
-          class="w-52 md:rounded-2xl row-span-2 shadow-lg hidden md:block"
-        />
-        <img
-          src="/assets/images/mini-arcade.jpg"
-          alt=""
-          class="w-52 rounded-r-2xl md:rounded-2xl row-span-2 row-start-2 md:col-start-3 shadow-lg"
-        />
-        <img
-          src="/assets/images/screen-sign.jpg"
-          alt=""
-          class="w-52 rounded-l-2xl md:rounded-2xl row-span-2 row-start-3 shadow-lg"
-        />
+        <div
+          class="rounded-l-2xl md:rounded-2xl row-span-2 md:row-start-2 shadow-lg overflow-hidden"
+        >
+          {% responsive_image path: assets/images/pac-man-and-screen.jpg class:
+          "" alt: "Pac-Man arcadekast met een scherm ernaast waarop de
+          highscores staan" %}
+        </div>
+        <div
+          class="md:rounded-2xl row-span-2 shadow-lg hidden md:block overflow-hidden"
+        >
+          {% responsive_image path: assets/images/screen.jpg alt: "Close-up van
+          het scherm met highscores, met daaronder een infobordje en trofee" %}
+        </div>
+        <div
+          class="rounded-r-2xl md:rounded-2xl row-span-2 row-start-2 md:col-start-3 shadow-lg overflow-hidden"
+        >
+          {% responsive_image path: assets/images/mini-arcade.jpg alt: "Close-up
+          de trofee: een klein plastic arcadekastje" %}
+        </div>
+        <div
+          class="rounded-l-2xl md:rounded-2xl row-span-2 row-start-3 shadow-lg overflow-hidden"
+        >
+          {% responsive_image path: assets/images/screen-sign.jpg alt: "Close-up
+          van het infobord onder het scherm" %}
+        </div>
       </div>
     </div>
   </div>

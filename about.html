@@ -16,11 +16,12 @@ title: About
         Originele arcadekasten, nergens anders te huur in België.
       </p>
     </div>
-    <img
-      src="/assets/images/pinball-line-up.jpg"
-      alt="Rij van flipperkasten"
-      class="rounded-l-3xl my-auto order-1 md:order-2 ml-8 md:ml-0"
-    />
+    <div
+      class="rounded-l-3xl my-auto order-1 md:order-2 ml-8 md:ml-0 overflow-hidden"
+    >
+      {% responsive_image path: assets/images/pinball-line-up.jpg alt: "Rij van
+      flipperkasten" %}
+    </div>
   </div>
   <div
     class="absolute top-0 right-0 -z-10 h-3/4 w-3/4 md:w-1/2 grid-background"
@@ -82,16 +83,12 @@ title: About
 
 <section class="bg-gray-50 mb-32 pb-8">
   <div class="mx-auto max-w-screen-xl px-8">
-    <div
-      class="grid grid-cols-1 md:gap-4 md:grid-cols-3 md:items-center md:gap-16"
-    >
+    <div class="grid grid-cols-1 md:grid-cols-3 md:items-center md:gap-16">
       <div
         class="rounded-full border scale-110 overflow-hidden bg-indigo-700 shadow-xl"
       >
-        <img
-          src="/assets/images/kevin.png"
-          alt="Portretfoto van de eigenaar, Kevin Vanthuyne"
-        />
+        {% responsive_image path: assets/images/kevin.png alt: "Portretfoto van
+        de eigenaar, Kevin Vanthuyne" %}
       </div>
       <div class="col-span-2">
         <div class="max-w-lg md:max-w-none">

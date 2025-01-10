@@ -11,4 +11,5 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
 #   gem "jekyll-postcss"
   gem "jekyll-postcss-v2"
+  gem "jekyll-responsive-image"
 end
