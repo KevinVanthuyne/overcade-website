@@ -1,14 +1,14 @@
 ---
 name: Space Invaders
 year: 1978
-image: https://arcadedirect.co.uk/wp-content/uploads/2011/04/original-space-invaders-arcade-game-machine-for-sale-uk.png
+image: /assets/images/arcades/space-invaders/space-invaders.jpg
+tagline: De arcade waarmee alles begon.
+showOnHomepage: true
 images:
   - /assets/images/arcades/space-invaders/si-control-panel.jpg
   - /assets/images/arcades/space-invaders/si-front-dark.jpg
   - /assets/images/arcades/space-invaders/si-inside.jpg
   - /assets/images/arcades/space-invaders/si-side.jpg
-tagline: De arcade waarmee alles begon.
-showOnHomepage: true
 ---
 
 Een van de meest iconische en invloedrijke arcadespellen aller tijden. Space Invaders wordt algemeen beschouwd als een

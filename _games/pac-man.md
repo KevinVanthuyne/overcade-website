@@ -1,7 +1,10 @@
 ---
 name: Pac-Man
 year: 1981
-image: https://www.joystixgames.com/wp-content/uploads/2024/03/Pac-Man-arcade-game-at-Joystix-resized.jpg
+image: /assets/images/arcades/pac-man/pac-man.jpg
+images:
+  - /assets/images/arcades/pac-man/pac-man-closer.jpg
+  - /assets/images/arcades/pac-man/pac-man-screen.jpg
 featured: true
 showOnHomepage: true
 tagline: De echte all-time klassieker.

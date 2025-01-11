@@ -1,11 +1,11 @@
 ---
 name: Frogger
 year: 1982
-image: https://www.joystixgames.com/wp-content/uploads/2024/03/FROGGER-ARCADE-GAME-AT-JOYSTIX-fixed-resized.jpg
+image: /assets/images/arcades/frogger/frogger.jpg
 images:
-  - https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Frogger_game_arcade.png/220px-Frogger_game_arcade.png
-  - https://landofozarcades.com/wp-content/uploads/2020/05/MONITOR.jpg
-  - https://carboneentertainment.com/wp-content/uploads/Copy-of-IMG_9284.jpg
+  - /assets/images/arcades/frogger/frogger-side.jpg
+  - /assets/images/arcades/frogger/frogger-screen.jpg
+  - /assets/images/arcades/frogger/frogger-dark.jpg
 tagline: Gekend door iedereen!
 showOnHomepage: true
 ---
