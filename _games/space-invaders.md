@@ -1,7 +1,7 @@
 ---
 name: Space Invaders
 year: 1978
-image: /assets/images/arcades/space-invaders/space-invaders.jpg
+image: assets/images/arcades/space-invaders/space-invaders.jpg
 tagline: De arcade waarmee alles begon.
 showOnHomepage: true
 images:

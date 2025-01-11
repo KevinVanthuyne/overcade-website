@@ -1,7 +1,7 @@
 ---
 name: Shuffle Box
 year: ~2010
-image: /assets/images/shuffle-box.png
+image: assets/images/shuffle-box.png
 tagline: Uniek in de wereld
 preview: true
 ---

@@ -1,7 +1,7 @@
 ---
 name: Pac-Man
 year: 1981
-image: /assets/images/arcades/pac-man/pac-man.jpg
+image: assets/images/arcades/pac-man/pac-man.jpg
 images:
   - /assets/images/arcades/pac-man/pac-man-closer.jpg
   - /assets/images/arcades/pac-man/pac-man-screen.jpg

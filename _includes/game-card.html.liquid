@@ -19,13 +19,14 @@
         Binnenkort
         </span>
             {% endif %}
-            <img
-                    src="{{ game.image }}"
-                    alt=""
-                    {% comment %}class="h-100 w-full rounded-tr-3xl object-cover"{% endcomment %}
-                    class="h-100 w-full rounded-tr-3xl object-cover transition duration-500 group-hover:scale-105 -z-10 flex-grow p-5 {% if game.preview %}opacity-50{% endif %}"
-
-            />
+            <div class=" {% if game.preview %}opacity-50{% endif %}">
+                <!--@formatter:off-->
+            {% responsive_image_block %}
+            path: {{ game.image }}
+            class: "h-100 w-full rounded-tr-3xl object-cover transition duration-500 group-hover:scale-105 -z-10 flex-grow p-5"
+            {% endresponsive_image_block %}
+            <!--@formatter:on-->
+            </div>
 
             <div class="p-4 text-center">
                 <strong class="text-xl font-medium text-gray-900">{{ game.name }}</strong>
