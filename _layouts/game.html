@@ -38,7 +38,7 @@ layout: default
     </div>
 
     <div
-            class="order-1 md:order-2 splide md:mt-16 bg-white md:rounded-l-[60px] md:mb-16"
+            class="order-1 md:order-2 splide md:mt-16 bg-white md:rounded-l-[60px] md:mb-16 overflow-hidden"
     >
         <div class="splide__track max-h-[80vh]">
             <ul class="splide__list">
@@ -52,11 +52,12 @@ layout: default
                 </li>
                 {% for image in page.images %}
                 <li class="splide__slide">
-                    <img
-                            alt=""
-                            src="{{ image }}"
-                            class="h-full w-full max-h-[80vh] object-contain"
-                    />
+                    <!--@formatter:off-->
+                    {% responsive_image_block %}
+                    path: {{ image }}
+                    class: "h-full w-full max-h-[80vh] object-contain"
+                    {% endresponsive_image_block %}
+                    <!--@formatter:on-->
                     <!--            class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"-->
                 </li>
                 {% endfor %}
@@ -74,7 +75,12 @@ layout: default
             </li>
             {% for image in page.images %}
             <li class="thumbnail">
-                <img src="{{ image }}" alt="" class="object-cover"/>
+                <!--@formatter:off-->
+                {% responsive_image_block %}
+                path: {{ image }}
+                class: "object-cover"
+                {% endresponsive_image_block %}
+                <!--@formatter:on-->
             </li>
             {% endfor %}
         </ul>

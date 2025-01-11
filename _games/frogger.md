@@ -3,9 +3,9 @@ name: Frogger
 year: 1982
 image: assets/images/arcades/frogger/frogger.jpg
 images:
-  - /assets/images/arcades/frogger/frogger-side.jpg
-  - /assets/images/arcades/frogger/frogger-screen.jpg
-  - /assets/images/arcades/frogger/frogger-dark.jpg
+  - assets/images/arcades/frogger/frogger-side.jpg
+  - assets/images/arcades/frogger/frogger-screen.jpg
+  - assets/images/arcades/frogger/frogger-dark.jpg
 tagline: Gekend door iedereen!
 showOnHomepage: true
 ---

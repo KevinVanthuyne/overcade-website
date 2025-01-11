@@ -5,10 +5,10 @@ image: assets/images/arcades/space-invaders/space-invaders.jpg
 tagline: De arcade waarmee alles begon.
 showOnHomepage: true
 images:
-  - /assets/images/arcades/space-invaders/si-control-panel.jpg
-  - /assets/images/arcades/space-invaders/si-front-dark.jpg
-  - /assets/images/arcades/space-invaders/si-inside.jpg
-  - /assets/images/arcades/space-invaders/si-side.jpg
+  - assets/images/arcades/space-invaders/si-control-panel.jpg
+  - assets/images/arcades/space-invaders/si-front-dark.jpg
+  - assets/images/arcades/space-invaders/si-inside.jpg
+  - assets/images/arcades/space-invaders/si-side.jpg
 ---
 
 Een van de meest iconische en invloedrijke arcadespellen aller tijden. Space Invaders wordt algemeen beschouwd als een
