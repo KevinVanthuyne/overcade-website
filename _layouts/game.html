@@ -3,110 +3,115 @@ layout: default
 ---
 
 <section
-  class="overflow-hidden flex flex-col md:flex-row bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
+        class="overflow-hidden flex flex-col md:flex-row bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
 >
-  <div class="h-full order-2 md:order-1">
-    <div class="p-8 md:p-12 lg:px-16 lg:py-12">
-      <div class="mx-auto max-w-xl">
-        <a
-          href="/games.html"
-          class="hidden md:block text-indigo-600 hover:underline focus:outline-none focus:ring active:bg-indigo-500"
-          >← Terug naar aanbod</a
-        >
-      </div>
-    </div>
-    <div class="h-full p-8 md:p-12 lg:px-16 lg:py-24">
-      <div class="mx-auto max-w-xl">
-        <h2
-          class="text-2xl font-bold text-gray-900 md:text-3xl text-center sm:text-left"
-        >
-          {{ page.name }}
-        </h2>
-
-        <section class="mt-6 text-gray-500 game-content">{{ content }}</section>
-
-        <div class="mt-4 md:mt-8 flex justify-center md:justify-start">
-          <a
-            href="#"
-            class="rounded bg-indigo-700 px-12 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-indigo-500 border hover:border-indigo-500 focus:outline-none focus:ring focus:ring-yellow-400"
-          >
-            Bestellen
-          </a>
+    <div class="h-full order-2 md:order-1">
+        <div class="p-8 md:p-12 lg:px-16 lg:py-12">
+            <div class="mx-auto max-w-xl">
+                <a
+                        href="/games.html"
+                        class="hidden md:block text-indigo-600 hover:underline focus:outline-none focus:ring active:bg-indigo-500"
+                >← Terug naar aanbod</a
+                >
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+        <div class="h-full p-8 md:p-12 lg:px-16 lg:py-24">
+            <div class="mx-auto max-w-xl">
+                <h2
+                        class="text-2xl font-bold text-gray-900 md:text-3xl text-center sm:text-left"
+                >
+                    {{ page.name }}
+                </h2>
 
-  <div
-    class="order-1 md:order-2 splide md:mt-16 bg-white md:rounded-l-[60px] md:mb-16"
-  >
-    <div class="splide__track max-h-[80vh]">
-      <ul class="splide__list">
-        <li class="splide__slide">
-          <img
-            alt=""
-            src="{{ page.image }}"
-            class="h-full w-full max-h-[80vh] object-contain"
-          />
-          <!--            class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"-->
-        </li>
-        {% for image in page.images %}
-        <li class="splide__slide">
-          <img
-            alt=""
-            src="{{ image }}"
-            class="h-full w-full max-h-[80vh] object-contain"
-          />
-          <!--            class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"-->
-        </li>
-        {% endfor %}
-      </ul>
+                <section class="mt-6 text-gray-500 game-content">{{ content }}</section>
+
+                <div class="mt-4 md:mt-8 flex justify-center md:justify-start">
+                    <a
+                            href="#"
+                            class="rounded bg-indigo-700 px-12 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-indigo-500 border hover:border-indigo-500 focus:outline-none focus:ring focus:ring-yellow-400"
+                    >
+                        Bestellen
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <ul id="thumbnails" class="thumbnails mb-8">
-      <li class="thumbnail">
-        <img src="{{ page.image }}" alt="" class="object-cover" />
-      </li>
-      {% for image in page.images %}
-      <li class="thumbnail">
-        <img src="{{ image }}" alt="" class="object-cover" />
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+    <div
+            class="order-1 md:order-2 splide md:mt-16 bg-white md:rounded-l-[60px] md:mb-16"
+    >
+        <div class="splide__track max-h-[80vh]">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <!--@formatter:off-->
+                    {% responsive_image_block %}
+                        path: {{ page.image }}
+                        class: "h-full w-full max-h-[80vh] object-contain"
+                    {% endresponsive_image_block %}
+                    <!--@formatter:on-->
+                </li>
+                {% for image in page.images %}
+                <li class="splide__slide">
+                    <img
+                            alt=""
+                            src="{{ image }}"
+                            class="h-full w-full max-h-[80vh] object-contain"
+                    />
+                    <!--            class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"-->
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <ul id="thumbnails" class="thumbnails mb-8">
+            <li class="thumbnail">
+                <!--@formatter:off-->
+                {% responsive_image_block %}
+                path: {{ page.image }}
+                class: "object-cover"
+                {% endresponsive_image_block %}
+                <!--@formatter:on-->
+            </li>
+            {% for image in page.images %}
+            <li class="thumbnail">
+                <img src="{{ image }}" alt="" class="object-cover"/>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Main carousel for the large image
-    const splide = new Splide(".splide", { pagination: false, gap: "16px" });
+    document.addEventListener("DOMContentLoaded", function () {
+        // Main carousel for the large image
+        const splide = new Splide(".splide", {pagination: false, gap: "16px"});
 
-    // Set up the smaller thumbnail images
-    const thumbnails = document.getElementsByClassName("thumbnail");
-    // Keeps the current thumbnail
-    let current;
+        // Set up the smaller thumbnail images
+        const thumbnails = document.getElementsByClassName("thumbnail");
+        // Keeps the current thumbnail
+        let current;
 
-    // If a thumbnail is clicked, go to that slide
-    for (let i = 0; i < thumbnails.length; i++) {
-      thumbnails[i].addEventListener("click", function () {
-        splide.go(i);
-      });
-    }
-
-    splide.on("mounted move", function () {
-      // Splide#index returns the latest slide index:
-      const thumbnail = thumbnails[splide.index];
-
-      if (thumbnail) {
-        if (current) {
-          current.classList.remove("is-active");
+        // If a thumbnail is clicked, go to that slide
+        for (let i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].addEventListener("click", function () {
+                splide.go(i);
+            });
         }
-        thumbnail.classList.add("is-active");
-        current = thumbnail;
-      }
-    });
 
-    splide.mount();
-  });
+        splide.on("mounted move", function () {
+            // Splide#index returns the latest slide index:
+            const thumbnail = thumbnails[splide.index];
+
+            if (thumbnail) {
+                if (current) {
+                    current.classList.remove("is-active");
+                }
+                thumbnail.classList.add("is-active");
+                current = thumbnail;
+            }
+        });
+
+        splide.mount();
+    });
 </script>
