@@ -1,6 +1,7 @@
 ---
 name: Pac-Man
-year: 1981
+year: 1980
+manufacturer: Namco
 image: assets/images/arcades/pac-man/pac-man.jpg
 images:
   - assets/images/arcades/pac-man/pac-man-closer.jpg

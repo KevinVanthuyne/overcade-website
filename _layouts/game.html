@@ -17,18 +17,23 @@ layout: default
         </div>
         <div class="h-full p-8 md:p-12 lg:px-16 lg:py-24">
             <div class="mx-auto max-w-xl">
-                <div class="font-semibold text-indigo-700 md:text-lg mb-2">{{ page.year }}</div>
+                <div class="font-semibold text-indigo-700 md:text-lg my-2 text-center sm:text-left">
+                    {{ page.manufacturer }}
+                </div>
                 <h2
                         class="text-2xl font-bold text-gray-900 md:text-3xl text-center sm:text-left"
                 >
                     {{ page.name }}
                 </h2>
+                <div class="font-semibold text-indigo-700 md:text-lg mt-4 mb-2 text-center sm:text-left">
+                    {{ page.year }}
+                </div>
 
                 <section class="mt-6 text-gray-500 game-content">{{ content }}</section>
 
                 <div class="mt-4 md:mt-8 flex justify-center md:justify-start">
                     <a
-                            href="#"
+                            href="/contact.html"
                             class="rounded bg-indigo-700 px-12 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-indigo-500 border hover:border-indigo-500 focus:outline-none focus:ring focus:ring-yellow-400"
                     >
                         Bestellen
