@@ -4,7 +4,7 @@
             <div class="flex-1 md:flex md:items-center md:gap-12">
                 <a class="block" href="/">
                     <span class="sr-only">Home</span>
-                    <div class="w-52">
+                    <div class="w-40">
                         {% include logo/overcade-logo-with-text.svg %}
                     </div>
                 </a>
@@ -13,7 +13,7 @@
             <div class="md:flex md:items-center md:gap-12">
                 <!-- Menu -->
                 <nav id="menu" aria-label="Global" class="hidden md:block">
-                    <ul class="gap-6 text-lg md:text-sm pb-8 md:pb-0 font-medium text-sky-500">
+                    <ul class="gap-6 text-lg md:text-base pb-8 md:pb-0 font-medium text-sky-500 mt-8 md:mt-0">
                         {% for item in site.data.navigation %}
                             <li>
                                 <a href="{{ item.link }}"{% if page.url == item.link %} class="current-link text-red-500 transition hover:opacity-75"{% endif %}>{{ item.name }}</a>
