@@ -1,7 +1,7 @@
 <div class="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
 
 {% if game.preview != true %}
-    <a href="{{ game.url }}" class="relative group flex flex-col h-full">
+    <a href="{{ game.url }}" class="relative group flex flex-col max-h-[90vh]">
         {% else %}
         <div class="relative group flex flex-col h-full">
             {% endif %}
@@ -19,14 +19,12 @@
         Binnenkort
         </span>
             {% endif %}
-            <div class=" {% if game.preview %}opacity-50{% endif %}">
-                <!--@formatter:off-->
+            <!--@formatter:off-->
             {% responsive_image_block %}
             path: {{ game.image }}
-            class: "h-100 w-full rounded-tr-3xl object-cover transition duration-500 group-hover:scale-105 -z-10 flex-grow p-5"
+            class: "min-w-0 min-h-0 w-full h-auto rounded-tr-3xl object-contain transition duration-500 group-hover:scale-105 -z-10 px-5 md:p-5 {% if game.preview %}opacity-50{% endif %}"
             {% endresponsive_image_block %}
             <!--@formatter:on-->
-            </div>
 
             <div class="p-4 text-center">
                 <strong class="text-xl font-medium text-gray-900">{{ game.name }}</strong>

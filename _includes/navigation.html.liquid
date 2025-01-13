@@ -13,10 +13,10 @@
             <div class="md:flex md:items-center md:gap-12">
                 <!-- Menu -->
                 <nav id="menu" aria-label="Global" class="hidden md:block">
-                    <ul class="gap-6 text-lg md:text-sm pb-8 md:pb-0">
+                    <ul class="gap-6 text-lg md:text-sm pb-8 md:pb-0 font-medium text-sky-500">
                         {% for item in site.data.navigation %}
                             <li>
-                                <a href="{{ item.link }}"{% if page.url == item.link %} class="current-link text-gray-500 transition hover:text-gray-500/75"{% endif %}>{{ item.name }}</a>
+                                <a href="{{ item.link }}"{% if page.url == item.link %} class="current-link text-red-500 transition hover:opacity-75"{% endif %}>{{ item.name }}</a>
                             </li>
                         {% endfor %}
                     </ul>

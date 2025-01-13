@@ -20,8 +20,8 @@
             </svg>
         </a>
     </div>
-    <div class="overflow-y-auto">
-
+    <div>
+        <!-- Carousel for mobile -->
         <section class="md:hidden splide">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -36,6 +36,7 @@
             </div>
         </section>
 
+        <!-- 3 games for desktop -->
         <div class="hidden md:grid grid-cols-1 gap-4 sm:grid-cols-3 sm:items-stretch md:grid-cols-3 md:gap-8">
             {% for game in site.games %}
                 {% if game.showOnHomepage %}
