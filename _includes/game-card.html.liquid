@@ -22,7 +22,7 @@
             <!--@formatter:off-->
             {% responsive_image_block %}
             path: {{ game.image }}
-            class: "min-w-0 min-h-0 w-full h-auto rounded-tr-3xl object-contain transition duration-500 group-hover:scale-105 -z-10 px-5 md:p-5 {% if game.preview %}opacity-50{% endif %}"
+            class: "flex-grow min-w-0 min-h-0 w-full h-auto rounded-tr-3xl object-contain transition duration-500 group-hover:scale-105 -z-10 px-5 md:p-5 {% if game.preview %}opacity-50{% endif %}"
             {% endresponsive_image_block %}
             <!--@formatter:on-->
 
@@ -32,13 +32,12 @@
                 <div class="mt-2 text-pretty text-gray-500">
                     {{ game.tagline | markdownify }}
                 </div>
-                {% if game.preview != true %}
-                    <span
-                            class="mt-4 block rounded-md border border-sky-500 bg-sky-500 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-sky-500"
-                    >
+
+                <span
+                        class="{% if game.preview == true %}invisible{% endif %} mt-4 block rounded-md border border-sky-500 bg-sky-500 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-sky-500"
+                >
               Meer info
             </span>
-                {% endif %}
             </div>
             {% if game.preview != true %}
     </a>
