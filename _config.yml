@@ -12,6 +12,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      image: /assets/images/logo/overcade-logo-with-text.png # image for social sharing preview
 
 plugins:
   - jekyll-sitemap
@@ -37,3 +38,16 @@ responsive_image:
     - width: 2000
   extra_images:
     - assets/images/pac-man-in-office.JPG
+
+# SEO
+title: Overcade
+tagline: Arcadeverhuur
+description: Verhuur van authentieke arcadekasten voor op kantoor
+locale: nl_BE
+logo: /assets/images/logo/overcade-logo-with-text.png
+social:
+  name: Overcade
+  links:
+    - https://www.facebook.com/overcade
+    - https://www.instagram.com/overcade.be
+
