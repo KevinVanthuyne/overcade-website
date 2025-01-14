@@ -7,17 +7,21 @@ images:
   - assets/images/arcades/frogger/frogger-side.jpg
   - assets/images/arcades/frogger/frogger-screen.jpg
   - assets/images/arcades/frogger/frogger-dark.jpg
-tagline: Gekend door iedereen!
+tagline: Tijdloze uitdaging voor iedereen.
 showOnHomepage: true
 ---
 
-Een van de meest iconische en geliefde arcadespellen aller tijden. Frogger wordt algemeen beschouwd als een klassieker
-die de tand des tijds heeft doorstaan.
+Frogger is een tijdloze klassieker uit het gouden tijdperk van de arcadespellen. Het is een iconisch spel dat nog steeds
+geliefd is bij spelers van alle leeftijden.
 
-In dit spel moet je een kikker begeleiden over een drukke weg en een
-verraderlijke rivier om zijn thuis te bereiken. De gameplay vereist snelle reflexen en strategische planning om
-obstakels te vermijden en het doel te bereiken.
+In dit spel moet je een kikker begeleiden over een drukke weg en een verraderlijke rivier om de overkant te bereiken.
+Wanneer alle 5 kikkers veilig aan de overkant zijn, ga je naar het volgende level. Ontwijk de auto's en krokodillen, en
+vermijd de duikende schildpadden. Pik onderweg de vrouwelijke kikker op of eet de vliegen op voor extra punten.
 
-Frogger was een van de eerste spellen met meerdere niveaus met
-toenemende moeilijkheidsgraad, wat spelers motiveerde om steeds terug te komen. Het spel werd ontwikkeld door Konami en
-uitgebracht door Sega in 1981. Het succes leidde tot talloze vervolgen en aanpassingen op verschillende platforms.
+Frogger kreeg de dubieuze eer van het arcadespel met de meeste manieren om te sterven. Met maar liefst 9 manieren om het
+loodje te leggen, is het spel een hele uitdaging. Frogger verscheen ook in de populaire tv-serie Seinfeld, waar een
+volledige episode aan het spel was gewijd.
+
+Het spel werd ontwikkeld door Konami en uitgebracht door Sega in 1981. In de VS kwam de arcade op de markt via
+Sega/Gremlin.
+Het succes leidde tot talloze vervolgen en aanpassingen op verschillende platforms.
