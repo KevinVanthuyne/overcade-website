@@ -2,11 +2,11 @@
 name: Lethal Enforcers II
 year: 1994
 manufacturer: Konami
-image: assets/images/arcades/frogger/frogger.jpg
+image: assets/images/arcades/lethal-enforcers-ii/le2.jpg
 images:
-  - assets/images/arcades/frogger/frogger-side.jpg
-  - assets/images/arcades/frogger/frogger-screen.jpg
-  - assets/images/arcades/frogger/frogger-dark.jpg
+  - assets/images/arcades/lethal-enforcers-ii/le2-lightgun.jpg
+  - assets/images/arcades/lethal-enforcers-ii/le2-in-game.png
+  - assets/images/arcades/lethal-enforcers-ii/le2-bank.png
 tagline: Duelleren in het Wilde Westen
 ---
 
