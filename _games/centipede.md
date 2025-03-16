@@ -14,13 +14,12 @@ preview: true
 Een arcade-icoon met een twist! Centipede is een unieke mix van strategie en snelle reflexen die elke speler op de proef
 stelt.
 
-In dit spel bestuur je een kleine kanon dat zich onderaan het scherm bevindt. Jouw missie? Een slangachtige duizendpoot
-vernietigen die zich door een veld vol paddenstoelen kronkelt. Elke keer dat je een segment raakt, splitst de
+In dit spel bestuur je een klein kanon dat zich onderaan het scherm bevindt. Jouw missie bestaat eruit een duizendpoot
+vernietigen te die zich door een veld vol paddenstoelen kronkelt. Elke keer dat je een segment raakt, splitst de
 duizendpoot zich op en beweegt hij sneller. Maar pas op: spinnen, vlooien en schorpioenen maken het je extra lastig
-terwijl
-ze door het veld bewegen.
+terwijl ze door het veld bewegen.
 
-Centipede wordt geprezen om zijn eenvoudige maar verslavende gameplay. De unieke trackball-besturing zorgde voor een
+Centipede wordt geprezen om zijn eenvoudige maar verslavende gameplay. De unieke trackball-besturing zorgt voor een
 vloeiende en nauwkeurige manier om het kanon te bedienen. Het was ook een van de eerste arcadespellen die populair werd
 bij zowel mannelijke als vrouwelijke spelers.
 
