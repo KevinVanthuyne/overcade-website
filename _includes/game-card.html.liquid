@@ -1,7 +1,7 @@
 <div class="divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
 
 {% if game.preview != true %}
-    <a href="{{ game.url }}" class="relative group flex flex-col max-h-[90vh]">
+    <a href="{{ game.url }}" class="relative group flex flex-col justify-end-end h-full max-h-[90vh]">
         {% else %}
         <div class="relative group flex flex-col h-full">
             {% endif %}
@@ -26,7 +26,7 @@
             {% endresponsive_image_block %}
             <!--@formatter:on-->
 
-            <div class="p-4 text-center">
+            <div class="p-4 text-center ">
                 <strong class="text-xl font-medium text-gray-900">{{ game.name }}</strong>
 
                 <div class="mt-2 text-pretty text-gray-500">
