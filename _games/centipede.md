@@ -2,7 +2,7 @@
 name: Centipede
 year: 1980
 manufacturer: Atari
-image: assets/images/arcades/centipede/centipede-placeholder.jpg
+image: assets/images/arcades/centipede/centipede.jpg
 #images:
 #  - assets/images/arcades/frogger/frogger-side.jpg
 #  - assets/images/arcades/frogger/frogger-screen.jpg
