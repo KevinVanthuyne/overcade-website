@@ -9,7 +9,8 @@ images:
   - assets/images/pinballs/aiq/aiq-disc.jpg
   - assets/images/pinballs/aiq/aiq-thanos.jpg
   - assets/images/pinballs/aiq/aiq-tower.jpg
-tagline: Bemachtig de Infinity Stones en versla Thanos
+tagline: Bemachtig de Infinity Stones
+showOnHomepage: true
 ---
 
 Een moderne flipperkast met een knaller van een thema: de bekende Avengers superhelden uit de stripboeken, series en

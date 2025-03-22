@@ -8,7 +8,6 @@ images:
   - assets/images/arcades/frogger/frogger-screen.jpg
   - assets/images/arcades/frogger/frogger-dark.jpg
 tagline: Tijdloze uitdaging voor iedereen
-showOnHomepage: true
 ---
 
 Frogger is een tijdloze klassieker uit het gouden tijdperk van de arcadespellen. Het is een iconisch spel dat nog steeds
