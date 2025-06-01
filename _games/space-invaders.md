@@ -4,7 +4,7 @@ year: 1978
 manufacturer: Taito
 image: assets/images/arcades/space-invaders/space-invaders.jpg
 tagline: De arcade waarmee alles begon
-showOnHomepage: true
+showOnHomepage: false
 images:
   - assets/images/arcades/space-invaders/si-control-panel.jpg
   - assets/images/arcades/space-invaders/si-front-dark.jpg
