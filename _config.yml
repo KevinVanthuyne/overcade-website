@@ -26,6 +26,7 @@ postcss:
 responsive_image:
   template: _includes/responsive-image.html.liquid
   save_to_source: false
+  default_quality: 65
   sizes:
     - width: 80
     - width: 160
@@ -36,6 +37,7 @@ responsive_image:
     - width: 1200
     - width: 1500
     - width: 2000
+    - width: 2500
   extra_images:
     - assets/images/pac-man-in-office.JPG
 
