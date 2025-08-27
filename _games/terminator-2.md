@@ -11,7 +11,7 @@ images:
   - assets/images/arcades/terminator-2/t2-game-1.jpg
   - assets/images/arcades/terminator-2/t2-game-2.jpg
   - assets/images/arcades/terminator-2/t2-game-3.jpg
-
+order: 3
 ---
 
 Klaar om het op te nemen tegen Skynet? Red de mensheid met een arcade die recht uit de befaamde

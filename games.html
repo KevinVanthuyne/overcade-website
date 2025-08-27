@@ -15,7 +15,7 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
 
         <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <!--@formatter:off-->
-            {% assign sortedGames = site.games | sort: 'preview' %}
+            {% assign sortedGames = site.games | sort: 'order', 'last' %}
             {% for game in sortedGames %}
             <!--@formatter:on-->
             <li class="flex">{% include game-card.html.liquid %}</li>

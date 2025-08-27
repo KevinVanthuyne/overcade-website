@@ -11,6 +11,7 @@ images:
   - assets/images/pinballs/aiq/aiq-tower.jpg
 tagline: Bemachtig de Infinity Stones
 showOnHomepage: true
+order: 2
 ---
 
 Een moderne flipperkast met een knaller van een thema: de bekende Avengers superhelden uit de stripboeken, series en

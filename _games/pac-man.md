@@ -9,6 +9,7 @@ images:
 featured: true
 showOnHomepage: true
 tagline: De ultieme all-time klassieker
+order: 1
 ---
 
 Misschien wel de ultieme arcadeklassieker. Pac-Man wordt algemeen beschouwd als een van de meest

@@ -10,6 +10,7 @@ images:
   - assets/images/arcades/space-invaders/si-front-dark.jpg
   - assets/images/arcades/space-invaders/si-inside.jpg
   - assets/images/arcades/space-invaders/si-side.jpg
+order: 4
 ---
 
 Een van de meest iconische en invloedrijke arcadespellen aller tijden. Space Invaders wordt algemeen beschouwd als een
