@@ -1,5 +1,5 @@
 {% comment %}
-Render your responsive images using <img srcset>, with the largest resized image used as a fallback.
+Render your responsive images using lazysizes.js
 
 Usage:
 
@@ -14,5 +14,11 @@ Usage:
     {% endfor %}
 {% endcapture %}
 
-<img src="/{{ largest.path }}" alt="{{ alt }}" class="{{ class }}"
-     srcset="{{ srcset | strip_newlines }} /{{ path }} {{ original.width }}w">
+<!-- responsive example with automatic sizes calculation: -->
+<img
+        alt="{{ alt }}"
+        data-sizes="auto"
+        data-src="/{{ largest.path }}"
+        data-srcset="{{ srcset | strip_newlines }} /{{ path }} {{ original.width }}w"
+        class="lazyload {{ class }}"
+/>
