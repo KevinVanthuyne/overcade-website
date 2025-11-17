@@ -2,6 +2,7 @@
 name: Terminator 2
 year: 1991
 manufacturer: Midway
+category: arcade
 image: assets/images/arcades/terminator-2/t2-cabinet.jpg
 tagline: Herbeleef de actiefilm
 showOnHomepage: true

@@ -2,6 +2,7 @@
 name: Spider-Man
 year: 2007
 manufacturer: Stern Pinball
+category: flipperkast
 image: assets/images/pinballs/sm/sm-cabinet.jpg
 images:
   - assets/images/pinballs/sm/sm-front.jpg
@@ -10,7 +11,7 @@ images:
   - assets/images/pinballs/sm/sm-playfield-back.jpg
   - assets/images/pinballs/sm/sm-doc-ock.jpg
   - assets/images/pinballs/sm/sm-backglass.jpg
-tagline: Schiet jouw webben uit
+tagline: Schiet jouw webben
 showOnHomepage: false
 #order: 2
 ---

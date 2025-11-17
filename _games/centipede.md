@@ -2,6 +2,7 @@
 name: Centipede
 year: 1980
 manufacturer: Atari
+category: arcade
 image: assets/images/arcades/centipede/centipede.jpg
 images:
   - assets/images/arcades/centipede/centipede-screen-dark.jpg

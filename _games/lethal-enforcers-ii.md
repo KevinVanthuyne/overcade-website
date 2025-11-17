@@ -2,6 +2,7 @@
 name: Lethal Enforcers II
 year: 1994
 manufacturer: Konami
+category: arcade
 image: assets/images/arcades/lethal-enforcers-ii/le2.jpg
 images:
   - assets/images/arcades/lethal-enforcers-ii/le2-lightgun.jpg

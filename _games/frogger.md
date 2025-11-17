@@ -2,6 +2,7 @@
 name: Frogger
 year: 1981
 manufacturer: Konami
+category: arcade
 image: assets/images/arcades/frogger/frogger.jpg
 images:
   - assets/images/arcades/frogger/frogger-side.jpg

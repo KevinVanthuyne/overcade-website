@@ -2,6 +2,7 @@
 name: Pac-Man
 year: 1980
 manufacturer: Namco
+category: arcade
 image: assets/images/arcades/pac-man/pac-man.jpg
 images:
   - assets/images/arcades/pac-man/pac-man-closer.jpg

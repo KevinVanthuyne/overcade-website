@@ -2,6 +2,7 @@
 name: "Avengers: Infinity Quest (Pro)"
 year: 2020
 manufacturer: Stern Pinball
+category: flipperkast
 image: assets/images/pinballs/aiq/aiq-side.jpg
 images:
   - assets/images/pinballs/aiq/aiq-front.jpg

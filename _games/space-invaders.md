@@ -2,6 +2,7 @@
 name: Space Invaders
 year: 1978
 manufacturer: Taito
+category: arcade
 image: assets/images/arcades/space-invaders/space-invaders.jpg
 tagline: De arcade waarmee alles begon
 showOnHomepage: false

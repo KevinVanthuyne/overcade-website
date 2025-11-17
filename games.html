@@ -13,13 +13,83 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
             Het volledige aanbod van arcades en flipperkasten. 100% origineel, uniek in België.
         </p>
 
+        <!-- Filter Buttons -->
+        <div class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button class="filter-btn px-4 py-2 rounded-lg font-medium transition-colors bg-sky-500 text-white"
+                    data-category="all">
+                Alle
+            </button>
+            {% assign categories = site.games | map: 'category' | uniq | sort %}
+            {% for category in categories %}
+            {% if category %}
+            <button class="filter-btn px-4 py-2 rounded-lg font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 capitalize"
+                    data-category="{{ category }}">
+                {{ category }}
+            </button>
+            {% endif %}
+            {% endfor %}
+        </div>
+
         <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <!--@formatter:off-->
             {% assign sortedGames = site.games | sort: 'order', 'last' %}
             {% for game in sortedGames %}
             <!--@formatter:on-->
-            <li class="flex">{% include game-card.html.liquid %}</li>
+            <li class="flex game-item" data-category="{{ game.category }}">{% include game-card.html.liquid %}</li>
             {% endfor %}
         </ul>
     </div>
 </section>
+
+<script>
+    // Get all filter buttons and game items
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const gameItems = document.querySelectorAll('.game-item');
+
+    // Function to filter games
+    function filterGames(category) {
+        gameItems.forEach(item => {
+            const itemCategory = item.getAttribute('data-category');
+            if (category === 'all' || itemCategory === category) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        // Update active button styling
+        filterBtns.forEach(btn => {
+            if (btn.getAttribute('data-category') === category) {
+                btn.classList.remove('bg-gray-100', 'text-gray-700');
+                btn.classList.add('bg-sky-500', 'text-white');
+            } else {
+                btn.classList.remove('bg-sky-500', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
+            }
+        });
+    }
+
+    // Add click event listeners to buttons
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.getAttribute('data-category');
+            filterGames(category);
+
+            // Update URL without reload
+            const url = new URL(window.location);
+            if (category === 'all') {
+                url.searchParams.delete('category');
+            } else {
+                url.searchParams.set('category', category);
+            }
+            window.history.pushState({}, '', url);
+        });
+    });
+
+    // Filter on page load if URL has category parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category');
+    if (initialCategory) {
+        filterGames(initialCategory);
+    }
+</script>
