@@ -60,11 +60,11 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
         // Update active button styling
         filterBtns.forEach(btn => {
             if (btn.getAttribute('data-category') === category) {
-                btn.classList.remove('bg-gray-100', 'text-gray-700');
+                btn.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
                 btn.classList.add('bg-sky-500', 'text-white');
             } else {
                 btn.classList.remove('bg-sky-500', 'text-white');
-                btn.classList.add('bg-gray-100', 'text-gray-700');
+                btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
             }
         });
     }
@@ -74,6 +74,9 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
         btn.addEventListener('click', () => {
             const category = btn.getAttribute('data-category');
             filterGames(category);
+
+            // Remove focus to prevent stuck hover states on mobile
+            btn.blur();
 
             // Update URL without reload
             const url = new URL(window.location);
