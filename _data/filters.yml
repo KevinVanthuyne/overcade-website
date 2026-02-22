@@ -1,0 +1,27 @@
+- id: category
+  label: Categorie
+  values:
+    - id: arcade
+      label: Arcade
+    - id: flipperkast
+      label: Flipperkast
+
+- id: multiplayer
+  label: Spelers
+  values:
+    - id: 2-player-simultaneous
+      label: 2 Spelers simultaan
+    - id: 2-player-turn-based
+      label: 2 Spelers om beurt
+    - id: 4-player-turn-based
+      label: 4 Spelers om beurt
+
+- id: force_feedback
+  label: Force Feedback
+  values:
+    - id: yes
+      label: Ja
+    - id: no
+      label: Nee
+    - id: none
+      label: Nvt
