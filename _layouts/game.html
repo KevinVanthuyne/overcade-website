@@ -21,7 +21,7 @@ layout: default
                     {{ page.manufacturer }}
                 </div>
                 <h2
-                        class="text-2xl font-bold text-gray-900 md:text-3xl text-center sm:text-left"
+                  class="text-2xl font-bold text-gray-900 md:text-3xl text-center sm:text-left"
                 >
                     {{ page.name }}
                 </h2>
@@ -33,12 +33,46 @@ layout: default
 
                 <div class="mt-8 flex justify-center md:justify-start">
                     <a
-                            href="/contact.html"
-                            class="rounded bg-red-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-red-500 border border-red-500 focus:outline-none focus:ring focus:ring-red-500"
+                      href="/contact.html"
+                      class="rounded bg-red-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-red-500 border border-red-500 focus:outline-none focus:ring focus:ring-red-500"
                     >
                         Bestellen
                     </a>
                 </div>
+
+              {% assign has_properties = false %}
+              {% for filter in site.data.filters %}
+              {% if filter.id != 'category' %}
+              {% assign filter_value = page[filter.id] %}
+              {% if filter_value %}
+              {% assign has_properties = true %}
+              {% break %}
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+
+              {% if has_properties %}
+              <section class="mt-12 border-t border-gray-200 pt-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Eigenschappen</h3>
+                <dl class="space-y-2 text-sm">
+                  {% for filter in site.data.filters %}
+                  {% if filter.id != 'category' %}
+                  {% assign filter_value = page[filter.id] %}
+                  {% if filter_value %}
+                  {% for value in filter.values %}
+                  {% if value.id == filter_value %}
+                  <div class="flex">
+                    <dt class="font-medium text-gray-700 w-40">{{ filter.label }}:</dt>
+                    <dd class="text-gray-600">{{ value.label }}</dd>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                  {% endif %}
+                  {% endif %}
+                  {% endfor %}
+                </dl>
+              </section>
+              {% endif %}
             </div>
         </div>
     </div>
