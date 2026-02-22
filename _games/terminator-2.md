@@ -13,6 +13,10 @@ images:
   - assets/images/arcades/terminator-2/t2-game-2.jpg
   - assets/images/arcades/terminator-2/t2-game-3.jpg
 order: 3
+
+# Filters
+multiplayer: 2-player-simultaneous
+force_feedback: yes
 ---
 
 Klaar om het op te nemen tegen Skynet? Red de mensheid met een arcade die recht uit de befaamde

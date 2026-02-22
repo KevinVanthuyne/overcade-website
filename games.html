@@ -4,95 +4,209 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
 ---
 
 <section>
-    <div
-            class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 text-center md:text-left"
-    >
-        <h2 class="text-2xl font-bold text-gray-900 sm:text-4xl">Aanbod</h2>
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <h2 class="text-2xl font-bold text-gray-900 sm:text-4xl text-center md:text-left">Aanbod</h2>
 
-        <p class="mt-4 text-gray-500 sm:text-lg/relaxed">
+        <p class="mt-4 text-gray-500 sm:text-lg/relaxed text-center md:text-left">
             Het volledige aanbod van arcades en flipperkasten. 100% origineel, uniek in België.
         </p>
 
-        <!-- Filter Buttons -->
-        <div class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start">
-            <button class="filter-btn px-4 py-2 rounded-lg font-medium transition-colors bg-sky-500 text-white"
-                    data-category="all">
-                Alle
-            </button>
-            {% assign categories = site.games | map: 'category' | uniq | sort %}
-            {% for category in categories %}
-            {% if category %}
-            <button class="filter-btn px-4 py-2 rounded-md font-medium transition-colors bg-gray-100 text-gray-700 hover:bg-gray-200 capitalize"
-                    data-category="{{ category }}">
-                {{ category }}
-            </button>
-            {% endif %}
-            {% endfor %}
-        </div>
+        <!-- Responsive Layout with Sidebar and Grid -->
+        <div class="mt-8 flex flex-col lg:flex-row gap-8">
+            <!-- Left Sidebar - Filters -->
+            <aside class="lg:w-64 flex-shrink-0">
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-4">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Filters</h3>
 
-        <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <!--@formatter:off-->
-            {% assign sortedGames = site.games | sort: 'order', 'last' %}
-            {% for game in sortedGames %}
-            <!--@formatter:on-->
-            <li class="flex game-item" data-category="{{ game.category }}">{% include game-card.html.liquid %}</li>
-            {% endfor %}
-        </ul>
+                    <!-- Clear All Filters Button -->
+                    <button id="clear-filters"
+                            class="w-full mb-4 px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">
+                        Wis alle filters
+                    </button>
+
+                    <!-- Dynamic Filters from _data/filters.yml -->
+                    {% for filter in site.data.filters %}
+                    <div class="filter-group mb-6 pb-6 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+                        <h4 class="font-medium text-gray-900 mb-3">{{ filter.label }}</h4>
+                        <div class="space-y-2">
+                            {% for value in filter.values %}
+                            <label class="flex items-center cursor-pointer group">
+                                <input type="checkbox"
+                                       class="filter-checkbox w-4 h-4 text-sky-500 border-gray-300 rounded focus:ring-sky-500 focus:ring-2 cursor-pointer"
+                                       data-filter="{{ filter.id }}"
+                                       data-value="{{ value.id }}">
+                                <span class="ml-2 text-sm text-gray-700 group-hover:text-gray-900">{{ value.label }}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </aside>
+
+            <!-- Right Side - Games Grid -->
+            <div class="flex-1">
+                <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <!--@formatter:off-->
+                    {% assign sortedGames = site.games | sort: 'order', 'last' %}
+                    {% for game in sortedGames %}
+                    <!--@formatter:on-->
+                    <li class="flex game-item"
+                        {% for filter in site.data.filters %}
+                        data-{{ filter.id }}="{{ game[filter.id] }}"
+                        {% endfor %}>
+                        {% include game-card.html.liquid %}
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <!-- No Results Message -->
+                <div id="no-results" class="hidden text-center py-12">
+                    <p class="text-gray-500 text-lg">Geen spellen gevonden met de geselecteerde filters.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <script>
-    // Get all filter buttons and game items
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    // Dynamic Multi-Filter System
+    const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
     const gameItems = document.querySelectorAll('.game-item');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+    const noResultsMsg = document.getElementById('no-results');
 
-    // Function to filter games
-    function filterGames(category) {
+    // Store active filters: { filterId: Set of active values }
+    const activeFilters = {};
+
+    // Initialize active filters structure dynamically from checkboxes
+    function initializeFilters() {
+        filterCheckboxes.forEach(checkbox => {
+            const filterId = checkbox.getAttribute('data-filter');
+            if (!activeFilters[filterId]) {
+                activeFilters[filterId] = new Set();
+            }
+        });
+    }
+
+    // Filter games based on all active filters
+    function filterGames() {
+        let visibleCount = 0;
+
         gameItems.forEach(item => {
-            const itemCategory = item.getAttribute('data-category');
-            if (category === 'all' || itemCategory === category) {
+            let shouldShow = true;
+
+            // Check each filter type
+            for (const [filterId, activeValues] of Object.entries(activeFilters)) {
+                // Skip if no values are selected for this filter
+                if (activeValues.size === 0) continue;
+
+                // Get the game's value for this filter
+                const gameValue = item.getAttribute(`data-${filterId}`);
+
+                // Game must match at least one of the selected values (OR logic within filter)
+                if (!activeValues.has(gameValue)) {
+                    shouldShow = false;
+                    break; // AND logic between different filters
+                }
+            }
+
+            // Show or hide the game item
+            if (shouldShow) {
                 item.style.display = 'flex';
+                visibleCount++;
             } else {
                 item.style.display = 'none';
             }
         });
 
-        // Update active button styling
-        filterBtns.forEach(btn => {
-            if (btn.getAttribute('data-category') === category) {
-                btn.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
-                btn.classList.add('bg-sky-500', 'text-white');
-            } else {
-                btn.classList.remove('bg-sky-500', 'text-white');
-                btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
-            }
-        });
+        // Show/hide no results message
+        if (visibleCount === 0) {
+            noResultsMsg.classList.remove('hidden');
+        } else {
+            noResultsMsg.classList.add('hidden');
+        }
+
+        // Update URL with all active filters
+        updateURL();
     }
 
-    // Add click event listeners to buttons
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const category = btn.getAttribute('data-category');
-            filterGames(category);
+    // Update URL parameters with current filter state
+    function updateURL() {
+        const url = new URL(window.location);
 
-            // Remove focus to prevent stuck hover states on mobile
-            btn.blur();
+        // Clear all existing filter parameters
+        for (const filterId in activeFilters) {
+            url.searchParams.delete(filterId);
+        }
 
-            // Update URL without reload
-            const url = new URL(window.location);
-            if (category === 'all') {
-                url.searchParams.delete('category');
-            } else {
-                url.searchParams.set('category', category);
+        // Add active filters to URL
+        for (const [filterId, activeValues] of Object.entries(activeFilters)) {
+            if (activeValues.size > 0) {
+                url.searchParams.set(filterId, Array.from(activeValues).join(','));
             }
-            window.history.pushState({}, '', url);
+        }
+
+        // Update URL without reload
+        window.history.pushState({}, '', url);
+    }
+
+    // Restore filter state from URL parameters
+    function restoreFiltersFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        urlParams.forEach((value, filterId) => {
+            if (activeFilters[filterId]) {
+                const values = value.split(',');
+                values.forEach(val => {
+                    activeFilters[filterId].add(val);
+
+                    // Check the corresponding checkbox
+                    const checkbox = document.querySelector(
+                        `.filter-checkbox[data-filter="${filterId}"][data-value="${val}"]`
+                    );
+                    if (checkbox) {
+                        checkbox.checked = true;
+                    }
+                });
+            }
+        });
+
+        filterGames();
+    }
+
+    // Add event listeners to all checkboxes
+    filterCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const filterId = checkbox.getAttribute('data-filter');
+            const value = checkbox.getAttribute('data-value');
+
+            if (checkbox.checked) {
+                activeFilters[filterId].add(value);
+            } else {
+                activeFilters[filterId].delete(value);
+            }
+
+            filterGames();
         });
     });
 
-    // Filter on page load if URL has category parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialCategory = urlParams.get('category');
-    if (initialCategory) {
-        filterGames(initialCategory);
-    }
+    // Clear all filters button
+    clearFiltersBtn.addEventListener('click', () => {
+        // Uncheck all checkboxes
+        filterCheckboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        // Clear active filters
+        for (const filterId in activeFilters) {
+            activeFilters[filterId].clear();
+        }
+
+        filterGames();
+    });
+
+    // Initialize on page load
+    initializeFilters();
+    restoreFiltersFromURL();
 </script>

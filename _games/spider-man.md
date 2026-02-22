@@ -14,6 +14,10 @@ images:
 tagline: Schiet jouw webben
 showOnHomepage: false
 #order: 2
+
+# Filters
+multiplayer: 4-player-turn-based
+force_feedback: none
 ---
 
 Duik in de wereld van de befaamde superheld Spider-Man met vloeiende gameplay en duidelijke doelen. Een ideaal spel voor

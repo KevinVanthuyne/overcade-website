@@ -10,8 +10,12 @@ images:
   - assets/images/arcades/after-burner/after-burner-screen.jpg
   - assets/images/arcades/after-burner/after-burner-instructions.jpg
   - assets/images/arcades/after-burner/after-burner-throttle.jpg
-tagline: Beman een F-14
+tagline: Klaar om op te stijgen
 #order: 1
+
+# Filters 
+multiplayer: 2-player-turn-based
+force_feedback: yes
 ---
 
 Een explosieve arcade-ervaring vol snelheid en spektakel. After Burner is pure adrenaline en laat niemand onberoerd.

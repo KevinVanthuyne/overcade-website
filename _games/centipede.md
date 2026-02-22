@@ -10,6 +10,10 @@ images:
   - assets/images/arcades/centipede/centipede-control-panel.jpg
   - assets/images/arcades/centipede/centipede-trackball.jpg
 tagline: Kleurrijke trackball-actie
+
+# Filters
+multiplayer: 2-player-turn-based
+force_feedback: no
 ---
 
 Een arcade-icoon met een twist! Centipede is een unieke mix van strategie en snelle reflexen, bestuurd door een

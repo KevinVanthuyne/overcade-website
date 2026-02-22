@@ -9,6 +9,10 @@ images:
   - assets/images/arcades/lethal-enforcers-ii/le2-in-game.png
   - assets/images/arcades/lethal-enforcers-ii/le2-bank.png
 tagline: Duelleren in het Wilde Westen
+
+# Filters
+multiplayer: 2-player-simultaneous
+force_feedback: no
 ---
 
 De ultieme schietervaring in het Wilde Westen! Lethal Enforcers 2 brengt het revolverduel naar de arcade.
