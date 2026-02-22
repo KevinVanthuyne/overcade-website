@@ -17,6 +17,8 @@ order: 3
 # Filters
 multiplayer: 2-player-simultaneous
 force_feedback: yes
+controls: light-gun
+genre: shooter
 ---
 
 Klaar om het op te nemen tegen Skynet? Red de mensheid met een arcade die recht uit de befaamde

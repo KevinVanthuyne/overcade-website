@@ -13,9 +13,11 @@ images:
 tagline: Klaar om op te stijgen
 #order: 1
 
-# Filters 
+# Filters
 multiplayer: 2-player-turn-based
 force_feedback: yes
+controls: flight-stick
+genre: classic
 ---
 
 Een explosieve arcade-ervaring vol snelheid en spektakel. After Burner is pure adrenaline en laat niemand onberoerd.

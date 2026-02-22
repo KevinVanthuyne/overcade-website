@@ -28,3 +28,31 @@
       label: Nee
     - id: none
       label: Nvt
+
+- id: controls
+  label: Besturing
+  tooltip: Het type besturingselementen
+  values:
+    - id: joystick
+      label: Joystick & knoppen
+    - id: flight-stick
+      label: Flight Stick
+#    - id: steering-wheel
+#      label: Stuur
+    - id: trackball
+      label: Trackball
+#    - id: spinner
+#      label: Spinner
+    - id: light-gun
+      label: Geweer
+
+- id: genre
+  label: Genre
+  tooltip: Het type spel
+  values:
+    - id: classic
+      label: Klassieker
+    - id: shooter
+      label: Shooter
+    - id: pop-culture
+      label: Pop cultuur

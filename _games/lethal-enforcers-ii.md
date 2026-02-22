@@ -13,6 +13,8 @@ tagline: Duelleren in het Wilde Westen
 # Filters
 multiplayer: 2-player-simultaneous
 force_feedback: no
+controls: light-gun
+genre: shooter
 ---
 
 De ultieme schietervaring in het Wilde Westen! Lethal Enforcers 2 brengt het revolverduel naar de arcade.

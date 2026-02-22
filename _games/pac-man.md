@@ -15,6 +15,8 @@ order: 1
 # Filters
 multiplayer: 2-player-turn-based
 force_feedback: no
+controls: joystick
+genre: classic
 ---
 
 Misschien wel de ultieme arcadeklassieker. Pac-Man wordt algemeen beschouwd als een van de meest

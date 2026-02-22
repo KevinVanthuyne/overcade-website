@@ -16,6 +16,8 @@ order: 4
 # Filters
 multiplayer: 2-player-turn-based
 force_feedback: no
+controls: joystick
+genre: classic
 ---
 
 Een van de meest iconische en invloedrijke arcadespellen aller tijden. Space Invaders wordt algemeen beschouwd als een

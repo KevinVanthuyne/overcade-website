@@ -17,6 +17,8 @@ order: 2
 # Filters
 multiplayer: 4-player-turn-based
 force_feedback: none
+controls: joystick
+genre: pop-culture
 ---
 
 Een moderne flipperkast met een knaller van een thema: de bekende Avengers superhelden uit de stripboeken, series en

@@ -18,6 +18,8 @@ showOnHomepage: false
 # Filters
 multiplayer: 4-player-turn-based
 force_feedback: none
+controls: joystick
+genre: pop-culture
 ---
 
 Duik in de wereld van de befaamde superheld Spider-Man met vloeiende gameplay en duidelijke doelen. Een ideaal spel voor
