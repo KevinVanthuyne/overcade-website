@@ -1,5 +1,6 @@
 - id: category
   label: Categorie
+  tooltip: Het type spelautomaat
   values:
     - id: arcade
       label: Arcade
@@ -8,6 +9,7 @@
 
 - id: multiplayer
   label: Spelers
+  tooltip: Hoeveel spelers kunnen tegelijk of om beurt spelen
   values:
     - id: 2-player-simultaneous
       label: 2 Spelers simultaan
@@ -18,6 +20,7 @@
 
 - id: force_feedback
   label: Force Feedback
+  tooltip: Of het spel terugslag of trillingen heeft in de bedieningselementen
   values:
     - id: yes
       label: Ja

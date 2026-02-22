@@ -15,8 +15,18 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
         <div class="mt-8 flex flex-col lg:flex-row gap-8">
             <!-- Left Sidebar - Filters -->
             <aside class="lg:w-64 flex-shrink-0">
-                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-4">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Filters</h3>
+                <!-- Mobile: Collapsible Filter Button -->
+                <button id="mobile-filter-toggle"
+                        class="lg:hidden w-full mb-4 px-4 py-3 text-left font-semibold text-gray-900 bg-white rounded-lg shadow-sm border border-gray-200 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                    <span>Filters</span>
+                    <svg id="filter-chevron" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Filter Panel (collapsible on mobile) -->
+                <div id="filter-panel" class="hidden lg:block bg-white rounded-lg shadow-sm border border-gray-200 p-6 lg:sticky lg:top-4">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 hidden lg:block">Filters</h3>
 
                     <!-- Clear All Filters Button -->
                     <button id="clear-filters"
@@ -27,7 +37,20 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
                     <!-- Dynamic Filters from _data/filters.yml -->
                     {% for filter in site.data.filters %}
                     <div class="filter-group mb-6 pb-6 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
-                        <h4 class="font-medium text-gray-900 mb-3">{{ filter.label }}</h4>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h4 class="font-medium text-gray-900">{{ filter.label }}</h4>
+                            {% if filter.tooltip %}
+                            <div class="relative group">
+                                <button type="button" class="tooltip-trigger w-4 h-4 rounded-full bg-gray-300 text-white text-xs flex items-center justify-center hover:bg-gray-400 transition-colors cursor-help">
+                                    ?
+                                </button>
+                                <div class="tooltip-content absolute left-6 top-0 w-48 p-2 bg-gray-900 text-white text-xs rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 pointer-events-none">
+                                    {{ filter.tooltip }}
+                                    <div class="absolute top-2 -left-1 w-2 h-2 bg-gray-900 transform rotate-45"></div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
                         <div class="space-y-2">
                             {% for value in filter.values %}
                             <label class="flex items-center cursor-pointer group">
@@ -46,7 +69,7 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
 
             <!-- Right Side - Games Grid -->
             <div class="flex-1">
-                <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     <!--@formatter:off-->
                     {% assign sortedGames = site.games | sort: 'order', 'last' %}
                     {% for game in sortedGames %}
@@ -204,6 +227,25 @@ description: Het volledige aanbod van arcades en flipperkasten. 100% origineel, 
         }
 
         filterGames();
+    });
+
+    // Mobile filter toggle functionality
+    const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+    const filterPanel = document.getElementById('filter-panel');
+    const filterChevron = document.getElementById('filter-chevron');
+
+    mobileFilterToggle.addEventListener('click', () => {
+        const isHidden = filterPanel.classList.contains('hidden');
+
+        if (isHidden) {
+            // Show the filter panel
+            filterPanel.classList.remove('hidden');
+            filterChevron.classList.add('rotate-180');
+        } else {
+            // Hide the filter panel
+            filterPanel.classList.add('hidden');
+            filterChevron.classList.remove('rotate-180');
+        }
     });
 
     // Initialize on page load
