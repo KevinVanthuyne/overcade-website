@@ -44,7 +44,7 @@ layout: default
               {% for filter in site.data.filters %}
               {% if filter.id != 'category' %}
               {% assign filter_value = page[filter.id] %}
-              {% if filter_value %}
+              {% if filter_value != nil and filter_value != '' %}
               {% assign has_properties = true %}
               {% break %}
               {% endif %}
@@ -58,7 +58,7 @@ layout: default
                   {% for filter in site.data.filters %}
                   {% if filter.id != 'category' %}
                   {% assign filter_value = page[filter.id] %}
-                  {% if filter_value %}
+                  {% if filter_value != nil and filter_value != '' %}
                   {% for value in filter.values %}
                   {% if value.id == filter_value %}
                   <div class="flex">
