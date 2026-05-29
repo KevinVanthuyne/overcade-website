@@ -36,6 +36,9 @@ jobs:
       - name: Install node dependencies
         run: npm ci
 
+      - name: Install ImageMagick
+        run: sudo apt-get install -y imagemagick libmagickwand-dev
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.206.0
         with:
