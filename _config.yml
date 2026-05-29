@@ -23,6 +23,9 @@ plugins:
 postcss:
   cache: false
 
+keep_files:
+  - assets/resized
+
 responsive_image:
   template: _includes/responsive-image.html.liquid
   save_to_source: false
