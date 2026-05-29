@@ -26,12 +26,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install node dependencies
         run: npm ci
@@ -40,14 +40,14 @@ jobs:
         run: sudo apt-get install -y imagemagick libmagickwand-dev
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1.206.0
+        uses: ruby/setup-ruby@v1.292.0
         with:
           ruby-version: '3.2' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
       - name: Cache generated responsive images
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: _site/assets/resized
           key: responsive-images-${{ hashFiles('assets/images/**') }}
@@ -70,7 +70,7 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: jekyll-build
           path: ./_site/
@@ -80,13 +80,13 @@ jobs:
     needs: build
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: jekyll-build
           path: ./_site/
 
       - name: Deploy over FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER_URL }}
           username: ${{ secrets.FTP_USERNAME }}
