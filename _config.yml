@@ -15,20 +15,34 @@ defaults:
       image: "/assets/images/logo/overcade-logo-with-text.png" # image for social sharing preview
 
 plugins:
-  - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-postcss-v2
   - jekyll-responsive-image
+  - jekyll-polyglot
 
 postcss:
   cache: false
+
+# Build tooling that should not end up on the server
+exclude:
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+  - node_modules
 
 keep_files:
   - assets/resized
 
 responsive_image:
   template: _includes/responsive-image.html.liquid
-  save_to_source: false
+  # Resized images are written next to the sources so that every language pass
+  # of the build reuses them instead of regenerating the whole set.
+  save_to_source: true
   default_quality: 65
   sizes:
     - width: 80
@@ -44,6 +58,30 @@ responsive_image:
   extra_images:
     - assets/images/pac-man-in-office.JPG
 
+# Languages
+languages: ["nl", "en"]
+default_lang: "nl"
+# These live at the site root only. Listing them here stops Polyglot from
+# copying them into /en/ and from prefixing links to them with the language.
+exclude_from_localization:
+  - assets
+  - maker-faire-25-give-away
+  - robots.txt
+  - sitemap.xml
+  - site.webmanifest
+  - favicon.ico
+  - favicon-16x16.png
+  - favicon-32x32.png
+  - apple-touch-icon.png
+  - android-chrome-192x192.png
+  - android-chrome-512x512.png
+# Building the languages in parallel forks the process, which is unsupported on
+# Windows and lets the image and PostCSS pipelines write over each other.
+parallel_localization: false
+
+# Fail the build instead of only warning when a translation is missing.
+i18n_strict: false
+
 # SEO
 title: Overcade arcadeverhuur
 tagline: Authentiek arcadeverhuur
@@ -56,4 +94,3 @@ social:
   links:
     - https://www.facebook.com/overcade
     - https://www.instagram.com/overcade.be
-

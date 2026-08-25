@@ -63,6 +63,8 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-polyglot (1.14.0)
+      jekyll (>= 4.0, >= 3.0)
     jekyll-postcss-v2 (1.0.2)
     jekyll-responsive-image (1.6.0)
       jekyll (>= 2.0, < 5.0)
@@ -71,8 +73,6 @@ GEM
       sass-embedded (~> 1.54)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
-    jekyll-sitemap (1.4.0)
-      jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.5.1)
@@ -179,10 +179,10 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-polyglot
   jekyll-postcss-v2
   jekyll-responsive-image
   jekyll-seo-tag
-  jekyll-sitemap
 
 BUNDLED WITH
    2.6.2

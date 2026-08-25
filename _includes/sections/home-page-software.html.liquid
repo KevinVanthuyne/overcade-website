@@ -3,16 +3,14 @@
         <div class="mx-auto max-w-xl text-center sm:text-left">
 
             <h2 class="text-3xl font-extrabold sm:text-5xl">
-                <strong class="block font-extrabold text-sky-500">Online scorebord</strong>
+                <strong class="block font-extrabold text-sky-500">{{ site.data.t.home.software.eyebrow }}</strong>
             </h2>
             <span class="text-2xl font-bold text-gray-900 md:text-3xl mt-2">
-                Voor extra competitie
+                {{ site.data.t.home.software.title }}
             </span>
 
             <p class="text-gray-500 mt-6 sm:text-xl/relaxed">
-                Bij onze arcades en flipperkasten krijg je een online scorebord.
-                Zo kan iedereen de strijd aangaan met elkaar om de ultieme highscore te behalen.
-                Optioneel met een fysiek scherm en trofee.
+                {{ site.data.t.home.software.body }}
             </p>
 
             <div class="mt-8">
@@ -22,7 +20,7 @@
                         transition hover:bg-transparent hover:text-red-500 focus:outline-none
                         focus:ring focus:ring-red-500"
                 >
-                    Meer info
+                    {{ site.data.t.common.more_info }}
                 </a>
             </div>
         </div>
@@ -31,6 +29,6 @@
     <div
             class="sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] overflow-hidden"
     >
-        {% responsive_image path: assets/images/pac-man-and-screen-hor.jpg alt: "Pac-Man arcade met scherm ernaast waar de high scores op staan" class: "h-full w-full object-cover" %}
+        {% responsive_image path: assets/images/pac-man-and-screen-hor.jpg alt: "{{ site.data.t.home.software.image_alt }}" class: "h-full w-full object-cover" %}
     </div>
 </section>

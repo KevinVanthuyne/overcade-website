@@ -57,18 +57,21 @@ npx prettier --write "**/*.scss"
 
 ### Content Structure
 
-**Collections (`_games/`)**: Arcade game entries as Markdown files with YAML frontmatter. Each game has:
+**Collections (`_games/<lang>/`)**: Arcade game entries as Markdown files with YAML frontmatter, one subfolder per language. Each game has:
 - Metadata: `name`, `year`, `manufacturer`, `category`
 - Images: `image` (primary) and `images` (gallery)
 - Display options: `featured`, `showOnHomepage`, `order`
 - Filters: `multiplayer`, `force_feedback`, `controls`, `genre`
 - Description: Markdown body content
+- Translation: `lang` and an explicit `permalink`, so `_games/nl/pac-man.md` and `_games/en/pac-man.md` both serve `/games/pac-man.html` (English under `/en/`)
 
 **Static Pages**: `index.html`, `games.html`, `about.html`, `contact.html`, `leaderboard.html` — contain main content with Liquid template includes.
 
 **Layouts** (`_layouts/`):
 - `default.html`: Main layout with navigation, footer, and SEO tags
 - `game.html`: Layout for individual arcade game pages (inherits from default)
+
+**Data** (`_data/<lang>/`): Per-language `t.yml` (interface and page copy, read as `{{ site.data.t.<key> }}`), `navigation.yml` and `filters.yml`. Polyglot merges the active language over the default one, so a missing key falls back to Dutch.
 
 **Includes** (`_includes/`):
 - `sections/`: Home page sections (banner, features, plans, contact, games overview)
@@ -77,6 +80,7 @@ npx prettier --write "**/*.scss"
 - `navigation.html.liquid`, `footer.html.liquid`: Global UI components
 - `game-card.html.liquid`, `plan-card.html.liquid`, `feature-card.html.liquid`: Reusable card components
 - `responsive-image.html.liquid`: Image rendering with multiple sizes
+- `language-switcher.html.liquid`, `language-alternates.html.liquid`: Flag dropdown in the navigation bar and the `hreflang` tags
 
 ### Styling
 
@@ -108,14 +112,15 @@ Jekyll's responsive-image plugin generates multiple image sizes (80px to 2500px 
 - Title, description, URL, locale (nl_BE for Dutch/Belgium)
 - Social media links (Facebook, Instagram)
 - Default preview image for social sharing
-- Sitemap auto-generation
+
+The site title, description and locale are swapped per language by `_plugins/i18n_page_metadata.rb`; per-page titles come from an `en:` block in the page's front matter. `sitemap.xml` is a source file rather than `jekyll-sitemap` output, because the plugin only ever sees one language at a time.
 
 ## Key Dependencies
 
 **Ruby/Bundler**:
 - `jekyll`: Static site generator
-- `jekyll-sitemap`: Auto-generates sitemap.xml
 - `jekyll-seo-tag`: SEO meta tags and structured data
+- `jekyll-polyglot`: Builds the site once per language
 - `jekyll-postcss-v2`: Integrates PostCSS build into Jekyll
 - `jekyll-responsive-image`: Multi-size responsive images (requires ImageMagick)
 
@@ -130,9 +135,10 @@ Jekyll's responsive-image plugin generates multiple image sizes (80px to 2500px 
 
 ## Important Details
 
-- **Language**: Dutch (nl_BE locale) — content and UI in Dutch
+- **Languages**: Dutch (`nl_BE`, at the site root) and English (`en_GB`, under `/en/`). Every build lists the translations that are still missing; `i18n_strict: true` turns that into a build failure
+- **Untranslated content**: falls back to Dutch instead of 404ing, so pages can be translated one at a time
 - **Deployment**: Manual — copy `_site/` contents to server after production build
 - **Image Optimization**: ImageMagick must be installed and in PATH; missing it breaks responsive image generation
 - **Live Reload**: Only works in development; requires `--livereload` flag
 - **Production CSS**: Only minified when `JEKYLL_ENV=production` is set
-- **Responsive Images**: Processed at build time; don't edit images in `_site/` — they'll be overwritten on next build
+- **Responsive Images**: Processed at build time into `assets/resized/` (gitignored) so that both language passes reuse the same files instead of regenerating them

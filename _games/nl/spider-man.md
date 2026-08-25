@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/spider-man.html
 name: Spider-Man
 year: 2007
 manufacturer: Stern Pinball

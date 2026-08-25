@@ -1,0 +1,65 @@
+{%- comment -%}
+  Pages listed in exclude_from_localization only exist in the default language,
+  so offering a translation would link to a page that was never built.
+{%- endcomment -%}
+{%- assign localised = true -%}
+{%- for excluded in site.exclude_from_localization -%}
+  {%- if page.path contains excluded -%}{%- assign localised = false -%}{%- endif -%}
+{%- endfor -%}
+{% if localised %}
+<div class="relative" id="language-switcher">
+    <button id="language-toggle" type="button"
+            class="flex items-center gap-2 rounded border border-gray-200 px-2 py-1.5 text-gray-700 transition hover:bg-gray-50">
+        <span class="sr-only">{{ site.data.t.language.label }}</span>
+        {% assign active_flag = 'icons/flags/' | append: site.active_lang | append: '.svg' %}
+        <span class="block h-4 w-6 overflow-hidden rounded-sm">{% include {{ active_flag }} %}</span>
+        <span class="text-sm font-medium uppercase">{{ site.active_lang }}</span>
+        <svg class="size-4 transition-transform" id="language-chevron" fill="none" stroke="currentColor"
+             viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+    </button>
+
+    <ul id="language-menu"
+        class="hidden absolute right-0 z-50 mt-2 w-44 overflow-hidden rounded border border-gray-200 bg-white py-1 shadow-lg">
+        {% for lang in site.languages %}
+            {% if lang == site.default_lang %}
+                {% assign language_url = page.url %}
+            {% else %}
+                {% assign language_url = page.url | prepend: lang | prepend: '/' %}
+            {% endif %}
+            {% assign flag = 'icons/flags/' | append: lang | append: '.svg' %}
+            <li>
+                <!-- static_href keeps Polyglot from prefixing these with the language that is already active -->
+                <a {% static_href %}href="{{ language_url }}"{% endstatic_href %}
+                   class="flex items-center gap-3 px-3 py-2 text-sm transition hover:bg-gray-50 {% if lang == site.active_lang %}font-semibold text-sky-500{% else %}text-gray-700{% endif %}">
+                    <span class="block h-4 w-6 flex-shrink-0 overflow-hidden rounded-sm">{% include {{ flag }} %}</span>
+                    <span>{{ site.data[lang].t.language.name }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<script>
+    (() => {
+        const switcher = document.getElementById('language-switcher');
+        const toggle = document.getElementById('language-toggle');
+        const menu = document.getElementById('language-menu');
+        const chevron = document.getElementById('language-chevron');
+
+        toggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            menu.classList.toggle('hidden');
+            chevron.classList.toggle('rotate-180');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!switcher.contains(event.target)) {
+                menu.classList.add('hidden');
+                chevron.classList.remove('rotate-180');
+            }
+        });
+    })();
+</script>
+{% endif %}

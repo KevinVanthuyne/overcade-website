@@ -1,6 +1,9 @@
 ---
 title: Scorebord
 description: Online applicatie om scores in te zenden en de onderlinge competitie aan te wakkeren.
+en:
+  title: Scoreboard
+  description: Online application to submit scores and fuel the competition between players.
 ---
 
 <section>
@@ -10,13 +13,12 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
     <div class="w-full">
       <div class="max-w-xl text-center mx-auto">
         <span class="font-semibold text-sky-500 sm:text-xl mb-2">
-          Meer competitie
+          {{ site.data.t.leaderboard.hero.eyebrow }}
         </span>
-        <h2 class="text-2xl font-bold sm:text-5xl/tight">Online highscores</h2>
+        <h2 class="text-2xl font-bold sm:text-5xl/tight">{{ site.data.t.leaderboard.hero.title }}</h2>
 
         <p class="mt-4 mb-24 sm:text-xl/relaxed text-gray-500">
-          Een applicatie om scores in te zenden en de onderlinge competitie aan
-          te wakkeren.
+          {{ site.data.t.leaderboard.hero.lead }}
         </p>
       </div>
 
@@ -24,8 +26,7 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
         class="relative rounded-2xl drop-shadow-xl md:drop-shadow-2xl overflow-hidden"
       >
         {% responsive_image path: assets/images/agon-leaderboard.png alt:
-        "Highscore website met de namen van spelers en hun scores voor Pac-Man"
-        %}
+        "{{ site.data.t.leaderboard.hero.image_alt }}" %}
       </div>
     </div>
   </div>
@@ -45,11 +46,10 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
         <div class="size-7 text-sky-500 mr-3">
           {% include icons/trophy_filled.svg %}
         </div>
-        <h3>Leaderboard</h3>
+        <h3>{{ site.data.t.leaderboard.usps.leaderboard.title }}</h3>
       </dt>
       <dd class="text-gray-500 leading-relaxed text-center md:text-left">
-        Een overzicht van elke speler en hun hoogste score, per locatie of
-        globaal. Altijd makkelijk online te raadplegen.
+        {{ site.data.t.leaderboard.usps.leaderboard.body }}
       </dd>
     </div>
 
@@ -60,11 +60,10 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
         <div class="size-6 text-sky-500 mr-3">
           {% include icons/info_filled.svg %}
         </div>
-        <h3>Meer interactie</h3>
+        <h3>{{ site.data.t.leaderboard.usps.interaction.title }}</h3>
       </dt>
       <dd class="text-center md:text-left text-gray-500 leading-relaxed">
-        Iedereen kan zijn scores inzenden en vergelijken met anderen. Promoot
-        het engagement en de competitiedrang.
+        {{ site.data.t.leaderboard.usps.interaction.body }}
       </dd>
     </div>
 
@@ -75,11 +74,10 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
         <div class="size-6 text-sky-500 mr-3">
           {% include icons/sparkly_cogwheel_filled.svg %}
         </div>
-        <h3>Op maat gemaakt</h3>
+        <h3>{{ site.data.t.leaderboard.usps.custom.title }}</h3>
       </dt>
       <dd class="text-center md:text-left text-gray-500 leading-relaxed">
-        De volledige applicatie is ontwikkeld door Overcade. Uniek binnen het
-        arcadeverhuur.
+        {{ site.data.t.leaderboard.usps.custom.body }}
       </dd>
     </div>
   </div>
@@ -91,22 +89,22 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
       <div
         class="rounded-r-2xl drop-shadow-xl md:drop-shadow-2xl overflow-hidden"
       >
-        {% responsive_image path: assets/images/agon-game-page.png alt: "Pac-Man
-        pagina op de high score website met informatie over de arcade" %}
+        {% responsive_image path: assets/images/agon-game-page.png alt:
+        "{{ site.data.t.leaderboard.detail.image_alt }}" %}
       </div>
     </div>
     <div class="flex items-center mt-16 md:mt-0">
       <div class="max-w-xl mx-auto px-8">
         <div class="text-center">
           <span class="font-semibold text-sky-500 sm:text-xl mb-2">
-            Duik dieper
+            {{ site.data.t.leaderboard.detail.eyebrow }}
           </span>
           <h2 class="text-2xl font-bold sm:text-4xl/tight">
-            Informatie over elke arcade & flipperkast
+            {{ site.data.t.leaderboard.detail.title }}
           </h2>
 
           <p class="mt-4 mb-8 sm:text-xl/relaxed text-gray-500">
-            Leer meer over de kast en wat deze speciaal maakt.
+            {{ site.data.t.leaderboard.detail.lead }}
           </p>
         </div>
 
@@ -115,11 +113,10 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
             <div class="size-6 text-sky-500 absolute left-0 top-1">
               {% include icons/history.svg %}
             </div>
-            <h3 class="inline">Geschiedenis.</h3>
+            <h3 class="inline">{{ site.data.t.leaderboard.detail.history.title }}</h3>
           </dt>
           <dd class="inline text-gray-500 leading-relaxed">
-            Wanneer werd het spel uitgebracht en door welke fabrikant. Wat is er
-            speciaal aan deze kast.
+            {{ site.data.t.leaderboard.detail.history.body }}
           </dd>
         </div>
 
@@ -128,11 +125,10 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
             <div class="size-6 text-sky-500 absolute left-0 top-1">
               {% include icons/question_filled.svg %}
             </div>
-            <h3 class="inline">Hoe spelen.</h3>
+            <h3 class="inline">{{ site.data.t.leaderboard.detail.how_to_play.title }}</h3>
           </dt>
           <dd class="inline text-gray-500 leading-relaxed">
-            Tips & tricks om het spel te spelen en hopelijk de hoogste score te
-            behalen.
+            {{ site.data.t.leaderboard.detail.how_to_play.body }}
           </dd>
         </div>
 
@@ -141,12 +137,10 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
             <div class="size-6 text-sky-500 absolute left-0 top-1">
               {% include icons/truck_filled.svg %}
             </div>
-            <h3 class="inline">Hoe kwam deze bij Overcade terecht.</h3>
+            <h3 class="inline">{{ site.data.t.leaderboard.detail.origin.title }}</h3>
           </dt>
           <dd class="inline text-gray-500 leading-relaxed">
-            Arcades en flippers hebben vaak een lang verleden achter de rug.
-            Waar komt de kast vandaan en wat is eraan gedaan om deze speelbaar
-            te maken.
+            {{ site.data.t.leaderboard.detail.origin.body }}
           </dd>
         </div>
       </div>
@@ -161,16 +155,14 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
     >
       <div class="text-center md:text-left">
         <span class="font-semibold text-sky-500 sm:text-xl mb-2">
-          Extra aanlokkelijk
+          {{ site.data.t.leaderboard.extras.eyebrow }}
         </span>
         <h2 class="text-3xl font-bold sm:text-4xl/tight">
-          Fysiek scherm & trofee
+          {{ site.data.t.leaderboard.extras.title }}
         </h2>
 
         <p class="mt-4 md:mb-8 sm:text-xl/relaxed text-gray-500">
-          Een scherm kan worden geplaatst om de online scores extra zichtbaar te
-          maken. Daarnaast kan er een trofee uitgereikt worden aan de speler met
-          de hoogste score.
+          {{ site.data.t.leaderboard.extras.body }}
         </p>
       </div>
     </div>
@@ -180,26 +172,25 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
           class="rounded-l-2xl md:rounded-2xl row-span-2 md:row-start-2 shadow-lg overflow-hidden"
         >
           {% responsive_image path: assets/images/pac-man-and-screen.jpg class:
-          "" alt: "Pac-Man arcadekast met een scherm ernaast waarop de
-          highscores staan" %}
+          "" alt: "{{ site.data.t.leaderboard.extras.image_alt_arcade_and_screen }}" %}
         </div>
         <div
           class="md:rounded-2xl row-span-2 shadow-lg hidden md:block overflow-hidden"
         >
-          {% responsive_image path: assets/images/screen.jpg alt: "Close-up van
-          het scherm met highscores, met daaronder een infobordje en trofee" %}
+          {% responsive_image path: assets/images/screen.jpg alt:
+          "{{ site.data.t.leaderboard.extras.image_alt_screen }}" %}
         </div>
         <div
           class="rounded-r-2xl md:rounded-2xl row-span-2 row-start-2 md:col-start-3 shadow-lg overflow-hidden"
         >
-          {% responsive_image path: assets/images/mini-arcade.jpg alt: "Close-up
-          de trofee: een klein plastic arcadekastje" %}
+          {% responsive_image path: assets/images/mini-arcade.jpg alt:
+          "{{ site.data.t.leaderboard.extras.image_alt_trophy }}" %}
         </div>
         <div
           class="rounded-l-2xl md:rounded-2xl row-span-2 row-start-3 shadow-lg overflow-hidden"
         >
-          {% responsive_image path: assets/images/screen-sign.jpg alt: "Close-up
-          van het infobord onder het scherm" %}
+          {% responsive_image path: assets/images/screen-sign.jpg alt:
+          "{{ site.data.t.leaderboard.extras.image_alt_sign }}" %}
         </div>
       </div>
     </div>
@@ -211,10 +202,10 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
     <div class="mx-auto max-w-4xl grid md:grid-cols-2 text-center md:text-left">
       <div>
         <h2 class="text-3xl font-bold text-gray-900 md:text-4xl col-span-2">
-          Competitie aangaan?
+          {{ site.data.t.leaderboard.cta.title }}
         </h2>
         <p class="mt-4 mb-8 sm:text-xl/relaxed text-gray-500">
-          Contacteer ons nu om te bestellen.
+          {{ site.data.t.leaderboard.cta.body }}
         </p>
       </div>
 
@@ -226,7 +217,7 @@ description: Online applicatie om scores in te zenden en de onderlinge competiti
             class="inline-flex items-center gap-2 rounded border border-red-500 bg-red-500 px-8 py-3 text-white hover:bg-transparent hover:text-red-500 focus:outline-none focus:ring active:text-red-500"
             href="/contact.html"
           >
-            <span class="text-sm font-medium"> Bestellen </span>
+            <span class="text-sm font-medium"> {{ site.data.t.common.order }} </span>
 
             <svg
               class="size-5 rtl:rotate-180"

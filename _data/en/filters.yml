@@ -1,0 +1,58 @@
+- id: category
+  label: Category
+  tooltip: The type of machine
+  values:
+    - id: arcade
+      label: Arcade
+    - id: flipperkast
+      label: Pinball
+
+- id: multiplayer
+  label: Players
+  tooltip: How many players can play at the same time or in turns
+  values:
+    - id: 2-player-simultaneous
+      label: 2 players simultaneously
+    - id: 2-player-turn-based
+      label: 2 players in turns
+    - id: 4-player-turn-based
+      label: 4 players in turns
+
+- id: force_feedback
+  label: Force feedback
+  tooltip: Whether the game has recoil or vibration in its controls
+  values:
+    - id: yes
+      label: "Yes"
+    - id: no
+      label: "No"
+    - id: none
+      label: N/A
+
+- id: controls
+  label: Controls
+  tooltip: The type of controls
+  values:
+    - id: joystick
+      label: Joystick & buttons
+    - id: flight-stick
+      label: Flight stick
+#    - id: steering-wheel
+#      label: Steering wheel
+    - id: trackball
+      label: Trackball
+#    - id: spinner
+#      label: Spinner
+    - id: light-gun
+      label: Light gun
+
+- id: genre
+  label: Genre
+  tooltip: The type of game
+  values:
+    - id: classic
+      label: Classic
+    - id: shooter
+      label: Shooter
+    - id: pop-culture
+      label: Pop culture

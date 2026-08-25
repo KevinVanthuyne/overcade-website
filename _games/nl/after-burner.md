@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/after-burner.html
 name: After Burner
 year: 1987
 manufacturer: Sega

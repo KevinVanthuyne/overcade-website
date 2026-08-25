@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/frogger.html
 name: Frogger
 year: 1981
 manufacturer: Konami

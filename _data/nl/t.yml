@@ -1,0 +1,195 @@
+site:
+  title: Overcade arcadeverhuur
+  tagline: Authentiek arcadeverhuur
+  description: Verhuur van authentieke arcadekasten voor thuis of op kantoor
+  locale: nl_BE
+
+language:
+  label: Taal
+  name: Nederlands
+
+common:
+  home: Home
+  order: Bestellen
+  contact_us: Contacteer ons
+  more_info: Meer info
+  full_range: Volledig aanbod
+  back_to_range: Terug naar aanbod
+  popular: Populair
+  coming_soon: Binnenkort
+  site_heading: Overcade authentiek arcadeverhuur
+
+home:
+  banner:
+    title: Uniek & authentiek
+    subtitle: Arcade & flipperkast verhuur
+    lead: Originele arcade- en flipperkasten uit het gouden tijdperk voor op kantoor, thuis of evenementen.
+    cta: Ontdek alle arcades
+  intro:
+    title_highlight: Ontspannen
+    title_rest: is belangrijk
+    body: >-
+      Een arcade- en flipperkast zorgt overal voor uniek plezier en nostalgie, op kantoor, thuis én
+      evenementen. Perfect voor ontspanning, een boost in sfeer en minder stress!
+  featured:
+    title: Uitgelicht aanbod
+  features:
+    eyebrow: Waarom Overcade
+    title: Kies voor zekerheid
+    lead: Één vaste prijs, alles inbegrepen. Geen verrassingen achteraf.
+    items:
+      - icon: icons/joystick.svg
+        title: Unieke nostalgische ontspanning
+        content: Minder stress, meer plezier door een unieke arcade-ervaring.
+      - icon: icons/construction.svg
+        title: Gratis onderhoud & levering
+        content: >-
+          Herstellingen, onderhoud en levering zitten in de prijs.
+          Geen zorgen dat iets kapot gaat en geen extra kosten achteraf.
+      # Alternatief: Mogelijkheid om af te wisselen met een nieuwe arcade om de
+      # zoveel tijd, thuis of op kantoor. Zo blijft er altijd iets nieuws te ontdekken.
+      - icon: icons/event-available.svg
+        title: Flexibel
+        content: >-
+          Een dag, een week, een maand huren of elke 3 maand een andere arcade of flipperkast?
+          Verschillende formules, alles is mogelijk.
+      - icon: icons/verified.svg
+        title: Authentieke arcades
+        content: >-
+          Enkel echte, originele arcade- en flipperkasten uit de jaren 80 en later.
+          Een uniek écht museumstuk, geen goedkope Chinese namaak.
+  software:
+    eyebrow: Online scorebord
+    title: Voor extra competitie
+    body: >-
+      Bij onze arcades en flipperkasten krijg je een online scorebord.
+      Zo kan iedereen de strijd aangaan met elkaar om de ultieme highscore te behalen.
+      Optioneel met een fysiek scherm en trofee.
+    image_alt: Pac-Man arcade met scherm ernaast waar de high scores op staan
+  contact:
+    title: Overtuigd om te huren?
+    body: Contacteer ons nu om te bestellen.
+
+games:
+  title: Aanbod
+  lead: Het volledige aanbod van arcades en flipperkasten. 100% origineel, uniek in België.
+  filters: Filters
+  clear_filters: Wis alle filters
+  no_results: Geen spellen gevonden met de geselecteerde filters.
+
+game:
+  properties: Eigenschappen
+
+about:
+  eyebrow: Over ons
+  title: De échte arcade weer bij het grotere publiek brengen
+  lead_line_1: Overcade staat voor authenticiteit en kwaliteit.
+  lead_line_2: Originele arcade- en flipperkasten, nergens anders te huur in België.
+  image_alt: Iemand speelt al lachend op de Pac-Man arcade
+  mission:
+    title: Onze missie
+    body_1: >-
+      Overcade gelooft in de unieke ervaring die een echte arcade- en
+      flipperkast biedt. De nostalgie van de jaren 80 en 90, de fysieke
+      gameplay en de authentieke uitstraling zorgen voor een bijzondere
+      beleving op kantoor, thuis of evenementen.
+    body_2: >-
+      Met Overcade willen we onze passie voor arcades en flippers delen met
+      een breder publiek. We bieden een unieke bron van ontspanning, een
+      boost in sfeer en minder stress.
+    body_3: >-
+      Niets is zo teleurstellend als de goedkope namaak-arcadekasten die
+      massaal (en vaak illegaal) in China worden geproduceerd. Deze kasten
+      bevatten moderne schermen waarop retrographics totaal niet tot hun
+      recht komen. De kwaliteit laat te wensen over door het gebruik van
+      goedkope knoppen, joysticks en voedingen.
+    body_4: >-
+      Daarom kiezen wij ervoor om uitsluitend originele arcades en
+      flipperkasten te verhuren. We restaureren de kasten volledig zelf en
+      garanderen 100% authenticiteit door gebruik te maken van originele
+      onderdelen en originele beeldbuizen.
+  stats:
+    arcades: Arcades in ons aanbod
+    pinball: Flipperkasten in ons aanbod
+    projects: Projecten in opslag
+  owner:
+    image_alt: Portretfoto van de eigenaar, Kevin Vanthuyne
+    title: Hallo, ik ben Kevin Vanthuyne 👋
+    body_1: >-
+      Al vele jaren ben ik gepassioneerd door retro gaming en
+      elektronica. Door het maken van allerlei projecten ben ik
+      uiteindelijk beland in de wereld van arcades en flipperkasten.
+    body_2: >-
+      Ondertussen verzamel ik al een hele tijd arcades en
+      flipperkasten, teveel om zowel aan te werken als overal op te
+      spelen. Zo kwam ik op het idee om mijn passie met een breder
+      publiek te delen en meer mensen te laten genieten van deze
+      prachtige machines.
+
+contact:
+  title: Contact
+  lead_line_1: Heb je vragen of wil je graag een arcade- of flipperkast huren?
+  lead_line_2: Neem dan gerust contact op via deze gegevens.
+  details: Contactgegevens
+  address: Adres
+  company: Onderneming
+
+leaderboard:
+  hero:
+    eyebrow: Meer competitie
+    title: Online highscores
+    lead: Een applicatie om scores in te zenden en de onderlinge competitie aan te wakkeren.
+    image_alt: Highscore website met de namen van spelers en hun scores voor Pac-Man
+  usps:
+    leaderboard:
+      title: Leaderboard
+      body: >-
+        Een overzicht van elke speler en hun hoogste score, per locatie of
+        globaal. Altijd makkelijk online te raadplegen.
+    interaction:
+      title: Meer interactie
+      body: >-
+        Iedereen kan zijn scores inzenden en vergelijken met anderen. Promoot
+        het engagement en de competitiedrang.
+    custom:
+      title: Op maat gemaakt
+      body: De volledige applicatie is ontwikkeld door Overcade. Uniek binnen het arcadeverhuur.
+  detail:
+    eyebrow: Duik dieper
+    title: Informatie over elke arcade & flipperkast
+    lead: Leer meer over de kast en wat deze speciaal maakt.
+    image_alt: Pac-Man pagina op de high score website met informatie over de arcade
+    history:
+      title: Geschiedenis.
+      body: Wanneer werd het spel uitgebracht en door welke fabrikant. Wat is er speciaal aan deze kast.
+    how_to_play:
+      title: Hoe spelen.
+      body: Tips & tricks om het spel te spelen en hopelijk de hoogste score te behalen.
+    origin:
+      title: Hoe kwam deze bij Overcade terecht.
+      body: >-
+        Arcades en flippers hebben vaak een lang verleden achter de rug.
+        Waar komt de kast vandaan en wat is eraan gedaan om deze speelbaar te maken.
+  extras:
+    eyebrow: Extra aanlokkelijk
+    title: Fysiek scherm & trofee
+    body: >-
+      Een scherm kan worden geplaatst om de online scores extra zichtbaar te
+      maken. Daarnaast kan er een trofee uitgereikt worden aan de speler met
+      de hoogste score.
+    image_alt_arcade_and_screen: Pac-Man arcadekast met een scherm ernaast waarop de highscores staan
+    image_alt_screen: Close-up van het scherm met highscores, met daaronder een infobordje en trofee
+    image_alt_trophy: Close-up de trofee, een klein plastic arcadekastje
+    image_alt_sign: Close-up van het infobord onder het scherm
+  cta:
+    title: Competitie aangaan?
+    body: Contacteer ons nu om te bestellen.
+
+footer:
+  contact: Contact
+  details: Gegevens
+  links: Links
+  legal: Juridisch
+  terms: Algemene voorwaarden
+  copyright: © 2024 Overcade. Alle rechten voorbehouden
+  part_of: Overcade is onderdeel van Ovelon BV

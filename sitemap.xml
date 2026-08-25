@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+{%- comment -%}
+Replaces jekyll-sitemap, which cannot see Polyglot's language prefixes: it only
+knows the URLs of the language currently being built, so it produced a copy of
+the Dutch sitemap under /en/. This lists every page in every language, with the
+xhtml:link alternates Google expects for a multilingual site. It is listed in
+exclude_from_localization so it is only written once, at the site root.
+{%- endcomment -%}
+{%- assign html_pages = site.pages | where_exp: "item", "item.sitemap != false" | where_exp: "item", "item.name contains '.html'" -%}
+{%- assign documents = site.games | where_exp: "item", "item.sitemap != false" -%}
+{%- assign entries = html_pages | concat: documents -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for entry in entries -%}
+  {%- for lang in site.languages %}
+  <url>
+    {%- if lang == site.default_lang %}
+    <loc>{{ site.url }}{{ entry.url }}</loc>
+    {%- else %}
+    <loc>{{ site.url }}/{{ lang }}{{ entry.url }}</loc>
+    {%- endif -%}
+    {%- for alternate in site.languages %}
+      {%- if alternate == site.default_lang %}
+    <xhtml:link rel="alternate" hreflang="{{ alternate }}" href="{{ site.url }}{{ entry.url }}" />
+      {%- else %}
+    <xhtml:link rel="alternate" hreflang="{{ alternate }}" href="{{ site.url }}/{{ alternate }}{{ entry.url }}" />
+      {%- endif -%}
+    {%- endfor %}
+  </url>
+  {%- endfor -%}
+{%- endfor -%}
+{%- for file in site.static_files -%}
+  {%- if file.extname == '.pdf' %}
+  <url>
+    <loc>{{ site.url }}{{ file.path }}</loc>
+  </url>
+  {%- endif -%}
+{%- endfor %}
+</urlset>

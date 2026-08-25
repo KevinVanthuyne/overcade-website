@@ -1,0 +1,189 @@
+site:
+  title: Overcade arcade rental
+  tagline: Authentic arcade rental
+  description: Rental of authentic arcade machines for your home or office
+  locale: en_GB
+
+language:
+  label: Language
+  name: English
+
+common:
+  home: Home
+  order: Order
+  contact_us: Contact us
+  more_info: More info
+  full_range: Full range
+  back_to_range: Back to the range
+  popular: Popular
+  coming_soon: Coming soon
+  site_heading: Overcade authentic arcade rental
+
+home:
+  banner:
+    title: Unique & authentic
+    subtitle: Arcade & pinball rental
+    lead: Original arcade and pinball machines from the golden age, for the office, your home or events.
+    cta: Discover all arcades
+  intro:
+    title_highlight: Unwinding
+    title_rest: matters
+    body: >-
+      An arcade or pinball machine brings unique fun and nostalgia wherever it goes: at the office,
+      at home and at events. Perfect for relaxing, a better atmosphere and less stress!
+  featured:
+    title: Featured machines
+  features:
+    eyebrow: Why Overcade
+    title: Choose certainty
+    lead: One fixed price, everything included. No surprises afterwards.
+    items:
+      - icon: icons/joystick.svg
+        title: Unique nostalgic downtime
+        content: Less stress, more fun through a one-of-a-kind arcade experience.
+      - icon: icons/construction.svg
+        title: Free maintenance & delivery
+        content: >-
+          Repairs, maintenance and delivery are part of the price.
+          No worries about something breaking and no extra costs afterwards.
+      - icon: icons/event-available.svg
+        title: Flexible
+        content: >-
+          Rent for a day, a week or a month, or swap for a different arcade or pinball machine every 3 months?
+          Different formulas, anything is possible.
+      - icon: icons/verified.svg
+        title: Authentic arcades
+        content: >-
+          Only real, original arcade and pinball machines from the 1980s onwards.
+          A genuine museum piece, not a cheap Chinese imitation.
+  software:
+    eyebrow: Online scoreboard
+    title: For extra competition
+    body: >-
+      Every arcade and pinball machine comes with an online scoreboard.
+      That way everyone can battle it out for the ultimate high score.
+      Optionally with a physical screen and trophy.
+    image_alt: Pac-Man arcade with a screen next to it showing the high scores
+  contact:
+    title: Ready to rent?
+    body: Get in touch to place your order.
+
+games:
+  title: Our range
+  lead: The complete range of arcade and pinball machines. 100% original, unique in Belgium.
+  filters: Filters
+  clear_filters: Clear all filters
+  no_results: No games found with the selected filters.
+
+game:
+  properties: Specifications
+
+about:
+  eyebrow: About us
+  title: Bringing the real arcade back to a wider audience
+  lead_line_1: Overcade stands for authenticity and quality.
+  lead_line_2: Original arcade and pinball machines, available nowhere else in Belgium.
+  image_alt: Someone laughing while playing the Pac-Man arcade
+  mission:
+    title: Our mission
+    body_1: >-
+      Overcade believes in the unique experience a real arcade or pinball
+      machine offers. The nostalgia of the 80s and 90s, the physical
+      gameplay and the authentic looks make for a special experience at the
+      office, at home or at events.
+    body_2: >-
+      With Overcade we want to share our passion for arcades and pinball
+      machines with a wider audience. We offer a unique source of relaxation,
+      a better atmosphere and less stress.
+    body_3: >-
+      Nothing is as disappointing as the cheap imitation arcade cabinets
+      produced en masse (and often illegally) in China. These cabinets use
+      modern screens on which retro graphics never look right, and the
+      quality suffers from cheap buttons, joysticks and power supplies.
+    body_4: >-
+      That is why we only rent out original arcade and pinball machines. We
+      restore every cabinet ourselves and guarantee 100% authenticity by
+      using original parts and original picture tubes.
+  stats:
+    arcades: Arcades in our range
+    pinball: Pinball machines in our range
+    projects: Projects in storage
+  owner:
+    image_alt: Portrait of the owner, Kevin Vanthuyne
+    title: Hi, I'm Kevin Vanthuyne 👋
+    body_1: >-
+      I have been passionate about retro gaming and electronics for many
+      years. Building all kinds of projects eventually landed me in the
+      world of arcade and pinball machines.
+    body_2: >-
+      By now I have been collecting arcades and pinball machines for quite
+      a while, too many to both work on and play everywhere. That is how I
+      got the idea to share my passion with a wider audience and let more
+      people enjoy these beautiful machines.
+
+contact:
+  title: Contact
+  lead_line_1: Do you have questions, or would you like to rent an arcade or pinball machine?
+  lead_line_2: Feel free to get in touch using the details below.
+  details: Contact details
+  address: Address
+  company: Company
+
+leaderboard:
+  hero:
+    eyebrow: More competition
+    title: Online high scores
+    lead: An application to submit scores and fuel the competition between players.
+    image_alt: High score website showing player names and their scores for Pac-Man
+  usps:
+    leaderboard:
+      title: Leaderboard
+      body: >-
+        An overview of every player and their highest score, per location or
+        globally. Always easy to check online.
+    interaction:
+      title: More interaction
+      body: >-
+        Everyone can submit their scores and compare them with others. It
+        drives engagement and the urge to compete.
+    custom:
+      title: Custom built
+      body: The entire application was developed by Overcade. Unique within arcade rental.
+  detail:
+    eyebrow: Dive deeper
+    title: Information about every arcade & pinball machine
+    lead: Learn more about the machine and what makes it special.
+    image_alt: Pac-Man page on the high score website with information about the arcade
+    history:
+      title: History.
+      body: When was the game released and by which manufacturer. What makes this machine special.
+    how_to_play:
+      title: How to play.
+      body: Tips & tricks to play the game and hopefully reach the highest score.
+    origin:
+      title: How it ended up at Overcade.
+      body: >-
+        Arcade and pinball machines often have a long history behind them.
+        Where does the machine come from and what was done to make it playable again.
+  extras:
+    eyebrow: Extra appeal
+    title: Physical screen & trophy
+    body: >-
+      A screen can be placed to make the online scores extra visible. On top
+      of that, a trophy can be awarded to the player with the highest score.
+    image_alt_arcade_and_screen: Pac-Man arcade cabinet with a screen next to it showing the high scores
+    image_alt_screen: Close-up of the screen with high scores, with an info sign and trophy below it
+    image_alt_trophy: Close-up of the trophy, a small plastic arcade cabinet
+    image_alt_sign: Close-up of the info sign below the screen
+  cta:
+    title: Up for the competition?
+    body: Get in touch to place your order.
+
+footer:
+  contact: Contact
+  details: Details
+  links: Links
+  legal: Legal
+  terms: Terms and conditions
+  copyright: © 2024 Overcade. All rights reserved
+  part_of: Overcade is part of Ovelon BV

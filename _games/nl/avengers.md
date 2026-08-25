@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/avengers.html
 name: "Avengers: Infinity Quest (Pro)"
 year: 2020
 manufacturer: Stern Pinball

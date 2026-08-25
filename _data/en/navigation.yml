@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Arcades
+  link: /games.html
+- name: About
+  link: /about.html
+- name: Scoreboard
+  link: /leaderboard.html
+- name: Contact
+  link: /contact.html

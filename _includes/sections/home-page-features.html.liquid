@@ -5,44 +5,25 @@
 
         <div class="relative mx-auto max-w-5xl text-center">
             <h2 class="text-sky-500 my-3 flex items-center justify-center font-semibold md:text-xl/relaxed tracking-wider">
-                Waarom Overcade
+                {{ site.data.t.home.features.eyebrow }}
             </h2>
             <span class="block w-full text-gray-900 font-bold text-3xl sm:text-4xl">
-                Kies voor zekerheid
+                {{ site.data.t.home.features.title }}
             </span>
             <p class="mx-auto my-4 w-full max-w-xl bg-transparent text-center
                         sm:text-xl/relaxed leading-relaxed tracking-wide text-gray-500">
-                Één vaste prijs, alles inbegrepen.
-                Geen verrassingen achteraf.
+                {{ site.data.t.home.features.lead }}
             </p>
         </div>
 
 
         <div class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-10 md:pt-14 sm:grid-cols-2 lg:grid-cols-4">
-            {% include feature-card.html.liquid
-                    icon="icons/joystick.svg"
-                    title="Unieke nostalgische ontspanning"
-                    content="Minder stress, meer plezier door een unieke arcade-ervaring." %}
-
-            {% include feature-card.html.liquid
-                    icon="icons/construction.svg"
-                    title="Gratis onderhoud & levering"
-                    content="Herstellingen, onderhoud en levering zitten in de prijs.
-                            Geen zorgen dat iets kapot gaat en geen extra kosten achteraf." %}
-
-            {% comment %}content="Mogelijkheid om af te wisselen met een nieuwe arcade om de zoveel tijd, thuis of op kantoor. Zo blijft er altijd iets nieuws te ontdekken."{% endcomment %}
-            {% include feature-card.html.liquid
-                    icon="icons/event-available.svg"
-                    title="Flexibel"
-                    content="Een dag, een week, een maand huren of elke 3 maand een andere arcade of flipperkast?
-                            Verschillende formules, alles is mogelijk."
-            %}
-
-            {% include feature-card.html.liquid
-                    icon="icons/verified.svg"
-                    title="Authentieke arcades"
-                    content="Enkel echte, originele arcade- en flipperkasten uit de jaren 80 en later.
-                            Een uniek écht museumstuk, geen goedkope Chinese namaak." %}
+            {% for feature in site.data.t.home.features.items %}
+                {% include feature-card.html.liquid
+                        icon=feature.icon
+                        title=feature.title
+                        content=feature.content %}
+            {% endfor %}
         </div>
 
         <div class="absolute bottom-0 left-0 z-0 h-1/3 w-full border-b"

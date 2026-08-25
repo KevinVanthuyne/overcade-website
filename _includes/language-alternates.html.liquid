@@ -1,0 +1,24 @@
+{%- comment -%}
+  Pages listed in exclude_from_localization only exist in the default language,
+  so they have no alternates to point at.
+
+  Polyglot rewrites relative links to keep visitors inside their own language, so
+  the alternates have to be wrapped in static_href to survive untouched. The href
+  is written before hreflang on purpose: Polyglot refuses to restore a static_href
+  that directly follows hreflang="{{ site.default_lang }}".
+{%- endcomment -%}
+{%- assign localised = true -%}
+{%- for excluded in site.exclude_from_localization -%}
+  {%- if page.path contains excluded -%}{%- assign localised = false -%}{%- endif -%}
+{%- endfor -%}
+{%- if localised -%}
+  {%- for lang in site.languages %}
+    {%- if lang == site.default_lang -%}
+      {%- assign alternate_url = page.url -%}
+    {%- else -%}
+      {%- assign alternate_url = page.url | prepend: lang | prepend: '/' -%}
+    {%- endif %}
+    <link rel="alternate" {% static_href %}href="{{ site.url }}{{ alternate_url }}"{% endstatic_href %} hreflang="{{ lang }}" />
+  {%- endfor %}
+    <link rel="alternate" {% static_href %}href="{{ site.url }}{{ page.url }}"{% endstatic_href %} hreflang="x-default" />
+{%- endif -%}
