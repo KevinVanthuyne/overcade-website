@@ -9,7 +9,7 @@
 {% if localised %}
 <div class="relative" id="language-switcher">
     <button id="language-toggle" type="button"
-            class="flex items-center gap-2 rounded border border-gray-200 px-2 py-1.5 text-gray-700 transition hover:bg-gray-50">
+            class="flex items-center gap-2 rounded border border-gray-200 px-2 py-1.5 text-sky-500 transition hover:bg-sky-50 hover:text-sky-600">
         <span class="sr-only">{{ site.data.t.language.label }}</span>
         {% assign active_flag = 'icons/flags/' | append: site.active_lang | append: '.svg' %}
         <span class="block h-4 w-6 overflow-hidden rounded-sm">{% include {{ active_flag }} %}</span>
@@ -32,7 +32,7 @@
             <li>
                 <!-- static_href keeps Polyglot from prefixing these with the language that is already active -->
                 <a {% static_href %}href="{{ language_url }}"{% endstatic_href %}
-                   class="flex items-center gap-3 px-3 py-2 text-sm transition hover:bg-gray-50 {% if lang == site.active_lang %}font-semibold text-sky-500{% else %}text-gray-700{% endif %}">
+                   class="flex items-center gap-3 px-3 py-2 text-sm transition hover:bg-sky-50 {% if lang == site.active_lang %}font-semibold text-red-500{% else %}text-sky-500{% endif %}">
                     <span class="block h-4 w-6 flex-shrink-0 overflow-hidden rounded-sm">{% include {{ flag }} %}</span>
                     <span>{{ site.data[lang].t.language.name }}</span>
                 </a>

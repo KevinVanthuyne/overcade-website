@@ -1,13 +1,46 @@
-# Reports translations that are still missing, so an untranslated page shows up
-# in the build log instead of silently falling back to Dutch.
+# Lists the translations that are still missing, every time the site is built.
 #
-# Three things are checked against the default language:
-#   * every string in _data/<default_lang>/ has a counterpart in _data/<lang>/
-#   * every collection document in <collection>/<default_lang>/ has a sibling in
-#     <collection>/<lang>/
-#   * every page with a title carries a <lang>: front matter block
+# The problem this solves:
 #
-# Set i18n_strict: true in _config.yml to fail the build instead of warning.
+# When Polyglot cannot find an English version of something, it does not fail and
+# it does not warn. It quietly falls back to the Dutch version and carries on. A
+# visitor on /en/ then reads a page that is partly or entirely in Dutch, and
+# nothing anywhere says so. Delete _games/en/frogger.md and the build stays green;
+# /en/games/frogger.html simply serves the Dutch text.
+#
+# That fallback is deliberate and worth keeping, because it means the site can be
+# translated a page at a time instead of all at once. But it needs a counterweight,
+# or a forgotten translation is only ever found by a visitor. This plugin is that
+# counterweight: it compares the two languages after every read and prints what is
+# missing.
+#
+# What it compares:
+#
+#   1. Data files. Every value in _data/nl/ must have a counterpart in _data/en/.
+#      This covers interface text (t.yml), the menu (navigation.yml) and the filter
+#      labels (filters.yml) in one pass, and it looks inside lists as well as
+#      nested keys, because Polyglot replaces a whole list rather than merging it
+#      entry by entry. An English list one item shorter than the Dutch one silently
+#      renders one card fewer, so that has to be caught too.
+#
+#   2. Collection documents. Every file in _games/nl/ must have a file with the
+#      same name in _games/en/.
+#
+#   3. Pages. Every page with a title must carry a front matter block for the other
+#      language, as described in _plugins/i18n_page_metadata.rb. Pages that only
+#      exist in Dutch on purpose, the Maker Faire ones, are skipped: they are listed
+#      in exclude_from_localization in _config.yml and are never built in English.
+#
+# What it prints:
+#
+#   i18n: 3 missing EN translation(s)
+#   i18n:   _data/en/ is missing t.games.clear_filters
+#   i18n:   games/en/frogger.md is missing
+#   i18n:   about.html has no en: block with a title
+#
+# Setting i18n_strict: true in _config.yml turns those warnings into an error that
+# stops the build, which is the useful setting once everything is translated and
+# the goal is to keep it that way.
 
 module Overcade
   module I18nTranslationCheck

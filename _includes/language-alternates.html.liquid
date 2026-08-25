@@ -1,11 +1,42 @@
 {%- comment -%}
-  Pages listed in exclude_from_localization only exist in the default language,
-  so they have no alternates to point at.
+  Tells search engines that the Dutch and English pages are the same page in two
+  languages.
 
-  Polyglot rewrites relative links to keep visitors inside their own language, so
-  the alternates have to be wrapped in static_href to survive untouched. The href
-  is written before hreflang on purpose: Polyglot refuses to restore a static_href
-  that directly follows hreflang="{{ site.default_lang }}".
+  The problem this solves:
+
+  /about.html and /en/about.html are two URLs with nearly the same content. Left
+  alone, a search engine has to guess whether one is a copy of the other, and it
+  may pick the wrong one to show, or show the Dutch page to someone searching in
+  English. The hreflang tags below remove the guesswork: they name every language
+  version of this page and say which language each one is in. The x-default entry
+  says which version to show someone whose language is neither, and points at the
+  Dutch page.
+
+  Why this is written by hand:
+
+  Polyglot ships an i18n_headers tag that produces these tags. It cannot be
+  used here because it builds each URL from the page's permalink, and ordinary
+  pages like about.html do not set one. Only the game files do. Every other page
+  would get a broken link.
+
+  Two things here look wrong and are not:
+
+  1. Each href is wrapped in a static_href block. Polyglot rewrites links so that a
+     visitor reading English keeps landing on English pages: inside the English
+     build, href="/about.html" silently becomes href="/en/about.html". That is
+     what you want for a link in the page, and exactly what you do not want here,
+     because the whole point of the Dutch entry is to link to the Dutch page.
+     static_href marks a link as already correct and stops the rewriting.
+
+  2. The href is written before hreflang, which reads backwards. static_href works
+     by writing the attribute out misspelled ("ferh") and spelling it back at the
+     end of the build. Polyglot skips that last step for anything directly
+     preceded by hreflang="<default language>", so writing the attributes in the
+     natural order leaves a misspelled attribute in the HTML and the tag stops
+     working. Putting the href first avoids it.
+
+  Pages that only exist in Dutch have nothing to point at, so they get no tags.
+  Those are the ones named in exclude_from_localization in _config.yml.
 {%- endcomment -%}
 {%- assign localised = true -%}
 {%- for excluded in site.exclude_from_localization -%}
