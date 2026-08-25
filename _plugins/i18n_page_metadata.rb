@@ -1,7 +1,7 @@
 # Polyglot renders the whole site once per language, but a page keeps the front
-# matter it was written with. jekyll-seo-tag reads the title, description and
-# locale straight off the page and the site, so the active language's values are
-# swapped in right after reading, before anything is rendered.
+# matter it was written with. jekyll-seo-tag reads the title, description, locale
+# and canonical URL straight off the page and the site, so the active language's
+# values are swapped in right after reading, before anything is rendered.
 #
 # Site-wide values come from _data/<lang>/t.yml, per-page values from a nested
 # block in the page's own front matter:
@@ -29,6 +29,8 @@ module Overcade
     def localize_pages(site)
       pages = site.pages + site.collections.each_value.flat_map(&:docs)
       pages.each do |page|
+        page.data["canonical_url"] = canonical_url(site, page)
+
         overrides = page.data[site.active_lang]
         next unless overrides.is_a?(Hash)
 
@@ -36,6 +38,14 @@ module Overcade
           page.data[key] = overrides[key] unless overrides[key].nil?
         end
       end
+    end
+
+    # Polyglot only rewrites href attributes, so jekyll-seo-tag would otherwise
+    # advertise the Dutch URL as an English page's og:url and schema.org url.
+    # Setting the canonical explicitly fixes all three at once.
+    def canonical_url(site, page)
+      prefix = site.active_lang == site.default_lang ? "" : "/#{site.active_lang}"
+      "#{site.config["url"]}#{site.config["baseurl"]}#{prefix}#{page.url}"
     end
   end
 end

@@ -23,8 +23,12 @@ en:
     <div
       class="rounded-l-3xl my-auto order-1 md:order-2 ml-8 md:ml-0 overflow-hidden"
     >
-      {% responsive_image path: assets/images/pac-man-being-played.JPG alt:
-      "{{ site.data.t.about.image_alt }}" %}
+      <!--@formatter:off-->
+      {% responsive_image_block %}
+      path: assets/images/pac-man-being-played.JPG
+      alt: "{{ site.data.t.about.image_alt }}"
+      {% endresponsive_image_block %}
+      <!--@formatter:on-->
     </div>
   </div>
   <div
@@ -87,8 +91,12 @@ en:
   <div class="mx-auto max-w-screen-xl px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 md:items-center md:gap-16">
       <div class="rounded-full scale-110 overflow-hidden bg-sky-500 shadow-xl">
-        {% responsive_image path: assets/images/kevin.png alt:
-        "{{ site.data.t.about.owner.image_alt }}" %}
+        <!--@formatter:off-->
+        {% responsive_image_block %}
+        path: assets/images/kevin.png
+        alt: "{{ site.data.t.about.owner.image_alt }}"
+        {% endresponsive_image_block %}
+        <!--@formatter:on-->
       </div>
       <div class="col-span-2">
         <div class="max-w-lg md:max-w-none">

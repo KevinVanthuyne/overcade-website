@@ -29,6 +29,12 @@
     <div
             class="sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] overflow-hidden"
     >
-        {% responsive_image path: assets/images/pac-man-and-screen-hor.jpg alt: "{{ site.data.t.home.software.image_alt }}" class: "h-full w-full object-cover" %}
+        <!--@formatter:off-->
+        {% responsive_image_block %}
+        path: assets/images/pac-man-and-screen-hor.jpg
+        alt: "{{ site.data.t.home.software.image_alt }}"
+        class: "h-full w-full object-cover"
+        {% endresponsive_image_block %}
+        <!--@formatter:on-->
     </div>
 </section>

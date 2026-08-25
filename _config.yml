@@ -79,7 +79,7 @@ exclude_from_localization:
 # Windows and lets the image and PostCSS pipelines write over each other.
 parallel_localization: false
 
-# Fail the build instead of only warning when a translation is missing.
+# Set to true to fail the build, instead of only warning, on a missing translation.
 i18n_strict: false
 
 # SEO
