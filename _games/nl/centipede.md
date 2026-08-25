@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/centipede.html
 name: Centipede
 year: 1980
 manufacturer: Atari

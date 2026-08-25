@@ -5,7 +5,7 @@ module.exports = {
     './_includes/**/*.html.liquid',
     './_layouts/**/*.html',
     './_layouts/**/*.html.liquid',
-    './_games/*.md',
+    './_games/**/*.md',
     './*.md',
     './*.html',
     './*.html.liquid'

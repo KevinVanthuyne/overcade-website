@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/terminator-2.html
 name: Terminator 2
 year: 1991
 manufacturer: Midway

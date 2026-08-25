@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/lethal-enforcers-ii.html
 name: Lethal Enforcers II
 year: 1994
 manufacturer: Konami

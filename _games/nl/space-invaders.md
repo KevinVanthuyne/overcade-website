@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/space-invaders.html
 name: Space Invaders
 year: 1978
 manufacturer: Taito

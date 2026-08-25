@@ -1,4 +1,6 @@
 ---
+lang: nl
+permalink: /games/pac-man.html
 name: Pac-Man
 year: 1980
 manufacturer: Namco

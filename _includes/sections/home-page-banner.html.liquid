@@ -14,13 +14,13 @@
     >
         <div class="max-w-xl text-center sm:text-left">
             <h2 class="text-3xl font-extrabold text-white sm:text-5xl">
-                Uniek & authentiek
+                {{ site.data.t.home.banner.title }}
 
-                <strong class="block font-extrabold text-sky-500">Arcade & flipperkast verhuur</strong>
+                <strong class="block font-extrabold text-sky-500">{{ site.data.t.home.banner.subtitle }}</strong>
             </h2>
 
             <p class="mt-6 max-w-lg text-white sm:text-xl/relaxed">
-                Originele arcade- en flipperkasten uit het gouden tijdperk voor op kantoor, thuis of evenementen.
+                {{ site.data.t.home.banner.lead }}
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4 text-center justify-center md:justify-start">
@@ -29,7 +29,7 @@
                         text-white hover:bg-transparent hover:text-red-500 focus:outline-none focus:ring active:text-red-500"
                         href="/games.html"
                 >
-                    <span class="text-sm font-medium"> Ontdek alle arcades </span>
+                    <span class="text-sm font-medium"> {{ site.data.t.home.banner.cta }} </span>
 
                     <svg
                             class="size-5 rtl:rotate-180"

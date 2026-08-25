@@ -1,0 +1,29 @@
+{%- comment -%}
+  Tells search engines that the Dutch and English pages are the same page in two
+  languages, so neither is treated as a duplicate of the other.
+
+  Polyglot's own i18n_headers tag builds these from page.permalink, which only the
+  game files set, so the tags are written out by hand here.
+
+  Two things that look wrong and are not: each href is wrapped in a static_href
+  block, which stops Polyglot rewriting the Dutch link into an English one; and
+  href is written before hreflang, because Polyglot skips restoring a static_href
+  that directly follows hreflang="nl".
+
+  Pages listed in exclude_from_localization exist in Dutch only and get no tags.
+{%- endcomment -%}
+{%- assign localised = true -%}
+{%- for excluded in site.exclude_from_localization -%}
+  {%- if page.path contains excluded -%}{%- assign localised = false -%}{%- endif -%}
+{%- endfor -%}
+{%- if localised -%}
+  {%- for lang in site.languages %}
+    {%- if lang == site.default_lang -%}
+      {%- assign alternate_url = page.url -%}
+    {%- else -%}
+      {%- assign alternate_url = page.url | prepend: lang | prepend: '/' -%}
+    {%- endif %}
+    <link rel="alternate" {% static_href %}href="{{ site.url }}{{ alternate_url }}"{% endstatic_href %} hreflang="{{ lang }}" />
+  {%- endfor %}
+    <link rel="alternate" {% static_href %}href="{{ site.url }}{{ page.url }}"{% endstatic_href %} hreflang="x-default" />
+{%- endif -%}

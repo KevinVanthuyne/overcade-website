@@ -11,7 +11,7 @@ layout: default
                 <a
                         href="/games.html"
                         class="text-sky-500 hover:underline focus:outline-none focus:ring active:bg-sky-500"
-                >← Terug naar aanbod</a
+                >← {{ site.data.t.common.back_to_range }}</a
                 >
             </div>
         </div>
@@ -36,7 +36,7 @@ layout: default
                       href="/contact.html"
                       class="rounded bg-red-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-red-500 border border-red-500 focus:outline-none focus:ring focus:ring-red-500"
                     >
-                        Bestellen
+                        {{ site.data.t.common.order }}
                     </a>
                 </div>
 
@@ -53,7 +53,7 @@ layout: default
 
               {% if has_properties %}
               <section class="mt-12 border-t border-gray-200 pt-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Eigenschappen</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ site.data.t.game.properties }}</h3>
                 <dl class="space-y-2 text-sm">
                   {% for filter in site.data.filters %}
                   {% if filter.id != 'category' %}

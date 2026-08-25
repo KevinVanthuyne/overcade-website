@@ -3,10 +3,10 @@
         <div class="mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-3">
             <div class="col-span-2 text-center md:text-left">
                 <h2 class="text-3xl font-bold text-gray-900 md:text-4xl col-span-2">
-                    Overtuigd om te huren?
+                    {{ site.data.t.home.contact.title }}
                 </h2>
                 <p class="mt-4 mb-8 sm:text-xl/relaxed text-gray-500">
-                    Contacteer ons nu om te bestellen.
+                    {{ site.data.t.home.contact.body }}
                 </p>
             </div>
 
@@ -16,7 +16,7 @@
                             class="inline-flex items-center gap-2 rounded border border-sky-500 bg-sky-500 px-8 py-3 text-white hover:bg-transparent hover:text-sky-500 focus:outline-none focus:ring active:text-sky-500"
                             href="/contact.html"
                     >
-                        <span class="text-sm font-medium"> Contacteer ons </span>
+                        <span class="text-sm font-medium"> {{ site.data.t.common.contact_us }} </span>
 
                         <svg
                                 class="size-5 rtl:rotate-180"

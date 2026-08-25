@@ -6,14 +6,14 @@
 
             <div class="flex-1 md:flex md:items-center md:gap-12">
                 <a class="block" href="/">
-                    <span class="sr-only">Home</span>
+                    <span class="sr-only">{{ site.data.t.common.home }}</span>
                     <div class="w-40">
                         {% include logo/overcade-logo-with-text.svg %}
                     </div>
                 </a>
             </div>
 
-            <div class="md:flex md:items-center md:gap-12">
+            <div class="flex items-center gap-4 md:gap-12">
                 <!-- Menu -->
                 <nav id="menu" aria-label="Global" class="hidden md:block">
                     <ul class="gap-6 text-lg md:text-base pb-8 md:pb-0 font-medium text-sky-500 mt-8 md:mt-0">
@@ -24,6 +24,8 @@
                         {% endfor %}
                     </ul>
                 </nav>
+
+                {% include language-switcher.html.liquid %}
 
                 <!-- Menu button for mobile -->
                 <div class="block md:hidden">
@@ -49,7 +51,6 @@
 <script>
     // Open the mobile menu when the button is pressed
     document.getElementById('menu-toggle').addEventListener('click', () => {
-        console.log("opened")
         const menu = document.getElementById('menu');
         menu.classList.toggle('mobile-menu-open');
         menu.classList.toggle('hidden');

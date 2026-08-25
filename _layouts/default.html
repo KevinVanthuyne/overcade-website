@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="nl">
+<html lang="{{ site.active_lang }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +13,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    {% include language-alternates.html.liquid %}
     {% seo %}
   </head>
   <body>
     {% include navigation.html.liquid %}
     <!-- margin of 64px, the height of the mobile fixed navbar -->
     <main class="pt-16 md:pt-0">
-      <h1 class="hidden">Overcade authentiek arcadeverhuur</h1>
+      <h1 class="hidden">{{ site.data.t.common.site_heading }}</h1>
       {{ content }}
     </main>
     {% include footer.html.liquid %}

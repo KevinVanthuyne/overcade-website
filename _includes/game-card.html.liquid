@@ -9,14 +9,14 @@
                 <span
                         class="absolute -right-px -top-px rounded-bl-3xl bg-red-500 px-6 py-4 font-medium uppercase tracking-widest text-white z-10"
                 >
-        Populair
+        {{ site.data.t.common.popular }}
         </span>
             {% endif %}
             {% if game.preview %}
                 <span
                         class="absolute -right-px -top-px rounded-bl-3xl bg-indigo-500 px-6 py-4 font-medium uppercase tracking-widest text-white z-10"
                 >
-        Binnenkort
+        {{ site.data.t.common.coming_soon }}
         </span>
             {% endif %}
             <!--@formatter:off-->
@@ -36,7 +36,7 @@
                 <span
                         class="{% if game.preview == true %}invisible{% endif %} mt-4 block rounded-md border border-sky-500 bg-sky-500 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-sky-500"
                 >
-              Meer info
+              {{ site.data.t.common.more_info }}
             </span>
             </div>
             {% if game.preview != true %}

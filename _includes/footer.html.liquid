@@ -69,7 +69,7 @@
                 class="grid grid-cols-1 gap-8 border-t border-gray-100 pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:pt-16  text-center md:text-left"
         >
             <div>
-                <p class="font-medium text-gray-900">Contact</p>
+                <p class="font-medium text-gray-900">{{ site.data.t.footer.contact }}</p>
 
                 <ul class="mt-6 space-y-4 text-sm text-gray-700">
                     <li><a href="mailto:info@overcade.be">info@overcade.be</a></li>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="mt-4 md:mt-0">
-                <p class="font-medium text-gray-900">Gegevens</p>
+                <p class="font-medium text-gray-900">{{ site.data.t.footer.details }}</p>
 
                 <ul class="mt-6 space-y-4 text-sm text-gray-700">
                     <li>Staf Bruggenstraat 26/001<br/>9040 Sint-Amandsberg (Gent)</li>
@@ -88,7 +88,7 @@
 
 
             <div class="mt-4 md:mt-0">
-                <p class="font-medium text-gray-900">Links</p>
+                <p class="font-medium text-gray-900">{{ site.data.t.footer.links }}</p>
 
                 <ul class="mt-6 space-y-4 text-sm">
                     {% for item in site.data.navigation %}
@@ -101,20 +101,20 @@
             </div>
 
             <div class="mt-4 md:mt-0">
-                <p class="font-medium text-gray-900">Juridisch</p>
+                <p class="font-medium text-gray-900">{{ site.data.t.footer.legal }}</p>
 
                 <ul class="mt-6 space-y-4 text-sm">
                     <li>
                         <a href="/assets/docs/algemene-voorwaarden-overcade.pdf"
-                           class="text-gray-700 transition hover:opacity-75"> Algemene voorwaarden </a>
+                           class="text-gray-700 transition hover:opacity-75"> {{ site.data.t.footer.terms }} </a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center md:text-left pt-12 md:pt-0">
-            <div class="lg:col-start-2 text-xs text-gray-500">&copy; 2024 Overcade. Alle rechten voorbehouden</div>
-            <div class="lg:col-start-3 text-xs text-gray-500">Overcade is onderdeel van Ovelon BV</div>
+            <div class="lg:col-start-2 text-xs text-gray-500">{{ site.data.t.footer.copyright }}</div>
+            <div class="lg:col-start-3 text-xs text-gray-500">{{ site.data.t.footer.part_of }}</div>
         </div>
     </div>
 </footer>

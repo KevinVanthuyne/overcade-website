@@ -47,21 +47,15 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
       - name: Cache generated responsive images
+        # The images are generated next to the sources (save_to_source), which is
+        # also what lets every language pass of the build reuse them. Regeneration
+        # is skipped whenever the file already exists.
         uses: actions/cache@v5
         with:
-          path: _site/assets/resized
+          path: assets/resized
           key: responsive-images-${{ hashFiles('assets/images/**') }}
           restore-keys: |
             responsive-images-
-
-      - name: Mark cached responsive images as up-to-date
-        # jekyll-responsive-image skips regeneration only when the destination
-        # file is newer than the source. After cache restore, source files
-        # have a fresh checkout mtime, so we bump cached files into the future.
-        run: |
-          if [ -d _site/assets/resized ]; then
-            find _site/assets/resized -type f -exec touch -d "tomorrow" {} +
-          fi
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default

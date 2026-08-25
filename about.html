@@ -1,6 +1,9 @@
 ---
 title: Over
 description: Overcade staat voor authenticiteit en kwaliteit. Originele arcadekasten, nergens anders te huur in België.
+en:
+  title: About
+  description: Overcade stands for authenticity and quality. Original arcade machines, available nowhere else in Belgium.
 ---
 
 <section>
@@ -8,20 +11,24 @@ description: Overcade staat voor authenticiteit en kwaliteit. Originele arcadeka
     <div
       class="order-2 md:order-1 mx-auto max-w-screen-xl px-8 py-16 md:p-28 text-center md:text-left"
     >
-      <h2 class="font-semibold text-sky-500 md:text-xl mb-2">Over ons</h2>
+      <h2 class="font-semibold text-sky-500 md:text-xl mb-2">{{ site.data.t.about.eyebrow }}</h2>
       <span class="text-2xl font-semibold text-gray-900 sm:text-5xl/tight">
-        De échte arcade weer bij het grotere publiek brengen
+        {{ site.data.t.about.title }}
       </span>
       <p class="text-gray-500 text-lg/relaxed md:text-xl/relaxed mt-5">
-        Overcade staat voor authenticiteit en kwaliteit. <br />
-        Originele arcade- en flipperkasten, nergens anders te huur in België.
+        {{ site.data.t.about.lead_line_1 }} <br />
+        {{ site.data.t.about.lead_line_2 }}
       </p>
     </div>
     <div
       class="rounded-l-3xl my-auto order-1 md:order-2 ml-8 md:ml-0 overflow-hidden"
     >
-      {% responsive_image path: assets/images/pac-man-being-played.JPG alt:
-      "Iemand speelt al lachend op de Pac-Man arcade" %}
+      <!--@formatter:off-->
+      {% responsive_image_block %}
+      path: assets/images/pac-man-being-played.JPG
+      alt: "{{ site.data.t.about.image_alt }}"
+      {% endresponsive_image_block %}
+      <!--@formatter:on-->
     </div>
   </div>
   <div
@@ -33,39 +40,27 @@ description: Overcade staat voor authenticiteit en kwaliteit. Originele arcadeka
   <h2
     class="ml-28 hidden md:block font-semibold text-5xl mt-14 text-gray-900 pt-32"
   >
-    Onze missie
+    {{ site.data.t.about.mission.title }}
   </h2>
   <div class="grid grid-cols-1 md:grid-cols-2 pb-32 md:pb-60">
     <div class="order-2 md:order-1 mx-auto max-w-screen-xl px-8 md:px-28">
       <h2
         class="block md:hidden font-semibold text-2xl mt-14 text-gray-900 pt-16 text-center md:text-left"
       >
-        Onze missie
+        {{ site.data.t.about.mission.title }}
       </h2>
       <p class="text-lg/relaxed md:text-xl/relaxed mt-8 text-gray-500">
-        Overcade gelooft in de unieke ervaring die een echte arcade- en
-        flipperkast biedt. De nostalgie van de jaren 80 en 90, de fysieke
-        gameplay en de authentieke uitstraling zorgen voor een bijzondere
-        beleving op kantoor, thuis of evenementen.
+        {{ site.data.t.about.mission.body_1 }}
       </p>
       <div class="text-gray-500">
         <p class="mt-8">
-          Met Overcade willen we onze passie voor arcades en flippers delen met
-          een breder publiek. We bieden een unieke bron van ontspanning, een
-          boost in sfeer en minder stress.
+          {{ site.data.t.about.mission.body_2 }}
         </p>
         <p class="mt-4">
-          Niets is zo teleurstellend als de goedkope namaak-arcadekasten die
-          massaal (en vaak illegaal) in China worden geproduceerd. Deze kasten
-          bevatten moderne schermen waarop retrographics totaal niet tot hun
-          recht komen. De kwaliteit laat te wensen over door het gebruik van
-          goedkope knoppen, joysticks en voedingen.
+          {{ site.data.t.about.mission.body_3 }}
         </p>
         <p class="mt-4">
-          Daarom kiezen wij ervoor om uitsluitend originele arcades en
-          flipperkasten te verhuren. We restaureren de kasten volledig zelf en
-          garanderen 100% authenticiteit door gebruik te maken van originele
-          onderdelen en originele beeldbuizen.
+          {{ site.data.t.about.mission.body_4 }}
         </p>
       </div>
     </div>
@@ -73,19 +68,19 @@ description: Overcade staat voor authenticiteit en kwaliteit. Originele arcadeka
       <div class="flex flex-col px-4 py-8 text-center">
         <dd class="text-4xl font-bold text-sky-500 md:text-5xl">7</dd>
         <dt class="order-last text-xl text-gray-500 mt-4">
-          Arcades in ons aanbod
+          {{ site.data.t.about.stats.arcades }}
         </dt>
       </div>
       <div class="flex flex-col px-4 py-8 text-center">
         <dd class="text-4xl font-bold text-sky-500 md:text-5xl">2</dd>
         <dt class="order-last text-xl text-gray-500 mt-4">
-          Flipperkasten in ons aanbod
+          {{ site.data.t.about.stats.pinball }}
         </dt>
       </div>
       <div class="flex flex-col px-4 py-8 text-center">
         <dd class="text-4xl font-bold text-sky-500 md:text-5xl">30+</dd>
         <dt class="order-last text-xl text-gray-500 mt-4">
-          Projecten in opslag
+          {{ site.data.t.about.stats.projects }}
         </dt>
       </div>
     </div>
@@ -96,8 +91,12 @@ description: Overcade staat voor authenticiteit en kwaliteit. Originele arcadeka
   <div class="mx-auto max-w-screen-xl px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 md:items-center md:gap-16">
       <div class="rounded-full scale-110 overflow-hidden bg-sky-500 shadow-xl">
-        {% responsive_image path: assets/images/kevin.png alt: "Portretfoto van
-        de eigenaar, Kevin Vanthuyne" %}
+        <!--@formatter:off-->
+        {% responsive_image_block %}
+        path: assets/images/kevin.png
+        alt: "{{ site.data.t.about.owner.image_alt }}"
+        {% endresponsive_image_block %}
+        <!--@formatter:on-->
       </div>
       <div class="col-span-2">
         <div class="max-w-lg md:max-w-none">
@@ -108,13 +107,11 @@ description: Overcade staat voor authenticiteit en kwaliteit. Originele arcadeka
             <h2
               class="text-3xl text-sky-500 font-semibold my-6 text-center md:text-left"
             >
-              Hallo, ik ben Kevin Vanthuyne 👋
+              {{ site.data.t.about.owner.title }}
             </h2>
             <div class="text-gray-500 text-lg/relaxed">
               <p class="mt-4">
-                Al vele jaren ben ik gepassioneerd door retro gaming en
-                elektronica. Door het maken van allerlei projecten ben ik
-                uiteindelijk beland in de wereld van arcades en flipperkasten.
+                {{ site.data.t.about.owner.body_1 }}
               </p>
               <!--              <p class="mt-4">-->
               <!--                Ik vind het ongelofelijk hoe arcades van soms meer dan 40 jaar-->
@@ -122,11 +119,7 @@ description: Overcade staat voor authenticiteit en kwaliteit. Originele arcadeka
               <!--                mensen kunnen entertainen.-->
               <!--              </p>-->
               <p class="mt-4">
-                Ondertussen verzamel ik al een hele tijd arcades en
-                flipperkasten, teveel om zowel aan te werken als overal op te
-                spelen. Zo kwam ik op het idee om mijn passie met een breder
-                publiek te delen en meer mensen te laten genieten van deze
-                prachtige machines.
+                {{ site.data.t.about.owner.body_2 }}
               </p>
             </div>
           </div>
