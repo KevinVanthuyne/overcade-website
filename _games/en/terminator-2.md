@@ -1,20 +1,27 @@
 ---
 lang: en
 permalink: /games/terminator-2.html
-title: "Rent the Terminator 2 arcade machine"
+title: "Rent Terminator 2 arcade machine"
 name: Terminator 2
 year: 1991
 manufacturer: Midway
 category: arcade
-image: assets/images/arcades/terminator-2/t2-cabinet.jpg
+image:
+  path: assets/images/arcades/terminator-2/t2-cabinet.jpg
+  alt: "Terminator 2 arcade machine, three-quarter view with its two mounted guns"
 tagline: Relive the action film
 showOnHomepage: true
 images:
-  - assets/images/arcades/terminator-2/t2-front.jpg
-  - assets/images/arcades/terminator-2/t2-side.jpg
-  - assets/images/arcades/terminator-2/t2-game-1.jpg
-  - assets/images/arcades/terminator-2/t2-game-2.jpg
-  - assets/images/arcades/terminator-2/t2-game-3.jpg
+  - path: assets/images/arcades/terminator-2/t2-front.jpg
+    alt: "Terminator 2 arcade machine, front view with its two mounted guns"
+  - path: assets/images/arcades/terminator-2/t2-side.jpg
+    alt: "Side art of the Terminator 2 arcade machine with Arnold Schwarzenegger"
+  - path: assets/images/arcades/terminator-2/t2-game-1.jpg
+    alt: "Terminator 2 gameplay with a T-800 endoskeleton"
+  - path: assets/images/arcades/terminator-2/t2-game-2.jpg
+    alt: "Terminator 2 gameplay: endoskeletons in a ruined city"
+  - path: assets/images/arcades/terminator-2/t2-game-3.jpg
+    alt: "Terminator 2 intro text about Judgment Day"
 order: 3
 
 # Filters

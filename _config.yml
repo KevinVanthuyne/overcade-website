@@ -65,7 +65,6 @@ default_lang: "nl"
 # copying them into /en/ and from prefixing links to them with the language.
 exclude_from_localization:
   - assets
-  - maker-faire-25-give-away
   - robots.txt
   - sitemap.xml
   - site.webmanifest

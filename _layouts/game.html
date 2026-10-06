@@ -87,9 +87,9 @@ layout: default
                 <li class="splide__slide">
                     <!--@formatter:off-->
                     {% responsive_image_block %}
-                        path: {{ page.image }}
+                        path: {{ page.image.path }}
                         class: "h-full w-full max-h-[80vh] object-contain"
-                        alt: "{{ image_alt }}"
+                        alt: "{{ page.image.alt | default: image_alt }}"
                     {% endresponsive_image_block %}
                     <!--@formatter:on-->
                 </li>
@@ -97,9 +97,9 @@ layout: default
                 <li class="splide__slide">
                     <!--@formatter:off-->
                     {% responsive_image_block %}
-                    path: {{ image }}
+                    path: {{ image.path }}
                     class: "h-full w-full max-h-[80vh] object-contain"
-                    alt: "{{ image_alt }}"
+                    alt: "{{ image.alt | default: image_alt }}"
                     {% endresponsive_image_block %}
                     <!--@formatter:on-->
                     <!--            class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"-->
@@ -112,9 +112,9 @@ layout: default
             <li class="thumbnail">
                 <!--@formatter:off-->
                 {% responsive_image_block %}
-                path: {{ page.image }}
+                path: {{ page.image.path }}
                 class: "object-cover"
-                alt: "{{ image_alt }}"
+                alt: "{{ page.image.alt | default: image_alt }}"
                 {% endresponsive_image_block %}
                 <!--@formatter:on-->
             </li>
@@ -122,9 +122,9 @@ layout: default
             <li class="thumbnail">
                 <!--@formatter:off-->
                 {% responsive_image_block %}
-                path: {{ image }}
+                path: {{ image.path }}
                 class: "object-cover"
-                alt: "{{ image_alt }}"
+                alt: "{{ image.alt | default: image_alt }}"
                 {% endresponsive_image_block %}
                 <!--@formatter:on-->
             </li>

@@ -1,19 +1,27 @@
 ---
 lang: en
 permalink: /games/spider-man.html
-title: "Rent the Spider-Man pinball machine"
+title: "Rent Spider-Man pinball machine"
 name: Spider-Man
 year: 2007
 manufacturer: Stern Pinball
 category: flipperkast
-image: assets/images/pinballs/sm/sm-cabinet.jpg
+image:
+  path: assets/images/pinballs/sm/sm-cabinet.jpg
+  alt: "Spider-Man pinball machine, three-quarter view"
 images:
-  - assets/images/pinballs/sm/sm-front.jpg
-  - assets/images/pinballs/sm/sm-playfield.jpg
-  - assets/images/pinballs/sm/sm-green-goblin.jpg
-  - assets/images/pinballs/sm/sm-playfield-back.jpg
-  - assets/images/pinballs/sm/sm-doc-ock.jpg
-  - assets/images/pinballs/sm/sm-backglass.jpg
+  - path: assets/images/pinballs/sm/sm-front.jpg
+    alt: "Spider-Man pinball machine, front view with backbox and playfield"
+  - path: assets/images/pinballs/sm/sm-playfield.jpg
+    alt: "Playfield of the Spider-Man pinball machine"
+  - path: assets/images/pinballs/sm/sm-green-goblin.jpg
+    alt: "Green Goblin figure on the playfield of the Spider-Man pinball machine"
+  - path: assets/images/pinballs/sm/sm-playfield-back.jpg
+    alt: "Back of the Spider-Man playfield with the Sandman figure"
+  - path: assets/images/pinballs/sm/sm-doc-ock.jpg
+    alt: "Doctor Octopus figure on the playfield of the Spider-Man pinball machine"
+  - path: assets/images/pinballs/sm/sm-backglass.jpg
+    alt: "Backglass and score display of the Spider-Man pinball machine"
 tagline: Shoot your webs
 showOnHomepage: false
 #order: 2

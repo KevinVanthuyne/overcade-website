@@ -1,19 +1,25 @@
 ---
 lang: nl
 permalink: /games/space-invaders.html
-title: "Space Invaders arcadekast huren"
+title: "Space Invaders arcade huren"
 name: Space Invaders
 year: 1978
 manufacturer: Taito
 category: arcade
-image: assets/images/arcades/space-invaders/space-invaders.jpg
+image:
+  path: assets/images/arcades/space-invaders/space-invaders.jpg
+  alt: "Space Invaders arcade, schuin van voren"
 tagline: De arcade waarmee alles begon
 showOnHomepage: false
 images:
-  - assets/images/arcades/space-invaders/si-control-panel.jpg
-  - assets/images/arcades/space-invaders/si-front-dark.jpg
-  - assets/images/arcades/space-invaders/si-inside.jpg
-  - assets/images/arcades/space-invaders/si-side.jpg
+  - path: assets/images/arcades/space-invaders/si-control-panel.jpg
+    alt: "Bedieningspaneel van de Space Invaders arcade"
+  - path: assets/images/arcades/space-invaders/si-front-dark.jpg
+    alt: "Space Invaders arcade in het donker, met het spel op het scherm"
+  - path: assets/images/arcades/space-invaders/si-inside.jpg
+    alt: "Close-up van het Space Invaders-scherm met de puntentabel"
+  - path: assets/images/arcades/space-invaders/si-side.jpg
+    alt: "Space Invaders arcade, zijkant met de artwork"
 order: 4
 
 # Filters

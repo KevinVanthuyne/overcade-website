@@ -3,7 +3,9 @@ lang: nl
 permalink: /games/shuffle-box.html
 name: Shuffle Box
 year: ~2010
-image: assets/images/shuffle-box.png
+image:
+  path: assets/images/shuffle-box.png
+  alt: "Shuffle Box"
 tagline: Uniek in de wereld
 preview: true
 published: false

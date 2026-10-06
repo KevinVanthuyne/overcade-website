@@ -79,7 +79,7 @@ games:
 game:
   properties: Eigenschappen
   machine:
-    arcade: arcadekast
+    arcade: arcade
     flipperkast: flipperkast
 
 about:

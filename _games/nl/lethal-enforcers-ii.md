@@ -1,16 +1,21 @@
 ---
 lang: nl
 permalink: /games/lethal-enforcers-ii.html
-title: "Lethal Enforcers II arcadekast huren"
+title: "Lethal Enforcers II arcade huren"
 name: Lethal Enforcers II
 year: 1994
 manufacturer: Konami
 category: arcade
-image: assets/images/arcades/lethal-enforcers-ii/le2.jpg
+image:
+  path: assets/images/arcades/lethal-enforcers-ii/le2.jpg
+  alt: "Lethal Enforcers II arcade, schuin van voren met de twee lichtpistolen"
 images:
-  - assets/images/arcades/lethal-enforcers-ii/le2-lightgun.jpg
-  - assets/images/arcades/lethal-enforcers-ii/le2-in-game.png
-  - assets/images/arcades/lethal-enforcers-ii/le2-bank.png
+  - path: assets/images/arcades/lethal-enforcers-ii/le2-lightgun.jpg
+    alt: "Blauw lichtpistool van de Lethal Enforcers II arcade"
+  - path: assets/images/arcades/lethal-enforcers-ii/le2-in-game.png
+    alt: "Lethal Enforcers II-spel op het scherm: een vuurgevecht in een westernstadje"
+  - path: assets/images/arcades/lethal-enforcers-ii/le2-bank.png
+    alt: "Startscherm van het level The Bank Robbery in Lethal Enforcers II"
 tagline: Duelleren in het Wilde Westen
 
 # Filters

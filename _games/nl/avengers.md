@@ -6,13 +6,20 @@ name: "Avengers: Infinity Quest (Pro)"
 year: 2020
 manufacturer: Stern Pinball
 category: flipperkast
-image: assets/images/pinballs/aiq/aiq-side.jpg
+image:
+  path: assets/images/pinballs/aiq/aiq-side.jpg
+  alt: "Avengers: Infinity Quest flipperkast, schuin van voren"
 images:
-  - assets/images/pinballs/aiq/aiq-front.jpg
-  - assets/images/pinballs/aiq/aiq-playfield.jpg
-  - assets/images/pinballs/aiq/aiq-disc.jpg
-  - assets/images/pinballs/aiq/aiq-thanos.jpg
-  - assets/images/pinballs/aiq/aiq-tower.jpg
+  - path: assets/images/pinballs/aiq/aiq-front.jpg
+    alt: "Avengers: Infinity Quest flipperkast, recht van voren met speelveld en kopkast"
+  - path: assets/images/pinballs/aiq/aiq-playfield.jpg
+    alt: "Speelveld van de Avengers: Infinity Quest flipperkast met Hulk en Captain America"
+  - path: assets/images/pinballs/aiq/aiq-disc.jpg
+    alt: "Close-up van de schijf op het speelveld van de Avengers: Infinity Quest flipperkast"
+  - path: assets/images/pinballs/aiq/aiq-thanos.jpg
+    alt: "Thanos met de Infinity Gauntlet achteraan op het speelveld van de Avengers: Infinity Quest flipperkast"
+  - path: assets/images/pinballs/aiq/aiq-tower.jpg
+    alt: "Avengers Tower op het speelveld van de Avengers: Infinity Quest flipperkast"
 tagline: Bemachtig de Infinity Stones
 showOnHomepage: true
 order: 2

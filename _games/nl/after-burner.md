@@ -1,18 +1,25 @@
 ---
 lang: nl
 permalink: /games/after-burner.html
-title: "After Burner arcadekast huren"
+title: "After Burner arcade huren"
 name: After Burner
 year: 1987
 manufacturer: Sega
 category: arcade
-image: assets/images/arcades/after-burner/after-burner-diagonal.jpg
+image:
+  path: assets/images/arcades/after-burner/after-burner-diagonal.jpg
+  alt: "After Burner arcade, schuin van voren"
 images:
-  - assets/images/arcades/after-burner/after-burner-flight-stick.jpg
-  - assets/images/arcades/after-burner/after-burner-front.jpg
-  - assets/images/arcades/after-burner/after-burner-screen.jpg
-  - assets/images/arcades/after-burner/after-burner-instructions.jpg
-  - assets/images/arcades/after-burner/after-burner-throttle.jpg
+  - path: assets/images/arcades/after-burner/after-burner-flight-stick.jpg
+    alt: "Stuurknuppel van de After Burner arcade"
+  - path: assets/images/arcades/after-burner/after-burner-front.jpg
+    alt: "After Burner arcade, recht van voren"
+  - path: assets/images/arcades/after-burner/after-burner-screen.jpg
+    alt: "After Burner-spel op het scherm"
+  - path: assets/images/arcades/after-burner/after-burner-instructions.jpg
+    alt: "Instructieplaatje op het bedieningspaneel van de After Burner arcade"
+  - path: assets/images/arcades/after-burner/after-burner-throttle.jpg
+    alt: "Gashendel van de After Burner arcade"
 tagline: Klaar om op te stijgen
 #order: 1
 

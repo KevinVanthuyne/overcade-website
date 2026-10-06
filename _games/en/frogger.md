@@ -1,16 +1,21 @@
 ---
 lang: en
 permalink: /games/frogger.html
-title: "Rent the Frogger arcade machine"
+title: "Rent Frogger arcade machine"
 name: Frogger
 year: 1981
 manufacturer: Konami
 category: arcade
-image: assets/images/arcades/frogger/frogger.jpg
+image:
+  path: assets/images/arcades/frogger/frogger.jpg
+  alt: "Frogger arcade machine, three-quarter view"
 images:
-  - assets/images/arcades/frogger/frogger-side.jpg
-  - assets/images/arcades/frogger/frogger-screen.jpg
-  - assets/images/arcades/frogger/frogger-dark.jpg
+  - path: assets/images/arcades/frogger/frogger-side.jpg
+    alt: "Side art of the Frogger arcade machine with the frog"
+  - path: assets/images/arcades/frogger/frogger-screen.jpg
+    alt: "Frogger gameplay on the screen"
+  - path: assets/images/arcades/frogger/frogger-dark.jpg
+    alt: "Frogger arcade machine in the dark, with the game on the screen"
 tagline: A timeless challenge for everyone
 
 # Filters

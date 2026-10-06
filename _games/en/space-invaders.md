@@ -1,19 +1,25 @@
 ---
 lang: en
 permalink: /games/space-invaders.html
-title: "Rent the Space Invaders arcade machine"
+title: "Rent Space Invaders arcade machine"
 name: Space Invaders
 year: 1978
 manufacturer: Taito
 category: arcade
-image: assets/images/arcades/space-invaders/space-invaders.jpg
+image:
+  path: assets/images/arcades/space-invaders/space-invaders.jpg
+  alt: "Space Invaders arcade machine, three-quarter view"
 tagline: The arcade that started it all
 showOnHomepage: false
 images:
-  - assets/images/arcades/space-invaders/si-control-panel.jpg
-  - assets/images/arcades/space-invaders/si-front-dark.jpg
-  - assets/images/arcades/space-invaders/si-inside.jpg
-  - assets/images/arcades/space-invaders/si-side.jpg
+  - path: assets/images/arcades/space-invaders/si-control-panel.jpg
+    alt: "Control panel of the Space Invaders arcade machine"
+  - path: assets/images/arcades/space-invaders/si-front-dark.jpg
+    alt: "Space Invaders arcade machine in the dark, with the game on the screen"
+  - path: assets/images/arcades/space-invaders/si-inside.jpg
+    alt: "Close-up of the Space Invaders screen with the score table"
+  - path: assets/images/arcades/space-invaders/si-side.jpg
+    alt: "Space Invaders arcade machine, side art"
 order: 4
 
 # Filters

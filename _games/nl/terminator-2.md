@@ -1,20 +1,27 @@
 ---
 lang: nl
 permalink: /games/terminator-2.html
-title: "Terminator 2 arcadekast huren"
+title: "Terminator 2 arcade huren"
 name: Terminator 2
 year: 1991
 manufacturer: Midway
 category: arcade
-image: assets/images/arcades/terminator-2/t2-cabinet.jpg
+image:
+  path: assets/images/arcades/terminator-2/t2-cabinet.jpg
+  alt: "Terminator 2 arcade, schuin van voren met de twee geweren"
 tagline: Herbeleef de actiefilm
 showOnHomepage: true
 images:
-  - assets/images/arcades/terminator-2/t2-front.jpg
-  - assets/images/arcades/terminator-2/t2-side.jpg
-  - assets/images/arcades/terminator-2/t2-game-1.jpg
-  - assets/images/arcades/terminator-2/t2-game-2.jpg
-  - assets/images/arcades/terminator-2/t2-game-3.jpg
+  - path: assets/images/arcades/terminator-2/t2-front.jpg
+    alt: "Terminator 2 arcade, recht van voren met de twee geweren"
+  - path: assets/images/arcades/terminator-2/t2-side.jpg
+    alt: "Zijkant van de Terminator 2 arcade met Arnold Schwarzenegger"
+  - path: assets/images/arcades/terminator-2/t2-game-1.jpg
+    alt: "Terminator 2-spel op het scherm met een T-800-endoskelet"
+  - path: assets/images/arcades/terminator-2/t2-game-2.jpg
+    alt: "Terminator 2-spel op het scherm: endoskeletten in een verwoeste stad"
+  - path: assets/images/arcades/terminator-2/t2-game-3.jpg
+    alt: "Introtekst van Terminator 2 over Judgment Day"
 order: 3
 
 # Filters

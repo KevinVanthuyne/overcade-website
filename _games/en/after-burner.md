@@ -1,18 +1,25 @@
 ---
 lang: en
 permalink: /games/after-burner.html
-title: "Rent the After Burner arcade machine"
+title: "Rent After Burner arcade machine"
 name: After Burner
 year: 1987
 manufacturer: Sega
 category: arcade
-image: assets/images/arcades/after-burner/after-burner-diagonal.jpg
+image:
+  path: assets/images/arcades/after-burner/after-burner-diagonal.jpg
+  alt: "After Burner arcade machine, three-quarter view"
 images:
-  - assets/images/arcades/after-burner/after-burner-flight-stick.jpg
-  - assets/images/arcades/after-burner/after-burner-front.jpg
-  - assets/images/arcades/after-burner/after-burner-screen.jpg
-  - assets/images/arcades/after-burner/after-burner-instructions.jpg
-  - assets/images/arcades/after-burner/after-burner-throttle.jpg
+  - path: assets/images/arcades/after-burner/after-burner-flight-stick.jpg
+    alt: "Flight stick of the After Burner arcade machine"
+  - path: assets/images/arcades/after-burner/after-burner-front.jpg
+    alt: "After Burner arcade machine, front view"
+  - path: assets/images/arcades/after-burner/after-burner-screen.jpg
+    alt: "After Burner gameplay on the screen"
+  - path: assets/images/arcades/after-burner/after-burner-instructions.jpg
+    alt: "Instruction plate on the control panel of the After Burner arcade machine"
+  - path: assets/images/arcades/after-burner/after-burner-throttle.jpg
+    alt: "Throttle lever of the After Burner arcade machine"
 tagline: Ready for take-off
 #order: 1
 

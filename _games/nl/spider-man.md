@@ -6,14 +6,22 @@ name: Spider-Man
 year: 2007
 manufacturer: Stern Pinball
 category: flipperkast
-image: assets/images/pinballs/sm/sm-cabinet.jpg
+image:
+  path: assets/images/pinballs/sm/sm-cabinet.jpg
+  alt: "Spider-Man flipperkast, schuin van voren"
 images:
-  - assets/images/pinballs/sm/sm-front.jpg
-  - assets/images/pinballs/sm/sm-playfield.jpg
-  - assets/images/pinballs/sm/sm-green-goblin.jpg
-  - assets/images/pinballs/sm/sm-playfield-back.jpg
-  - assets/images/pinballs/sm/sm-doc-ock.jpg
-  - assets/images/pinballs/sm/sm-backglass.jpg
+  - path: assets/images/pinballs/sm/sm-front.jpg
+    alt: "Spider-Man flipperkast, recht van voren met kopkast en speelveld"
+  - path: assets/images/pinballs/sm/sm-playfield.jpg
+    alt: "Speelveld van de Spider-Man flipperkast"
+  - path: assets/images/pinballs/sm/sm-green-goblin.jpg
+    alt: "Green Goblin-figuur op het speelveld van de Spider-Man flipperkast"
+  - path: assets/images/pinballs/sm/sm-playfield-back.jpg
+    alt: "Achterkant van het speelveld van de Spider-Man flipperkast met de Sandman-figuur"
+  - path: assets/images/pinballs/sm/sm-doc-ock.jpg
+    alt: "Doctor Octopus-figuur op het speelveld van de Spider-Man flipperkast"
+  - path: assets/images/pinballs/sm/sm-backglass.jpg
+    alt: "Kopkast van de Spider-Man flipperkast met het scorescherm"
 tagline: Schiet jouw webben
 showOnHomepage: false
 #order: 2
