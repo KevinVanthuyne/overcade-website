@@ -1,6 +1,7 @@
 ---
 lang: en
 permalink: /games/after-burner.html
+title: "Rent the After Burner arcade machine"
 name: After Burner
 year: 1987
 manufacturer: Sega

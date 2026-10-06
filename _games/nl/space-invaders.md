@@ -1,6 +1,7 @@
 ---
 lang: nl
 permalink: /games/space-invaders.html
+title: "Space Invaders arcadekast huren"
 name: Space Invaders
 year: 1978
 manufacturer: Taito

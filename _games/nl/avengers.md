@@ -1,6 +1,7 @@
 ---
 lang: nl
 permalink: /games/avengers.html
+title: "Avengers: Infinity Quest flipperkast huren"
 name: "Avengers: Infinity Quest (Pro)"
 year: 2020
 manufacturer: Stern Pinball

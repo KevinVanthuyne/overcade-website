@@ -83,7 +83,7 @@ parallel_localization: false
 i18n_strict: false
 
 # SEO
-title: Overcade arcadeverhuur
+title: Overcade
 tagline: Authentiek arcadeverhuur
 description: Verhuur van authentieke arcadekasten voor thuis of op kantoor
 url: https://overcade.be
@@ -94,3 +94,4 @@ social:
   links:
     - https://www.facebook.com/overcade
     - https://www.instagram.com/overcade.be
+    - https://www.linkedin.com/company/overcade

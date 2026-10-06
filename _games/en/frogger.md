@@ -1,6 +1,7 @@
 ---
 lang: en
 permalink: /games/frogger.html
+title: "Rent the Frogger arcade machine"
 name: Frogger
 year: 1981
 manufacturer: Konami

@@ -1,6 +1,7 @@
 ---
 lang: en
 permalink: /games/space-invaders.html
+title: "Rent the Space Invaders arcade machine"
 name: Space Invaders
 year: 1978
 manufacturer: Taito

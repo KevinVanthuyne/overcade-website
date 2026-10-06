@@ -1,6 +1,7 @@
 ---
 lang: nl
 permalink: /games/lethal-enforcers-ii.html
+title: "Lethal Enforcers II arcadekast huren"
 name: Lethal Enforcers II
 year: 1994
 manufacturer: Konami

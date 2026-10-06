@@ -1,6 +1,7 @@
 ---
 lang: en
 permalink: /games/pac-man.html
+title: "Rent the Pac-Man arcade machine"
 name: Pac-Man
 year: 1980
 manufacturer: Namco

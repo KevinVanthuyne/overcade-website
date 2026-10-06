@@ -1,6 +1,7 @@
 ---
 lang: en
 permalink: /games/avengers.html
+title: "Rent the Avengers: Infinity Quest pinball machine"
 name: "Avengers: Infinity Quest (Pro)"
 year: 2020
 manufacturer: Stern Pinball

@@ -62,6 +62,7 @@ Filtering is client-side, in an inline `<script>` at the bottom of `games.html`:
 Output as individual pages via the `games` collection, defaulting to the `game` layout. One document per language, paired by an explicit `permalink`. Frontmatter beyond the filter keys:
 
 - `image` — primary image; `images` — gallery, both rendered into a Splide carousel with thumbnails
+- `title` — the browser and search-result title, e.g. "Pac-Man arcadekast huren". Without it Jekyll derives "Pac Man" from the filename. The visible heading uses `name`.
 - `showOnHomepage` — include in the "Uitgelicht aanbod" section on the home page
 - `featured` — red "Populair" badge on the card
 - `order` — sort order on `games.html` (games without it sort last)
@@ -136,6 +137,6 @@ Splide (carousels) and lazysizes are loaded from CDNs, not npm — lazysizes in 
 
 ### Pages
 
-`index.html` is a thin list of `_includes/sections/*` includes — home page changes usually mean editing one of those section partials. Navigation comes from `_data/<lang>/navigation.yml`. `_layouts/default.html` supplies the nav, footer, favicons, language switcher, `hreflang` alternates and `{% seo %}` tags.
+`index.html` is a thin list of `_includes/sections/*` includes — home page changes usually mean editing one of those section partials. Navigation comes from `_data/<lang>/navigation.yml`. `_layouts/default.html` supplies the nav, footer, favicons, language switcher, `hreflang` alternates, `{% seo %}` tags (which also write the `<title>`, so the layout has none) and the `LocalBusiness` JSON-LD in `_includes/local-business-schema.html.liquid`. Each page has exactly one visible `<h1>`, its own main heading.
 
 Site-wide SEO defaults live in `_config.yml`, but `_plugins/i18n_page_metadata.rb` overrides the title, tagline, description, locale and canonical URL per language before anything renders — change those in `_data/<lang>/t.yml`, not `_config.yml`.

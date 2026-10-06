@@ -1,6 +1,7 @@
 ---
 lang: nl
 permalink: /games/spider-man.html
+title: "Spider-Man flipperkast huren"
 name: Spider-Man
 year: 2007
 manufacturer: Stern Pinball

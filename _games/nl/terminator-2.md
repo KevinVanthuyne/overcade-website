@@ -1,6 +1,7 @@
 ---
 lang: nl
 permalink: /games/terminator-2.html
+title: "Terminator 2 arcadekast huren"
 name: Terminator 2
 year: 1991
 manufacturer: Midway

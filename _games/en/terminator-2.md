@@ -1,6 +1,7 @@
 ---
 lang: en
 permalink: /games/terminator-2.html
+title: "Rent the Terminator 2 arcade machine"
 name: Terminator 2
 year: 1991
 manufacturer: Midway

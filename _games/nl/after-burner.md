@@ -1,6 +1,7 @@
 ---
 lang: nl
 permalink: /games/after-burner.html
+title: "After Burner arcadekast huren"
 name: After Burner
 year: 1987
 manufacturer: Sega

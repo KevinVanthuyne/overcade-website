@@ -1,5 +1,5 @@
 site:
-  title: Overcade arcadeverhuur
+  title: Overcade
   tagline: Authentiek arcadeverhuur
   description: Verhuur van authentieke arcadekasten voor thuis of op kantoor
   locale: nl_BE
@@ -17,7 +17,6 @@ common:
   back_to_range: Terug naar aanbod
   popular: Populair
   coming_soon: Binnenkort
-  site_heading: Overcade authentiek arcadeverhuur
 
 home:
   banner:
@@ -79,6 +78,9 @@ games:
 
 game:
   properties: Eigenschappen
+  machine:
+    arcade: arcadekast
+    flipperkast: flipperkast
 
 about:
   eyebrow: Over ons
