@@ -5,10 +5,14 @@ name: Pac-Man
 year: 1980
 manufacturer: Namco
 category: arcade
-image: assets/images/arcades/pac-man/pac-man.jpg
+image:
+  path: assets/images/arcades/pac-man/pac-man.jpg
+  alt: "Pac-Man arcade machine, three-quarter view of the yellow cabinet"
 images:
-  - assets/images/arcades/pac-man/pac-man-closer.jpg
-  - assets/images/arcades/pac-man/pac-man-screen.jpg
+  - path: assets/images/arcades/pac-man/pac-man-closer.jpg
+    alt: "Marquee and screen of the Pac-Man arcade machine"
+  - path: assets/images/arcades/pac-man/pac-man-screen.jpg
+    alt: "Pac-Man maze on the screen and the control panel"
 featured: true
 showOnHomepage: true
 tagline: The ultimate all-time classic

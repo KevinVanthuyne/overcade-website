@@ -5,12 +5,18 @@ name: Centipede
 year: 1980
 manufacturer: Atari
 category: arcade
-image: assets/images/arcades/centipede/centipede.jpg
+image:
+  path: assets/images/arcades/centipede/centipede.jpg
+  alt: "Centipede arcade machine, three-quarter view"
 images:
-  - assets/images/arcades/centipede/centipede-screen-dark.jpg
-  - assets/images/arcades/centipede/centipede-screen-bright.jpg
-  - assets/images/arcades/centipede/centipede-control-panel.jpg
-  - assets/images/arcades/centipede/centipede-trackball.jpg
+  - path: assets/images/arcades/centipede/centipede-screen-dark.jpg
+    alt: "Centipede gameplay on the screen, in the dark"
+  - path: assets/images/arcades/centipede/centipede-screen-bright.jpg
+    alt: "Screen and control panel of the Centipede arcade machine"
+  - path: assets/images/arcades/centipede/centipede-control-panel.jpg
+    alt: "Control panel of the Centipede arcade machine with trackball and fire buttons"
+  - path: assets/images/arcades/centipede/centipede-trackball.jpg
+    alt: "Close-up of the trackball of the Centipede arcade machine"
 tagline: Colourful trackball action
 
 # Filters

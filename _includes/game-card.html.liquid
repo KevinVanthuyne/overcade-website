@@ -21,8 +21,9 @@
             {% endif %}
             <!--@formatter:off-->
             {% responsive_image_block %}
-            path: {{ game.image }}
+            path: {{ game.image.path }}
             class: "flex-grow min-w-0 min-h-0 w-full h-auto rounded-tr-3xl object-contain transition duration-500 group-hover:scale-105 -z-10 px-5 md:p-5 {% if game.preview %}opacity-50{% endif %}"
+            alt: {{ game.image.alt | default: game.name | jsonify }}
             {% endresponsive_image_block %}
             <!--@formatter:on-->
 

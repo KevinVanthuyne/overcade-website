@@ -5,10 +5,14 @@ name: Pac-Man
 year: 1980
 manufacturer: Namco
 category: arcade
-image: assets/images/arcades/pac-man/pac-man.jpg
+image:
+  path: assets/images/arcades/pac-man/pac-man.jpg
+  alt: "Pac-Man arcade, schuin van voren met de gele zijkant"
 images:
-  - assets/images/arcades/pac-man/pac-man-closer.jpg
-  - assets/images/arcades/pac-man/pac-man-screen.jpg
+  - path: assets/images/arcades/pac-man/pac-man-closer.jpg
+    alt: "Kopbord en scherm van de Pac-Man arcade"
+  - path: assets/images/arcades/pac-man/pac-man-screen.jpg
+    alt: "Pac-Man-doolhof op het scherm en het bedieningspaneel"
 featured: true
 showOnHomepage: true
 tagline: De ultieme all-time klassieker

@@ -1,5 +1,5 @@
 site:
-  title: Overcade arcade rental
+  title: Overcade
   tagline: Authentic arcade rental
   description: Rental of authentic arcade machines for your home or office
   locale: en_GB
@@ -17,7 +17,6 @@ common:
   back_to_range: Back to the range
   popular: Popular
   coming_soon: Coming soon
-  site_heading: Overcade authentic arcade rental
 
 home:
   banner:
@@ -77,6 +76,10 @@ games:
 
 game:
   properties: Specifications
+  page_title: "Rent %{name} %{machine}"
+  machine:
+    arcade: arcade machine
+    flipperkast: pinball machine
 
 about:
   eyebrow: About us

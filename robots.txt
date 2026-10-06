@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /maker-faire-25-give-away/
 Allow: /
 
 Sitemap: https://overcade.be/sitemap.xml

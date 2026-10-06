@@ -3,7 +3,9 @@ lang: en
 permalink: /games/shuffle-box.html
 name: Shuffle Box
 year: ~2010
-image: assets/images/shuffle-box.png
+image:
+  path: assets/images/shuffle-box.png
+  alt: "Shuffle Box"
 tagline: Unique in the world
 preview: true
 published: false

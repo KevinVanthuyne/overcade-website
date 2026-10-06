@@ -5,11 +5,16 @@ name: Frogger
 year: 1981
 manufacturer: Konami
 category: arcade
-image: assets/images/arcades/frogger/frogger.jpg
+image:
+  path: assets/images/arcades/frogger/frogger.jpg
+  alt: "Frogger arcade, schuin van voren"
 images:
-  - assets/images/arcades/frogger/frogger-side.jpg
-  - assets/images/arcades/frogger/frogger-screen.jpg
-  - assets/images/arcades/frogger/frogger-dark.jpg
+  - path: assets/images/arcades/frogger/frogger-side.jpg
+    alt: "Zijkant van de Frogger arcade met de kikker"
+  - path: assets/images/arcades/frogger/frogger-screen.jpg
+    alt: "Frogger-spel op het scherm"
+  - path: assets/images/arcades/frogger/frogger-dark.jpg
+    alt: "Frogger arcade in het donker, met het spel op het scherm"
 tagline: Tijdloze uitdaging voor iedereen
 
 # Filters

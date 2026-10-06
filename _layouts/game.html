@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% assign image_alt = page.name | append: " " | append: site.data.t.game.machine[page.category] | strip %}
+
 <section
         class="overflow-hidden flex flex-col md:flex-row bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
 >
@@ -20,11 +22,11 @@ layout: default
                 <div class="font-semibold text-sky-500 md:text-lg my-2 text-center sm:text-left">
                     {{ page.manufacturer }}
                 </div>
-                <h2
+                <h1
                   class="text-2xl font-bold text-gray-900 md:text-3xl text-center sm:text-left"
                 >
                     {{ page.name }}
-                </h2>
+                </h1>
                 <div class="font-semibold text-sky-500 md:text-lg mt-4 mb-2 text-center sm:text-left">
                     {{ page.year }}
                 </div>
@@ -85,8 +87,9 @@ layout: default
                 <li class="splide__slide">
                     <!--@formatter:off-->
                     {% responsive_image_block %}
-                        path: {{ page.image }}
+                        path: {{ page.image.path }}
                         class: "h-full w-full max-h-[80vh] object-contain"
+                        alt: {{ page.image.alt | default: image_alt | jsonify }}
                     {% endresponsive_image_block %}
                     <!--@formatter:on-->
                 </li>
@@ -94,8 +97,9 @@ layout: default
                 <li class="splide__slide">
                     <!--@formatter:off-->
                     {% responsive_image_block %}
-                    path: {{ image }}
+                    path: {{ image.path }}
                     class: "h-full w-full max-h-[80vh] object-contain"
+                    alt: {{ image.alt | default: image_alt | jsonify }}
                     {% endresponsive_image_block %}
                     <!--@formatter:on-->
                     <!--            class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"-->
@@ -108,8 +112,9 @@ layout: default
             <li class="thumbnail">
                 <!--@formatter:off-->
                 {% responsive_image_block %}
-                path: {{ page.image }}
+                path: {{ page.image.path }}
                 class: "object-cover"
+                alt: {{ page.image.alt | default: image_alt | jsonify }}
                 {% endresponsive_image_block %}
                 <!--@formatter:on-->
             </li>
@@ -117,8 +122,9 @@ layout: default
             <li class="thumbnail">
                 <!--@formatter:off-->
                 {% responsive_image_block %}
-                path: {{ image }}
+                path: {{ image.path }}
                 class: "object-cover"
+                alt: {{ image.alt | default: image_alt | jsonify }}
                 {% endresponsive_image_block %}
                 <!--@formatter:on-->
             </li>

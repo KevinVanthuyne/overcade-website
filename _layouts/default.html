@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ page.title }} | Overcade</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link
       rel="stylesheet"
@@ -15,12 +14,12 @@
     <link rel="manifest" href="/site.webmanifest" />
     {% include language-alternates.html.liquid %}
     {% seo %}
+    {% include local-business-schema.html.liquid %}
   </head>
   <body>
     {% include navigation.html.liquid %}
     <!-- margin of 64px, the height of the mobile fixed navbar -->
     <main class="pt-16 md:pt-0">
-      <h1 class="hidden">{{ site.data.t.common.site_heading }}</h1>
       {{ content }}
     </main>
     {% include footer.html.liquid %}

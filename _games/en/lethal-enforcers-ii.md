@@ -5,11 +5,16 @@ name: Lethal Enforcers II
 year: 1994
 manufacturer: Konami
 category: arcade
-image: assets/images/arcades/lethal-enforcers-ii/le2.jpg
+image:
+  path: assets/images/arcades/lethal-enforcers-ii/le2.jpg
+  alt: "Lethal Enforcers II arcade machine, three-quarter view with its two light guns"
 images:
-  - assets/images/arcades/lethal-enforcers-ii/le2-lightgun.jpg
-  - assets/images/arcades/lethal-enforcers-ii/le2-in-game.png
-  - assets/images/arcades/lethal-enforcers-ii/le2-bank.png
+  - path: assets/images/arcades/lethal-enforcers-ii/le2-lightgun.jpg
+    alt: "Blue light gun of the Lethal Enforcers II arcade machine"
+  - path: assets/images/arcades/lethal-enforcers-ii/le2-in-game.png
+    alt: "Lethal Enforcers II gameplay: a shootout in a western town"
+  - path: assets/images/arcades/lethal-enforcers-ii/le2-bank.png
+    alt: "Start screen of The Bank Robbery level in Lethal Enforcers II"
 tagline: Duelling in the Wild West
 
 # Filters
