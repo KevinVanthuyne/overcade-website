@@ -76,6 +76,7 @@ games:
 
 game:
   properties: Specifications
+  page_title: "Rent %{name} %{machine}"
   machine:
     arcade: arcade machine
     flipperkast: pinball machine

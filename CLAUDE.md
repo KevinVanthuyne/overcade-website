@@ -62,7 +62,7 @@ Filtering is client-side, in an inline `<script>` at the bottom of `games.html`:
 Output as individual pages via the `games` collection, defaulting to the `game` layout. One document per language, paired by an explicit `permalink`. Frontmatter beyond the filter keys:
 
 - `image` — primary image; `images` — gallery, both rendered into a Splide carousel with thumbnails. Each is a `path` plus a translated `alt` describing what that photo shows (whole cabinet, control panel, screen…). A photo without `alt` falls back to the name and machine type.
-- `title` — the browser and search-result title, e.g. "Pac-Man arcade huren". Without it Jekyll derives "Pac Man" from the filename. The visible heading uses `name`.
+- `title` — only to override the browser and search-result title. By default `_plugins/i18n_page_metadata.rb` builds it from `game.page_title` and `game.machine` in `_data/<lang>/t.yml` ("Pac-Man arcade huren", "Rent Pac-Man arcade machine"). The visible heading uses `name`.
 - `showOnHomepage` — include in the "Uitgelicht aanbod" section on the home page
 - `featured` — red "Populair" badge on the card
 - `order` — sort order on `games.html` (games without it sort last)

@@ -1,7 +1,6 @@
 ---
 lang: nl
 permalink: /games/frogger.html
-title: "Frogger arcade huren"
 name: Frogger
 year: 1981
 manufacturer: Konami

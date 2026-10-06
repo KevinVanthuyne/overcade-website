@@ -1,7 +1,6 @@
 ---
 lang: en
 permalink: /games/spider-man.html
-title: "Rent Spider-Man pinball machine"
 name: Spider-Man
 year: 2007
 manufacturer: Stern Pinball

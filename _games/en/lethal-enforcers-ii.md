@@ -1,7 +1,6 @@
 ---
 lang: en
 permalink: /games/lethal-enforcers-ii.html
-title: "Rent Lethal Enforcers II arcade machine"
 name: Lethal Enforcers II
 year: 1994
 manufacturer: Konami

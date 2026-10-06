@@ -1,7 +1,6 @@
 ---
 lang: nl
 permalink: /games/pac-man.html
-title: "Pac-Man arcade huren"
 name: Pac-Man
 year: 1980
 manufacturer: Namco

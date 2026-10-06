@@ -1,7 +1,6 @@
 ---
 lang: en
 permalink: /games/centipede.html
-title: "Rent Centipede arcade machine"
 name: Centipede
 year: 1980
 manufacturer: Atari

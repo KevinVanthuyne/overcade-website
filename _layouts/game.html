@@ -89,7 +89,7 @@ layout: default
                     {% responsive_image_block %}
                         path: {{ page.image.path }}
                         class: "h-full w-full max-h-[80vh] object-contain"
-                        alt: "{{ page.image.alt | default: image_alt }}"
+                        alt: {{ page.image.alt | default: image_alt | jsonify }}
                     {% endresponsive_image_block %}
                     <!--@formatter:on-->
                 </li>
@@ -99,7 +99,7 @@ layout: default
                     {% responsive_image_block %}
                     path: {{ image.path }}
                     class: "h-full w-full max-h-[80vh] object-contain"
-                    alt: "{{ image.alt | default: image_alt }}"
+                    alt: {{ image.alt | default: image_alt | jsonify }}
                     {% endresponsive_image_block %}
                     <!--@formatter:on-->
                     <!--            class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] order-1 md:order-2"-->
@@ -114,7 +114,7 @@ layout: default
                 {% responsive_image_block %}
                 path: {{ page.image.path }}
                 class: "object-cover"
-                alt: "{{ page.image.alt | default: image_alt }}"
+                alt: {{ page.image.alt | default: image_alt | jsonify }}
                 {% endresponsive_image_block %}
                 <!--@formatter:on-->
             </li>
@@ -124,7 +124,7 @@ layout: default
                 {% responsive_image_block %}
                 path: {{ image.path }}
                 class: "object-cover"
-                alt: "{{ image.alt | default: image_alt }}"
+                alt: {{ image.alt | default: image_alt | jsonify }}
                 {% endresponsive_image_block %}
                 <!--@formatter:on-->
             </li>

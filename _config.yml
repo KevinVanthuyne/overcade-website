@@ -8,6 +8,8 @@ defaults:
       type: "games"
     values:
       layout: "game"
+      seo:
+        type: WebPage
   - scope:
       path: ""
     values:

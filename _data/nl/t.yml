@@ -78,6 +78,7 @@ games:
 
 game:
   properties: Eigenschappen
+  page_title: "%{name} %{machine} huren"
   machine:
     arcade: arcade
     flipperkast: flipperkast

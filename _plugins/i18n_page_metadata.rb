@@ -38,10 +38,31 @@ module Overcade
         end
       end
     end
+
+    # Builds "Pac-Man arcade huren" from game.page_title in t.yml, so a new game
+    # gets a search-friendly title without anyone having to remember to write one.
+    def title_games(site)
+      games = site.collections["games"]
+      return if games.nil?
+
+      games.docs.each do |doc|
+        translations = site.data.dig(doc.data["lang"] || site.active_lang, "t", "game")
+        pattern = translations&.dig("page_title")
+        machine = translations&.dig("machine", doc.data["category"])
+        next if pattern.nil? || machine.nil?
+
+        # Jekyll has already filled in "Pac Man" from the filename when the front
+        # matter has no title. Anything else was written by hand and wins.
+        next unless doc.data["title"] == Jekyll::Utils.titleize_slug(doc.data["slug"].to_s)
+
+        doc.data["title"] = format(pattern, name: doc.data["name"], machine: machine)
+      end
+    end
   end
 end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   Overcade::I18nPageMetadata.localize_site(site)
   Overcade::I18nPageMetadata.localize_pages(site)
+  Overcade::I18nPageMetadata.title_games(site)
 end

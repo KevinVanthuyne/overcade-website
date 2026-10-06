@@ -1,7 +1,6 @@
 ---
 lang: nl
 permalink: /games/centipede.html
-title: "Centipede arcade huren"
 name: Centipede
 year: 1980
 manufacturer: Atari
