@@ -24,7 +24,7 @@ en:
         <div class="mt-8 flex flex-col lg:flex-row gap-8">
             <!-- Left Sidebar - Filters -->
             <aside class="lg:w-64 flex-shrink-0">
-                <!-- Mobile: Collapsible Filter Button next to the card size toggle -->
+                <!-- Mobile: Collapsible Filter Button -->
                 <div class="lg:hidden mb-4 flex gap-2">
                     <button id="mobile-filter-toggle"
                             class="flex-1 px-4 py-3 text-left font-semibold text-gray-900 bg-white rounded-lg shadow-sm border border-gray-200 flex items-center justify-between hover:bg-gray-50 transition-colors">
@@ -279,6 +279,7 @@ en:
             button.classList.toggle('bg-sky-500', active);
             button.classList.toggle('text-white', active);
             button.classList.toggle('hover:text-white', active);
+            button.classList.toggle('hover:text-gray-900', !active);
         });
 
         // Images use data-sizes="auto"; lazysizes must re-measure after the cards change width.
