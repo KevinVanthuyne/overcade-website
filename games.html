@@ -72,7 +72,29 @@ en:
 
             <!-- Right Side - Games Grid -->
             <div class="flex-1">
-                <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Card size toggle -->
+                <div class="mb-4 flex justify-end">
+                    <div class="inline-flex rounded-lg border border-gray-200 bg-white p-1 shadow-sm">
+                        <button type="button" data-card-size="large" title="{{ site.data.t.games.view_large }}"
+                                class="card-size-btn rounded-md p-2 text-gray-500 transition-colors hover:text-gray-900">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <rect x="4" y="4" width="16" height="7" rx="1"></rect>
+                                <rect x="4" y="13" width="16" height="7" rx="1"></rect>
+                            </svg>
+                        </button>
+                        <button type="button" data-card-size="compact" title="{{ site.data.t.games.view_compact }}"
+                                class="card-size-btn rounded-md p-2 text-gray-500 transition-colors hover:text-gray-900">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <rect x="4" y="4" width="7" height="7" rx="1"></rect>
+                                <rect x="13" y="4" width="7" height="7" rx="1"></rect>
+                                <rect x="4" y="13" width="7" height="7" rx="1"></rect>
+                                <rect x="13" y="13" width="7" height="7" rx="1"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <ul id="games-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     <!--@formatter:off-->
                     {% assign sortedGames = site.games | sort: 'order', 'last' %}
                     {% for game in sortedGames %}
@@ -250,6 +272,44 @@ en:
             filterChevron.classList.remove('rotate-180');
         }
     });
+
+    // Card size toggle: large (default) or compact (two cards side by side on a phone)
+    const gamesGrid = document.getElementById('games-grid');
+    const cardSizeButtons = document.querySelectorAll('.card-size-btn');
+    const CARD_SIZE_KEY = 'overcade-card-size';
+
+    // Full class strings are written out so Tailwind keeps them in the build.
+    const gridClasses = {
+        large: 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
+        compact: 'compact grid gap-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+    };
+
+    function setCardSize(size) {
+        gamesGrid.className = gridClasses[size];
+        cardSizeButtons.forEach(button => {
+            const active = button.getAttribute('data-card-size') === size;
+            button.classList.toggle('bg-sky-500', active);
+            button.classList.toggle('text-white', active);
+            button.classList.toggle('hover:text-white', active);
+        });
+        try {
+            localStorage.setItem(CARD_SIZE_KEY, size);
+        } catch (e) {
+            // Storage can be blocked; the choice then only lasts for this visit.
+        }
+    }
+
+    cardSizeButtons.forEach(button => {
+        button.addEventListener('click', () => setCardSize(button.getAttribute('data-card-size')));
+    });
+
+    let storedCardSize = null;
+    try {
+        storedCardSize = localStorage.getItem(CARD_SIZE_KEY);
+    } catch (e) {
+        storedCardSize = null;
+    }
+    setCardSize(storedCardSize in gridClasses ? storedCardSize : 'large');
 
     // Initialize on page load
     initializeFilters();
