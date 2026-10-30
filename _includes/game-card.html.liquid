@@ -7,14 +7,14 @@
             {% endif %}
             {% if game.featured %}
                 <span
-                        class="absolute -right-px -top-px rounded-bl-3xl bg-red-500 px-6 py-4 font-medium uppercase tracking-widest text-white z-10"
+                        class="absolute -right-px -top-px rounded-bl-3xl bg-red-500 px-6 py-4 [.compact_&]:rounded-bl-xl [.compact_&]:px-2 [.compact_&]:py-1 [.compact_&]:text-xs font-medium uppercase tracking-widest text-white z-10"
                 >
         {{ site.data.t.common.popular }}
         </span>
             {% endif %}
             {% if game.preview %}
                 <span
-                        class="absolute -right-px -top-px rounded-bl-3xl bg-indigo-500 px-6 py-4 font-medium uppercase tracking-widest text-white z-10"
+                        class="absolute -right-px -top-px rounded-bl-3xl bg-indigo-500 px-6 py-4 [.compact_&]:rounded-bl-xl [.compact_&]:px-2 [.compact_&]:py-1 [.compact_&]:text-xs font-medium uppercase tracking-widest text-white z-10"
                 >
         {{ site.data.t.common.coming_soon }}
         </span>
@@ -22,20 +22,20 @@
             <!--@formatter:off-->
             {% responsive_image_block %}
             path: {{ game.image.path }}
-            class: "flex-grow min-w-0 min-h-0 w-full h-auto rounded-tr-3xl object-contain transition duration-500 group-hover:scale-105 -z-10 px-5 md:p-5 {% if game.preview %}opacity-50{% endif %}"
+            class: "flex-grow min-w-0 min-h-0 w-full h-auto rounded-tr-3xl object-contain transition duration-500 group-hover:scale-105 -z-10 px-5 md:p-5 [.compact_&]:p-2 {% if game.preview %}opacity-50{% endif %}"
             alt: {{ game.image.alt | default: game.name | jsonify }}
             {% endresponsive_image_block %}
             <!--@formatter:on-->
 
-            <div class="p-4 text-center ">
-                <strong class="text-xl font-medium text-gray-900">{{ game.name }}</strong>
+            <div class="p-4 text-center [.compact_&]:p-2">
+                <strong class="text-xl font-medium text-gray-900 [.compact_&]:text-sm">{{ game.name }}</strong>
 
-                <div class="mt-2 text-pretty text-gray-500">
+                <div class="mt-2 text-pretty text-gray-500 [.compact_&]:hidden">
                     {{ game.tagline | markdownify }}
                 </div>
 
                 <span
-                        class="{% if game.preview == true %}invisible{% endif %} mt-4 block rounded-md border border-sky-500 bg-sky-500 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-sky-500"
+                        class="{% if game.preview == true %}invisible{% endif %} mt-4 block rounded-md border border-sky-500 bg-sky-500 px-5 py-3 text-sm [.compact_&]:mt-2 [.compact_&]:px-2 [.compact_&]:py-2 [.compact_&]:text-xs font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-sky-500"
                 >
               {{ site.data.t.common.more_info }}
             </span>

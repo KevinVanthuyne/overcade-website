@@ -75,6 +75,8 @@ games:
   filters: Filters
   clear_filters: Wis alle filters
   no_results: Geen spellen gevonden met de geselecteerde filters.
+  view_large: Grote kaarten
+  view_compact: Kleine kaarten
 
 game:
   properties: Eigenschappen

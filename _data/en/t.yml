@@ -73,6 +73,8 @@ games:
   filters: Filters
   clear_filters: Clear all filters
   no_results: No games found with the selected filters.
+  view_large: Large cards
+  view_compact: Small cards
 
 game:
   properties: Specifications
