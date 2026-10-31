@@ -7,14 +7,14 @@
             {% endif %}
             {% if game.featured %}
                 <span
-                        class="absolute -right-px -top-px rounded-bl-3xl bg-red-500 px-6 py-4 [.compact_&]:rounded-bl-xl [.compact_&]:px-2 [.compact_&]:py-1 [.compact_&]:text-xs font-medium uppercase tracking-widest text-white z-10"
+                        class="absolute -right-px -top-px rounded-bl-3xl bg-red-500 px-6 py-4 [.compact_&]:rounded-bl-xl [.compact_&]:px-3 [.compact_&]:py-1.5 [.compact_&]:text-sm lg:[.compact_&]:px-4 lg:[.compact_&]:py-2 lg:[.compact_&]:text-base font-medium uppercase tracking-widest text-white z-10"
                 >
         {{ site.data.t.common.popular }}
         </span>
             {% endif %}
             {% if game.preview %}
                 <span
-                        class="absolute -right-px -top-px rounded-bl-3xl bg-indigo-500 px-6 py-4 [.compact_&]:rounded-bl-xl [.compact_&]:px-2 [.compact_&]:py-1 [.compact_&]:text-xs font-medium uppercase tracking-widest text-white z-10"
+                        class="absolute -right-px -top-px rounded-bl-3xl bg-indigo-500 px-6 py-4 [.compact_&]:rounded-bl-xl [.compact_&]:px-3 [.compact_&]:py-1.5 [.compact_&]:text-sm lg:[.compact_&]:px-4 lg:[.compact_&]:py-2 lg:[.compact_&]:text-base font-medium uppercase tracking-widest text-white z-10"
                 >
         {{ site.data.t.common.coming_soon }}
         </span>
@@ -28,14 +28,14 @@
             <!--@formatter:on-->
 
             <div class="p-4 text-center [.compact_&]:p-2 lg:[.compact_&]:p-4">
-                <strong class="text-xl font-medium text-gray-900 [.compact_&]:text-[13px] lg:[.compact_&]:text-lg">{{ game.name }}</strong>
+                <strong class="text-xl font-medium text-gray-900 [.compact_&]:text-sm lg:[.compact_&]:text-lg">{{ game.name }}</strong>
 
-                <div class="mt-2 text-pretty text-gray-500 [.compact_&]:max-lg:hidden lg:[.compact_&]:text-sm">
+                <div class="mt-2 text-pretty text-gray-500 [.compact_&]:text-xs lg:[.compact_&]:text-sm">
                     {{ game.tagline | markdownify }}
                 </div>
 
                 <span
-                        class="{% if game.preview == true %}invisible{% endif %} mt-4 block rounded-md border border-sky-500 bg-sky-500 px-5 py-3 text-sm [.compact_&]:mt-2 [.compact_&]:whitespace-nowrap [.compact_&]:tracking-wide [.compact_&]:px-2 [.compact_&]:py-2 [.compact_&]:text-[11px]/4 lg:[.compact_&]:px-4 lg:[.compact_&]:text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-sky-500"
+                        class="{% if game.preview == true %}invisible{% endif %} mt-4 block rounded-md border border-sky-500 bg-sky-500 px-5 py-3 text-sm [.compact_&]:mt-2 [.compact_&]:whitespace-nowrap [.compact_&]:tracking-wide [.compact_&]:px-2 [.compact_&]:py-2 [.compact_&]:text-xs lg:[.compact_&]:px-4 lg:[.compact_&]:text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-sky-500"
                 >
               {{ site.data.t.common.more_info }}
             </span>
